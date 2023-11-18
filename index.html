@@ -4,18 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Music Player</title>
   </head>
   <body>
+    <div class="main-container">
+      <div class="main-content">
+        <h1 id="greeting"></h1>
+        <h2>Playlists</h2>
+        <div class="playlist-container">
+          <div class="playlist-card" data-playlist="liked-songs">
+            <img src="liked.png" class="song-image">
+            <h3>Liked Songs</h3>
+          </div>
+          <div class="playlist-card" data-playlist="playlist-2">
+            <img src="images/怪物.png" class="song-image">
+            <h3>Playlist 2</h3>
+          </div>
+        </div>
+      </div>
+      <div id="queue-container">
+        <h2 style="margin-bottom: 20px;">Queue</h2>
+        <ul id="queue-list"></ul>
+      </div>
+    </div>
     <div class="music-container" id="music-container">
       <div class="music-info">
         <div class="img-container">
-          <img src="" alt="music-cover" id="cover" />
+          <img src="" alt="song" id="cover" />
         </div>
         <h4 id="title"></h4>
       </div>
@@ -35,6 +52,7 @@
       </div>
     </div>
     <audio src="" id="audio"></audio>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="greeting.js"></script>
   </body>
 </html>
