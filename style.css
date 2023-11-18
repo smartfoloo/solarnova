@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #16181c;
+  font-family: 'Inter';
+  color: #fff;
+}
+
+.music-container {
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 30px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  gap: 20px;
+}
+
+.img-container {
+  width: 40px;
+}
+
+.img-container img {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 25vw;
+}
+
+.action-btn {
+  background: transparent;
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  width: 25vw;
+  align-items: center !important;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+  gap: 20px;
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background: #575657;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.progress:hover {
+  background: #1cd96a;
+}
