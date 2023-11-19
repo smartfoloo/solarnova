@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		'liked-songs': [],
 		'yoasobi': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン'],
 		'phonk': ['metamorphosis', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'rave', 'shadow', 'psycho-cruise'],
-		'gaming': ['my-ordinary-life']
+		'gaming': ['my-ordinary-life'],
+		'meme-songs': ['whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig']
 	};
 
 	let currentPlaylist = [];
