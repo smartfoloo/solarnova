@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const queueContainer = document.getElementById('queue-container');
 	const queueList = document.getElementById('queue-list');
 	const likeBtn = document.getElementById('like-btn');
+	const shuffleBtn = document.getElementById('shuffle-btn'); // Add this line
 
 	let playlists = {
 		'liked-songs': [],
@@ -37,6 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+	// Add the shuffle functionality
+	shuffleBtn.addEventListener('click', () => {
+		shufflePlaylist();
+	});
+
 	let songIndex = 0;
 
 	const playlistIndicator = document.getElementById('playlist-indicator');
@@ -57,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Update playlist indicator
 		updatePlaylistIndicator();
 	}
+
 	function playSong() {
 		musicContainer.classList.add('play');
 		playBtn.querySelector('i.fas').classList.remove('fa-play');
@@ -217,6 +224,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 		return 'Unknown Playlist';
+	}
+
+	// Function to shuffle the current playlist
+	function shufflePlaylist() {
+		for (let i = currentPlaylist.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[currentPlaylist[i], currentPlaylist[j]] = [currentPlaylist[j], currentPlaylist[i]];
+		}
+		loadSong(0);
+		playSong();
 	}
 
 	audio.addEventListener('timeupdate', updateProgress);

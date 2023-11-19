@@ -205,3 +205,23 @@ h2 {
 #playlist-indicator {
   font-size: 14px;
 }
+
+.queue-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.queue-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  #queue-container {
+    display: none;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
