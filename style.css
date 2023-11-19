@@ -127,13 +127,13 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 20px 0px;
+  gap: 20px;
 }
 
 .playlist-card {
   background-color: #1f2228;
   padding: 15px;
   border-radius: 10px;
-  margin: 10px;
   display: inline-block;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -162,7 +162,7 @@ h2 {
   background: #16181c;
   border-radius: 15px;
   padding: 20px;
-  width: 80%;
+  width: 70%;
 }
 
 #queue-container {
@@ -171,12 +171,15 @@ h2 {
   background: #16181c;
   border-radius: 15px;
   padding: 20px;
-  width: 20%;
+  width: 30%;
   list-style-type: none;
+  text-overflow: ellipsis;
 }
 
 .main-container {
   display: flex;
+  min-height: calc(100vh - 84px);
+  margin-bottom: 84px !important;
 }
 
 #queue-container li {
@@ -184,10 +187,21 @@ h2 {
   align-items: center;
   margin: 10px 0px;
   gap: 10px;
+  padding: 5px;
+  border-radius: 7px;
+  text-overflow: ellipsis;
 }
 
 #queue-container img {
   width: 40px;
   height: 40px;
   border-radius: 5px;
+}
+
+.current-song {
+  border: 1px solid #575657;
+}
+
+#playlist-indicator {
+  font-size: 14px;
 }

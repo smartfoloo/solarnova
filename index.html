@@ -18,15 +18,81 @@
             <img src="liked.png" class="song-image">
             <h3>Liked Songs</h3>
           </div>
-          <div class="playlist-card" data-playlist="playlist-2">
-            <img src="images/怪物.png" class="song-image">
-            <h3>Playlist 2</h3>
+          <div class="playlist-card" data-playlist="yoasobi">
+            <img src="images/yoasobi.jpeg" class="song-image">
+            <h3>YOASOBI</h3>
           </div>
+          <div class="playlist-card" data-playlist="phonk">
+            <img src="images/phonk.jpeg" class="song-image">
+            <h3>Phonk</h3>
+          </div>
+          <div class="playlist-card" data-playlist="gaming">
+            <img src="images/gaming.avif" class="song-image">
+            <h3>Gaming</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+          <div class="playlist-card" data-playlist="card">
+            <img src="images/default.png" class="song-image">
+            <h3>Playlist</h3>
+          </div>
+
         </div>
       </div>
       <div id="queue-container">
         <h2 style="margin-bottom: 20px;">Queue</h2>
         <ul id="queue-list"></ul>
+        <span id="playlist-indicator">Playing from: </span>
       </div>
     </div>
     <div class="music-container" id="music-container">
@@ -49,6 +115,9 @@
         <button id="next" class="action-btn">
           <i class="fas fa-forward"></i>
         </button>
+        <div id="like-btn" class="action-btn" onclick="toggleLike()">
+          <i class="far fa-heart"></i>
+        </div>
       </div>
     </div>
     <audio src="" id="audio"></audio>

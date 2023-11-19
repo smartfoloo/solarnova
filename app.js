@@ -13,14 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	const durTime = document.querySelector('#durTime');
 	const queueContainer = document.getElementById('queue-container');
 	const queueList = document.getElementById('queue-list');
+	const likeBtn = document.getElementById('like-btn');
 
 	let playlists = {
-		'liked-songs': ['怪物', 'ハルジオン', 'metamorphosis'],
-		'playlist-2': ['Song1', 'Song2', 'Song3']
+		'liked-songs': [],
+		'yoasobi': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン'],
+		'phonk': ['metamorphosis', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'rave', 'shadow', 'psycho-cruise'],
+		'gaming': ['my-ordinary-life']
 	};
 
 	let currentPlaylist = [];
 	let queue = [];
+	let isLiked = false;
 
 	playlistCards.forEach(card => {
 		card.addEventListener('click', () => {
@@ -35,16 +39,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let songIndex = 0;
 
+	const playlistIndicator = document.getElementById('playlist-indicator');
+
 	function loadSong(index) {
 		title.innerText = currentPlaylist[index];
 		audio.src = `music/${currentPlaylist[index]}.mp3`;
-		cover.src = `images/${currentPlaylist[index]}.png`;
+		cover.src = `images/${currentPlaylist[index]}.jpeg`;
 		songIndex = index;
 
 		// Update the queue list
 		updateQueueList();
-	}
 
+		// Update like button state
+		isLiked = playlists['liked-songs'].includes(currentPlaylist[songIndex]);
+		updateLikeButton();
+
+		// Update playlist indicator
+		updatePlaylistIndicator();
+	}
 	function playSong() {
 		musicContainer.classList.add('play');
 		playBtn.querySelector('i.fas').classList.remove('fa-play');
@@ -66,6 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		} else {
 			playSong();
 		}
+	});
+
+	likeBtn.addEventListener('click', () => {
+		isLiked = !isLiked; // Toggle like state
+		updateLikeButton();
+		updateLikedSongs(); // Update liked songs playlist
 	});
 
 	prevBtn.addEventListener('click', () => {
@@ -141,12 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function updateQueueList() {
 		queueList.innerHTML = '';
-		for (let i = songIndex + 1; i < currentPlaylist.length; i++) {
+		for (let i = songIndex; i < currentPlaylist.length; i++) {
 			const listItem = document.createElement('li');
 
 			// Create an img element for the song image
 			const img = document.createElement('img');
-			img.src = `images/${currentPlaylist[i]}.png`;
+			img.src = `images/${currentPlaylist[i]}.jpeg`;
 			img.alt = currentPlaylist[i];
 
 			listItem.appendChild(img);
@@ -157,10 +175,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			listItem.appendChild(titleSpan);
 
+			if (i === songIndex) {
+				// Add an outline to indicate the currently playing song
+				listItem.classList.add('current-song');
+			}
+
 			queueList.appendChild(listItem);
 		}
 	}
 
+	function updateLikeButton() {
+		if (isLiked) {
+			likeBtn.innerHTML = '<i class="fas fa-heart"></i>';
+		} else {
+			likeBtn.innerHTML = '<i class="far fa-heart"></i>';
+		}
+	}
+
+	function updateLikedSongs() {
+		if (isLiked) {
+			if (!playlists['liked-songs'].includes(currentPlaylist[songIndex])) {
+				playlists['liked-songs'].push(currentPlaylist[songIndex]);
+			}
+		} else {
+			const indexToRemove = playlists['liked-songs'].indexOf(currentPlaylist[songIndex]);
+			if (indexToRemove !== -1) {
+				playlists['liked-songs'].splice(indexToRemove, 1);
+			}
+		}
+	}
+
+	function updatePlaylistIndicator() {
+		const playlistName = getPlaylistNameBySong(currentPlaylist[songIndex]);
+		playlistIndicator.innerText = `Playing from: ${playlistName}`;
+	}
+
+	function getPlaylistNameBySong(song) {
+		for (const [playlistName, songs] of Object.entries(playlists)) {
+			if (songs.includes(song)) {
+				return playlistName;
+			}
+		}
+		return 'Unknown Playlist';
+	}
 
 	audio.addEventListener('timeupdate', updateProgress);
 	progressContainer.addEventListener('click', setProgress);
@@ -178,8 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (musicContainer.classList.contains('play')) {
 				playSong();
 			}
-		} else {
-			playSong();
 		}
 	});
 });
