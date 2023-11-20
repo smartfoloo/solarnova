@@ -138,6 +138,7 @@ h2 {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   text-align: center;
+  width: 150px;
 }
 
 .playlist-card:hover {
@@ -147,9 +148,7 @@ h2 {
 .playlist-card h3 {
   color: white;
   margin: 5px 0px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.5;
 }
 
 .song-image {
@@ -178,7 +177,7 @@ h2 {
 
 .main-container {
   display: flex;
-  min-height: calc(100vh - 84px);
+  min-height: 100vh;
   margin-bottom: 84px !important;
 }
 
@@ -225,4 +224,17 @@ h2 {
   .main-content {
     width: 100%;
   }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1cd96a;
+  border-radius: 8px;
 }
