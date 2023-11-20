@@ -48,21 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
 	const playlistIndicator = document.getElementById('playlist-indicator');
 
 	function loadSong(index) {
-		title.innerText = currentPlaylist[index];
-		audio.src = `music/${currentPlaylist[index]}.mp3`;
-		cover.src = `images/${currentPlaylist[index]}.jpeg`;
-		songIndex = index;
+		if (currentPlaylist.length > 0 && index >= 0 && index < currentPlaylist.length) {
+			const selectedSong = currentPlaylist[index];
+			console.log('Loading song:', selectedSong); // Log the selected song
 
-		// Update the queue list
-		updateQueueList();
+			title.innerText = selectedSong;
+			audio.src = `music/${selectedSong}.mp3`; // Check if the path and file name match your audio files
+			cover.src = `images/${selectedSong}.jpeg`;
+			songIndex = index;
 
-		// Update like button state
-		isLiked = playlists['liked-songs'].includes(currentPlaylist[songIndex]);
-		updateLikeButton();
+			updateQueueList();
 
-		// Update playlist indicator
-		updatePlaylistIndicator();
+			// Update like button state
+			isLiked = playlists['liked-songs'].includes(currentPlaylist[songIndex]);
+			updateLikeButton();
+
+			// Update playlist indicator
+			updatePlaylistIndicator();
+
+			// Log the audio source being set
+			console.log('Audio source:', audio.src);
+
+			// Play the song (if needed)
+			playSong();
+		} else {
+			console.error('Invalid song index or playlist');
+		}
 	}
+
 
 	function playSong() {
 		musicContainer.classList.add('play');
