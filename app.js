@@ -141,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		get_sec(currentTime, sec);
-		currTime.innerHTML = min + ':' + sec;
 
 		let min_d = (isNaN(duration) === true) ? '0' : Math.floor(duration / 60);
 		min_d = min_d < 10 ? '0' + min_d : min_d;
@@ -161,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		get_sec_d(duration);
-		durTime.innerHTML = min_d + ':' + sec_d;
 	}
 
 	function updateQueueList() {
