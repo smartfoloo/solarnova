@@ -14,12 +14,12 @@ body {
 
 h1 {
   margin-bottom: 20px;
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 34px;
 }
 
 h2 {
   font-weight: 300;
+  font-size: 18px;
 }
 
 .music-container {
@@ -133,12 +133,12 @@ h2 {
 .playlist-card {
   background-color: #1f2228;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   display: inline-block;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   text-align: center;
-  width: 150px;
+  width: 170px;
 }
 
 .playlist-card:hover {
@@ -152,7 +152,7 @@ h2 {
 }
 
 .song-image {
-  width: 120px;
+  width: 140px;
   border-radius: 10px;
 }
 
@@ -219,6 +219,14 @@ h2 {
 @media screen and (max-width: 500px) {
   #queue-container {
     display: none;
+  }
+
+  .playlist-card {
+    width: calc(50% - 10px)
+  }
+
+  .playlist-card img {
+    width: 100%;
   }
 
   .main-content {
