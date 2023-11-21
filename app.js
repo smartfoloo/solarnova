@@ -128,8 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		const width = this.clientWidth;
 		const clickX = e.offsetX;
 		const duration = audio.duration;
-		audio.currentTime = (clickX / width) * duration;
+		const newTime = (clickX / width) * duration;
+		audio.currentTime = newTime;
+
+		const isPaused = audio.paused;
+		if (!isPaused) {
+			audio.play();
+		}
 	}
+
 
 	function DurTime(e) {
 		const { duration, currentTime } = e.srcElement;
