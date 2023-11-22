@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let playlists = {
 		'liked-songs': [],
 		'yoasobi': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター'],
-		'phonk': ['metamorphosis', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'tokyo-drift', 'hyptonic-data', 'avoid-me'],
+		'phonk': ['metamorphosis', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'tokyo-drift', 'hyptonic-data', 'avoid-me', 'neon-blade'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
 		'meme-songs': ['whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
