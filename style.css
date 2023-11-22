@@ -22,6 +22,10 @@ h2 {
   font-size: 18px;
 }
 
+p {
+  font-size: 14px;
+}
+
 .music-container {
   background: #000;
   display: flex;
@@ -49,7 +53,7 @@ h2 {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 25vw;
+  width: 30vw;
 }
 
 .action-btn {
@@ -85,7 +89,7 @@ h2 {
 .music-info {
   border-radius: 15px 15px 0 0;
   display: flex;
-  width: 25vw;
+  width: 30vw;
   align-items: center !important;
   transform: translateY(0%);
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
@@ -101,7 +105,7 @@ h2 {
   background: #575657;
   border-radius: 5px;
   cursor: pointer;
-  height:6px;
+  height: 6px;
   width: 100%;
 }
 
@@ -231,6 +235,21 @@ h2 {
 
   .main-content {
     width: 100%;
+  }
+
+  .music-container {
+    padding: 20px 15px;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+
+  .music-info {
+    width: 100%;
+    gap: 5px;
   }
 }
 
