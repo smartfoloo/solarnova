@@ -110,7 +110,7 @@ p {
 }
 
 .progress {
-  background-color: #fff;
+  background: #1cd96a;
   border-radius: 5px;
   height: 100%;
   width: 0%;
@@ -157,6 +157,7 @@ p {
 
 .song-image {
   width: 140px;
+  height: 140px;
   border-radius: 10px;
 }
 
