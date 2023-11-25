@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			const selectedSong = currentPlaylist[index];
 			console.log('Loading song:', selectedSong); // Log the selected song
 
-			title.innerText = selectedSong;
+			title.innerText = selectedSong.replace(/-/g, " ");
 			audio.src = `music/${selectedSong}.mp3`; // Check if the path and file name match your audio files
 			cover.src = `images/${selectedSong}.jpeg`;
 			songIndex = index;
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Create a span element for the song title
 			const titleSpan = document.createElement('span');
-			titleSpan.innerText = currentPlaylist[i];
+			titleSpan.innerText = currentPlaylist[i].replace(/-/g, " ");
 
 			listItem.appendChild(titleSpan);
 
