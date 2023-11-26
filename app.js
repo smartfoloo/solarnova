@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
 		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
 		'lofi-jazz': ['circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
-		'seasonal': ['mariahcarey'],
-		'mix': ['paint-the-town-red','somebody-that-i-used-to-know','somebodys-watching-me',"ballin'",'bad-habit','luxury','everybody-wants-to-rule-the-world','the-box','the-perfect-girl']
+		'seasonal': ['mariahcarey', 'snowman'],
+		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', "ballin'", 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
+		'rap': ['all-girls-are-the-same', 'the-box', "ballin'"]
 	};
 
 	let currentPlaylist = [];
@@ -56,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			console.log('Loading song:', selectedSong); // Log the selected song
 
 			title.innerText = selectedSong.replace(/-/g, " ");
-			audio.src = `music/${selectedSong}.mp3`; // Check if the path and file name match your audio files
-			cover.src = `images/${selectedSong}.jpeg`;
+			audio.src = `/music/songs/${selectedSong}.mp3`; // Check if the path and file name match your audio files
+			cover.src = `/music/images/${selectedSong}.jpeg`;
 			songIndex = index;
 
 			updateQueueList();
@@ -74,6 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Play the song (if needed)
 			playSong();
+			navigator.mediaSession.metadata = new MediaMetadata({
+				title: selectedSong.replace(/-/g, " "),
+				artist: "Groovy",
+				artwork: [
+					{
+						src: cover.src,
+						sizes: "300x300",
+						type: "image/jpeg",
+						src: cover.src,
+						sizes: "2000x2000",
+						type: "image/jpeg",
+					},
+				],
+			});
 		} else {
 			console.error('Invalid song index or playlist');
 		}
@@ -85,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		playBtn.querySelector('i.fas').classList.remove('fa-play');
 		playBtn.querySelector('i.fas').classList.add('fa-pause');
 		audio.play();
+		navigator.mediaSession.playbackState = "playing";
 	}
 
 	function pauseSong() {
@@ -92,12 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		playBtn.querySelector('i.fas').classList.add('fa-play');
 		playBtn.querySelector('i.fas').classList.remove('fa-pause');
 		audio.pause();
+		navigator.mediaSession.playbackState = "paused";
 	}
+
 
 	playBtn.addEventListener('click', () => {
 		const isPlaying = musicContainer.classList.contains('play');
 		if (isPlaying) {
 			pauseSong();
+
 		} else {
 			playSong();
 		}
@@ -192,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Create an img element for the song image
 			const img = document.createElement('img');
-			img.src = `images/${currentPlaylist[i]}.jpeg`;
+			img.src = `/music/images/${currentPlaylist[i]}.jpeg`;
 			img.alt = currentPlaylist[i];
 
 			listItem.appendChild(img);
@@ -219,7 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			likeBtn.innerHTML = '<i class="far fa-heart"></i>';
 		}
 	}
-
 	function updateLikedSongs() {
 		if (isLiked) {
 			if (!playlists['liked-songs'].includes(currentPlaylist[songIndex])) {
@@ -247,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		return 'Unknown Playlist';
 	}
 
-	// Function to shuffle the current playlist
 	function shufflePlaylist() {
 		for (let i = currentPlaylist.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -273,6 +290,32 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (musicContainer.classList.contains('play')) {
 				playSong();
 			}
+		}
+	});
+
+	const loopBtn = document.getElementById('loop');
+	let isLooping = false;
+
+	loopBtn.addEventListener('click', () => {
+		isLooping = !isLooping;
+		updateLoopButton();
+	});
+
+	function updateLoopButton() {
+		if (isLooping) {
+			loopBtn.style.color = "#FFFFFF";;
+		} else {
+			loopBtn.style.color = "#1cd96a";
+		}
+	}
+	audio.addEventListener('ended', () => {
+		if (isLooping) {
+			loadSong(songIndex);
+			playSong();
+		} else {
+			songIndex = (songIndex + 1) % currentPlaylist.length;
+			loadSong(songIndex);
+			playSong();
 		}
 	});
 });
