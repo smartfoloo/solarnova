@@ -11,7 +11,6 @@
     <title>Music Player</title>
   </head>
   <body>
-        
     <ul class="lightrope" style="display:block;margin-left:-50px;margin-right:auto;margin-top:0px;">
       <li></li>
       <li></li>
@@ -99,60 +98,62 @@
       <li></li>
 </ul>
     <div class="main-container">
-      
-    <div class="main-content">
-      
-        <div class="searchbarbg"><input type="text"id="searcher"class="searchbar"placeholder="search for songs..." onkeyup="searchFunc()"> </div>
-        <h1 id="greeting"style="margin-top:50px; font-size:50px;"></h1>
-        
+      <div class="main-content">
+        <h1 id="greeting"></h1>
+        <div class="input-div">
+          <input type="text" id="searchInput" placeholder="Search">
+        </div>
         <h2>Playlists</h2>
-        <div class="playlist-container">
+        <div class="playlist-container" id="playlists">
           <div class="playlist-card" data-playlist="liked-songs">
             <img src="liked.png" class="song-image">
-            <h3>Liked Songs</h3>
+            <h3 class="title">Liked Songs</h3>
           </div>
           <div class="playlist-card" data-playlist="yoasobi">
             <img src="/music/images/yoasobi.jpeg" class="song-image">
-            <h3>YOASOBI</h3>
+            <h3 class="title">YOASOBI</h3>
           </div>
           <div class="playlist-card" data-playlist="phonk">
             <img src="/music/images/phonk.jpeg" class="song-image"> 
-            <h3>Phonk</h3>
+            <h3 class="title">Phonk</h3>
           </div>
           <div class="playlist-card" data-playlist="gaming-tracks">
             <img src="/music/images/gaming.avif" class="song-image">
-            <h3>Gaming Tracks</h3>
+            <h3 class="title">Gaming Tracks</h3>
           </div>
           <div class="playlist-card" data-playlist="meme-songs">
             <img src="/music/images/meme.jpeg" class="song-image">
-            <h3>Meme Songs</h3>
+            <h3 class="title">Meme Songs</h3>
           </div>
           <div class="playlist-card" data-playlist="slowed-and-reverb">
             <img src="/music/images/slowed-and-reverb.jpeg" class="song-image">
-            <h3>Slowed and Reverb</h3>
+            <h3 class="title">Slowed and Reverb</h3>
           </div>
           <div class="playlist-card" data-playlist="vibes">
             <img src="/music/images/vibes.jpg" class="song-image">
-            <h3>Vibes</h3>
+            <h3 class="title">Vibes</h3>
           </div>
           <div class="playlist-card" data-playlist="lofi-jazz">
             <img src="/music/images/lofi-jazz.jpeg" class="song-image">
-            <h3>Lofi</h3>
+            <h3 class="title">Lofi</h3>
           </div>
           <div class="playlist-card" data-playlist="seasonal">
             <img src="/music/images/mcareyalbum.png" class="song-image">
-            <h3>Seasonal</h3>
+            <h3 class="title">Seasonal</h3>
           </div>
           <div class="playlist-card" data-playlist="mix">
             <img src="/music/images/mix.jpeg" class="song-image">
-            <h3>Mix</h3>
+            <h3 class="title">Mix</h3>
           </div>
           <div class="playlist-card" data-playlist="rap">
             <img src="/music/images/rapper.jpeg" class="song-image">
-            <h3>Rap</h3>
+            <h3 class="title">Rap</h3>
           </div>
         </div>
-        <p>All songs belong to their respective owners. We are not liable for any trouble you get in using this platform. Enjoy!</p><a href="https://forms.gle/diNB7Chwc68baeTf6"><p>Request A Song</p></a>
+        <p>All songs belong to their respective owners. We are not liable for any trouble you get in using this platform. Enjoy!
+        </p><a href="https://forms.gle/diNB7Chwc68baeTf6">
+          <p>Request A Song</p>
+        </a>
       </div>
       <div id="queue-container">
         <div class="queue-title">
@@ -189,8 +190,8 @@
           <i class="far fa-heart"></i>
         </button>
         <button id="loop" class="action-btn" onclick="toggleLike()">
-            <i class="fas fa-retweet"></i>
-          </button>
+          <i class="fas fa-retweet"></i>
+        </button>
       </div>
     </div>
     <audio src="" id="audio" type="audio/mp3"></audio>

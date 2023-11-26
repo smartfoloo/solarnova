@@ -25,25 +25,6 @@ h2 {
 p {
   font-size: 14px;
 }
-div.searchbarbg{
-    width:65%;
-    margin:auto;
-    margin-top:20px;
-    border-radius:20px;
-}
-input.searchbar{
-    width:100%;
-    text-align:center;
-    outline:none;
-    background:#222222;
-    color:#FFFFFF;
-    border-radius:20px;
-    border-style:solid;
-    border-color:#222222;
-}
-input.searchbar:hover{
-    border-color:#1cd96a;
-}
 
 .music-container {
   background: #000;
@@ -94,10 +75,11 @@ input.searchbar:hover{
 }
 
 .action-btn-big {
-  padding: 10px;
+  padding: 6px 10px;
   color: #000;
   background: #fff;
   border-radius: 20px;
+  font-size: 24px;;
 }
 
 .action-btn-big:hover {
@@ -154,6 +136,7 @@ input.searchbar:hover{
 }
 
 .playlist-card {
+  max-width: calc(20% - 16px);
   background-color: #1f2228;
   padding: 15px;
   border-radius: 15px;
@@ -161,7 +144,6 @@ input.searchbar:hover{
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   text-align: center;
-  width: 170px;
 }
 
 .playlist-card:hover {
@@ -175,8 +157,8 @@ input.searchbar:hover{
 }
 
 .song-image {
-  width: 140px;
-  height: 140px;
+  width: 100%;
+  height: inherit;
   border-radius: 10px;
 }
 #cover{
@@ -189,6 +171,7 @@ input.searchbar:hover{
 
 .main-content {
   margin: 15px;
+  margin-top: 72px;
   background: #16181c;
   border-radius: 15px;
   padding: 20px;
@@ -197,6 +180,7 @@ input.searchbar:hover{
 
 #queue-container {
   margin: 15px;
+  margin-top: 72px;
   margin-left: 0px;
   background: #16181c;
   border-radius: 15px;
@@ -247,6 +231,17 @@ input.searchbar:hover{
   justify-content: space-between;
 }
 
+@media screen and (max-width: 1050px) {
+  .playlist-card {
+    max-width: calc(25% - 15px);
+  }
+
+  .playlist-card img {
+    width: 100%;
+    height: inherit;
+  }
+}
+
 @media screen and (max-width: 500px) {
   #queue-container {
     display: none;
@@ -293,109 +288,137 @@ input.searchbar:hover{
   border-radius: 8px;
 }
 body {
-    background: #000;
-  }
-  .lightrope {
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-    margin: -15px 0 0 0;
-    padding: 0;
-    pointer-events: none;
-    width: 100%;
-  }
-  .lightrope li {
-    position: relative;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: block;
-    width: 12px;
-    height: 28px;
-    border-radius: 50%;
-    margin: 20px;
-    display: inline-block;
+  background: #000;
+}
+
+.lightrope {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: -15px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+}
+.lightrope li {
+  position: relative;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 12px;
+  height: 28px;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  background: #00f7a5;
+  box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+  animation-name: flash-1;
+  animation-duration: 2s;
+}
+.lightrope li:nth-child(2n+1) {
+  background: cyan;
+  box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.5);
+  animation-name: flash-2;
+  animation-duration: 0.4s;
+}
+.lightrope li:nth-child(4n+2) {
+  background: #f70094;
+  box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  animation-name: flash-3;
+  animation-duration: 1.1s;
+}
+.lightrope li:nth-child(odd) {
+  animation-duration: 1.8s;
+}
+.lightrope li:nth-child(3n+1) {
+  animation-duration: 1.4s;
+}
+.lightrope li:before {
+  content: "";
+  position: absolute;
+  background: #222;
+  width: 10px;
+  height: 9.3333333333px;
+  border-radius: 3px;
+  top: -4.6666666667px;
+  left: 1px;
+}
+.lightrope li:after {
+  content: "";
+  top: -14px;
+  left: 9px;
+  position: absolute;
+  width: 52px;
+  height: 18.6666666667px;
+  border-bottom: solid #222 2px;
+  border-radius: 50%;
+}
+.lightrope li:last-child:after {
+  content: none;
+}
+.lightrope li:first-child {
+  margin-left: -40px;
+}
+@keyframes flash-1 {
+  0%, 100% {
     background: #00f7a5;
     box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
-    animation-name: flash-1;
-    animation-duration: 2s;
   }
-  .lightrope li:nth-child(2n+1) {
+  50% {
+    background: rgba(0, 247, 165, 0.4);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+  }
+}
+@keyframes flash-2 {
+  0%, 100% {
     background: cyan;
-    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.5);
-    animation-name: flash-2;
-    animation-duration: 0.4s;
+    box-shadow: 0px 4.6666666667px 24px 3px cyan;
   }
-  .lightrope li:nth-child(4n+2) {
+  50% {
+    background: rgba(0, 255, 255, 0.4);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+  }
+}
+@keyframes flash-3 {
+  0%, 100% {
     background: #f70094;
     box-shadow: 0px 4.6666666667px 24px 3px #f70094;
-    animation-name: flash-3;
-    animation-duration: 1.1s;
   }
-  .lightrope li:nth-child(odd) {
-    animation-duration: 1.8s;
+  50% {
+    background: rgba(247, 0, 148, 0.4);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
   }
-  .lightrope li:nth-child(3n+1) {
-    animation-duration: 1.4s;
-  }
-  .lightrope li:before {
-    content: "";
-    position: absolute;
-    background: #222;
-    width: 10px;
-    height: 9.3333333333px;
-    border-radius: 3px;
-    top: -4.6666666667px;
-    left: 1px;
-  }
-  .lightrope li:after {
-    content: "";
-    top: -14px;
-    left: 9px;
-    position: absolute;
-    width: 52px;
-    height: 18.6666666667px;
-    border-bottom: solid #222 2px;
-    border-radius: 50%;
-  }
-  .lightrope li:last-child:after {
-    content: none;
-  }
-  .lightrope li:first-child {
-    margin-left: -40px;
-  }
-  @keyframes flash-1 {
-    0%, 100% {
-      background: #00f7a5;
-      box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
-    }
-    50% {
-      background: rgba(0, 247, 165, 0.4);
-      box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
-    }
-  }
-  @keyframes flash-2 {
-    0%, 100% {
-      background: cyan;
-      box-shadow: 0px 4.6666666667px 24px 3px cyan;
-    }
-    50% {
-      background: rgba(0, 255, 255, 0.4);
-      box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
-    }
-  }
-  @keyframes flash-3 {
-    0%, 100% {
-      background: #f70094;
-      box-shadow: 0px 4.6666666667px 24px 3px #f70094;
-    }
-    50% {
-      background: rgba(247, 0, 148, 0.4);
-      box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
-    }
-  }
+}
+
+.input-div {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  width: 50vw;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 24px;
+  text-decoration-style: solid;
+  text-decoration-color: #fff;
+  transition: 500ms;
+  outline: 1px solid #495057;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+::placeholder {
+  color: #757575;
+  font-size: 16px;
+}
   

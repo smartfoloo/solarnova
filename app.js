@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const playlistCards = document.querySelectorAll('.playlist-card');
 	const musicContainer = document.getElementById('music-container');
 	const audio = document.getElementById('audio');
 	const playBtn = document.getElementById('play');
@@ -12,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	const queueList = document.getElementById('queue-list');
 	const likeBtn = document.getElementById('like-btn');
 	const shuffleBtn = document.getElementById('shuffle-btn'); // Add this line
+	const searchInput = document.getElementById('searchInput');
+	const playlistCards = document.querySelectorAll('.playlist-card');
+
 
 	let playlists = {
 		'liked-songs': [],
@@ -159,6 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+	
+
 
 	function DurTime(e) {
 		const { duration, currentTime } = e.srcElement;
@@ -274,6 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		playSong();
 	}
 
+	searchInput.addEventListener('input', function () {
+		const searchText = this.value.toLowerCase();
+
+		playlistCards.forEach(card => {
+			const title = card.querySelector('.title').textContent.toLowerCase();
+			if (title.includes(searchText)) {
+				card.style.display = 'block';
+			} else {
+				card.style.display = 'none';
+			}
+		});
+	});
+
 	audio.addEventListener('timeupdate', updateProgress);
 	progressContainer.addEventListener('click', setProgress);
 
@@ -319,4 +336,3 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 });
-
