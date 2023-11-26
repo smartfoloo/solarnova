@@ -25,7 +25,14 @@ h2 {
 p {
   font-size: 14px;
 }
-
+a{
+  text-decoration:none;
+  color:#FFFFFF;
+}
+a:hover{
+  color:#1cd96a;
+  text-shadow: #222;
+}
 .music-container {
   background: #000;
   display: flex;
@@ -144,6 +151,7 @@ p {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   text-align: center;
+  width: 170px;
 }
 
 .playlist-card:hover {
