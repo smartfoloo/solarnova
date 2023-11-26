@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
 		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
 		'lofi-jazz': ['circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
-		'seasonal': ['mariahcarey', 'snowman'],
-		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', "ballin'", 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['all-girls-are-the-same', 'the-box', "ballin'"]
+		'seasonal': ['mariahcarey','snowman'],
+		'mix': ['paint-the-town-red','somebody-that-i-used-to-know','somebodys-watching-me',"ballin'",'bad-habit','luxury','everybody-wants-to-rule-the-world','the-box','the-perfect-girl'],
+        'rap':['all-girls-are-the-same','the-box',"ballin'"]
 	};
 
 	let currentPlaylist = [];
@@ -75,20 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Play the song (if needed)
 			playSong();
-			navigator.mediaSession.metadata = new MediaMetadata({
-				title: selectedSong.replace(/-/g, " "),
-				artist: "Groovy",
-				artwork: [
-					{
-						src: cover.src,
-						sizes: "300x300",
-						type: "image/jpeg",
-						src: cover.src,
-						sizes: "2000x2000",
-						type: "image/jpeg",
-					},
-				],
-			});
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: selectedSong.replace(/-/g, " "),
+                artist: "Groovy",
+                artwork: [
+                  {
+                    src: cover.src,
+                    sizes: "300x300",
+                    type: "image/jpeg",
+                    src: cover.src,
+                    sizes: "2000x2000",
+                    type: "image/jpeg",
+                  },
+                ],
+              });
 		} else {
 			console.error('Invalid song index or playlist');
 		}
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		playBtn.querySelector('i.fas').classList.remove('fa-play');
 		playBtn.querySelector('i.fas').classList.add('fa-pause');
 		audio.play();
-		navigator.mediaSession.playbackState = "playing";
+        navigator.mediaSession.playbackState = "playing";
 	}
 
 	function pauseSong() {
@@ -108,15 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		playBtn.querySelector('i.fas').classList.add('fa-play');
 		playBtn.querySelector('i.fas').classList.remove('fa-pause');
 		audio.pause();
-		navigator.mediaSession.playbackState = "paused";
+        navigator.mediaSession.playbackState = "paused";
 	}
-
+    
 
 	playBtn.addEventListener('click', () => {
 		const isPlaying = musicContainer.classList.contains('play');
 		if (isPlaying) {
 			pauseSong();
-
+            
 		} else {
 			playSong();
 		}
@@ -292,30 +292,31 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
-
-	const loopBtn = document.getElementById('loop');
-	let isLooping = false;
-
-	loopBtn.addEventListener('click', () => {
-		isLooping = !isLooping;
-		updateLoopButton();
-	});
-
-	function updateLoopButton() {
-		if (isLooping) {
-			loopBtn.style.color = "#FFFFFF";;
-		} else {
-			loopBtn.style.color = "#1cd96a";
-		}
-	}
-	audio.addEventListener('ended', () => {
-		if (isLooping) {
-			loadSong(songIndex);
-			playSong();
-		} else {
-			songIndex = (songIndex + 1) % currentPlaylist.length;
-			loadSong(songIndex);
-			playSong();
-		}
-	});
+    
+        const loopBtn = document.getElementById('loop');
+        let isLooping = false;
+    
+        loopBtn.addEventListener('click', () => {
+            isLooping = !isLooping;
+            updateLoopButton();
+        });
+    
+        function updateLoopButton() {
+            if (isLooping) {
+                loopBtn.style.color = "#FFFFFF"; ;
+            } else {
+                loopBtn.style.color = "#1cd96a"; 
+            }
+        }
+        audio.addEventListener('ended', () => {
+            if (isLooping) {
+                loadSong(songIndex);
+                playSong();
+            } else {
+                songIndex = (songIndex + 1) % currentPlaylist.length;
+                loadSong(songIndex);
+                playSong();
+            }
+        });
 });
+
