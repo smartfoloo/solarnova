@@ -36,7 +36,7 @@ a:hover{
 .music-container {
   background: #000;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
   position: fixed;
@@ -58,7 +58,7 @@ a:hover{
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   z-index: 1;
   width: 30vw;
 }
@@ -95,13 +95,9 @@ a:hover{
 }
 
 .music-info {
-  border-radius: 15px 15px 0 0;
   display: flex;
   width: 30vw;
   align-items: center !important;
-  transform: translateY(0%);
-  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-  z-index: 0;
   gap: 20px;
 }
 
@@ -271,7 +267,7 @@ a:hover{
   .music-container {
     padding: 20px 15px;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
   }
 
   .navigation {
@@ -279,8 +275,14 @@ a:hover{
   }
 
   .music-info {
-    width: 100%;
-    gap: 5px;
+    max-width: 40vw;
+    text-overflow: ellipsis;
+    gap: 10px;
+    align-items: center !important;
+  }
+
+  .action-btn {
+    margin: 0px 5px;
   }
 }
 
@@ -429,5 +431,6 @@ input {
 ::placeholder {
   color: #757575;
   font-size: 16px;
+  font-family: 'Inter';
 }
   
