@@ -86,8 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	const playlistIndicator = document.getElementById('playlist-indicator');
 
 	function loadSong(index) {
+		let selectedSong;
+		
 		if (currentPlaylist.length > 0 && index >= 0 && index < currentPlaylist.length) {
-			const selectedSong = currentPlaylist[index];
+			selectedSong = currentPlaylist[index];
 			console.log('Loading song:', selectedSong); // Log the selected song
 
 			title.innerText = selectedSong.replace(/-/g, " ");
