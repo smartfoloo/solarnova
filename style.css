@@ -248,11 +248,12 @@ p {
   }
 
   .playlist-card {
-    width: calc(50% - 10px)
+    max-width: calc(50% - 10px);
   }
 
   .playlist-card img {
     width: 100%;
+    height: inherit;
   }
 
   .main-content {
