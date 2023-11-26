@@ -49,6 +49,38 @@ document.addEventListener('DOMContentLoaded', () => {
 		shufflePlaylist();
 	});
 
+
+	const loopBtn = document.getElementById('loop');
+	let isLooping = false;
+
+	loopBtn.addEventListener('click', () => {
+		if (isLooping==false){
+			isLooping = true;
+			updateLoopButton();
+		}else{
+			isLooping = false;
+			updateLoopButton();
+		}
+	});
+
+	function updateLoopButton() {
+		if (isLooping) {
+			loopBtn.style.color = "#FFFFFF"; ;
+		} else {
+			loopBtn.style.color = "#1cd96a"; 
+		}
+	}
+	audio.addEventListener('ended', () => {
+		if (isLooping) {
+			loadSong(songIndex);
+			playSong();
+		} else {
+			songIndex = (songIndex + 1) % currentPlaylist.length;
+			loadSong(songIndex);
+			playSong();
+		}
+	});
+
 	let songIndex = 0;
 
 	const playlistIndicator = document.getElementById('playlist-indicator');
@@ -79,14 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			playSong();
             navigator.mediaSession.metadata = new MediaMetadata({
                 title: selectedSong.replace(/-/g, " "),
-                artist: "Groovy",
+                artist: "Platformer.io Music",
                 artwork: [
                   {
                     src: cover.src,
-                    sizes: "300x300",
-                    type: "image/jpeg",
-                    src: cover.src,
-                    sizes: "2000x2000",
+                    sizes: "140x140",
                     type: "image/jpeg",
                   },
                 ],
@@ -95,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			console.error('Invalid song index or playlist');
 		}
 	}
+
 
 
 	function playSong() {
@@ -123,6 +153,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			playSong();
 		}
 	});
+	navigator.mediaSession.setActionHandler("play", () => {
+		const isPlaying = musicContainer.classList.contains('play');
+		if (isPlaying) {
+			pauseSong();
+            
+		} else {
+			playSong();
+		}
+	});
+	navigator.mediaSession.setActionHandler("pause", () => {
+		const isPlaying = musicContainer.classList.contains('play');
+		if (isPlaying) {
+			pauseSong();
+            
+		} else {
+			playSong();
+		}
+	});
 
 	likeBtn.addEventListener('click', () => {
 		isLiked = !isLiked; // Toggle like state
@@ -134,12 +182,77 @@ document.addEventListener('DOMContentLoaded', () => {
 		songIndex = (songIndex - 1 + currentPlaylist.length) % currentPlaylist.length;
 		loadSong(songIndex);
 		playSong();
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: selectedSong.replace(/-/g, " "),
+			artist: "smartfoloo-musicplayer",
+			artwork: [
+			  {
+				src: cover.src,
+				sizes: "300x300",
+				type: "image/jpeg",
+				src: cover.src,
+				sizes: "2000x2000",
+				type: "image/jpeg",
+			  },
+			],
+		});
 	});
-
+	navigator.mediaSession.setActionHandler("previoustrack", () => {
+		songIndex = (songIndex - 1 + currentPlaylist.length) % currentPlaylist.length;
+		loadSong(songIndex);
+		playSong();
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: selectedSong.replace(/-/g, " "),
+			artist: "smartfoloo-musicplayer",
+			artwork: [
+			  {
+				src: cover.src,
+				sizes: "300x300",
+				type: "image/jpeg",
+				src: cover.src,
+				sizes: "2000x2000",
+				type: "image/jpeg",
+			  },
+			],
+		});
+	});
 	nextBtn.addEventListener('click', () => {
 		songIndex = (songIndex + 1) % currentPlaylist.length;
 		loadSong(songIndex);
 		playSong();
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: selectedSong.replace(/-/g, " "),
+			artist: "smartfoloo-musicplayer",
+			artwork: [
+			  {
+				src: cover.src,
+				sizes: "300x300",
+				type: "image/jpeg",
+				src: cover.src,
+				sizes: "2000x2000",
+				type: "image/jpeg",
+			  },
+			],
+		});
+	});
+	navigator.mediaSession.setActionHandler("nexttrack", () => {
+		songIndex = (songIndex + 1) % currentPlaylist.length;
+		loadSong(songIndex);
+		playSong();
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: selectedSong.replace(/-/g, " "),
+			artist: "smartfoloo-musicplayer",
+			artwork: [
+			  {
+				src: cover.src,
+				sizes: "300x300",
+				type: "image/jpeg",
+				src: cover.src,
+				sizes: "2000x2000",
+				type: "image/jpeg",
+			  },
+			],
+		});
 	});
 
 	function updateProgress(e) {
@@ -310,29 +423,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
     
-        const loopBtn = document.getElementById('loop');
-        let isLooping = false;
-    
-        loopBtn.addEventListener('click', () => {
-            isLooping = !isLooping;
-            updateLoopButton();
-        });
-    
-        function updateLoopButton() {
-            if (isLooping) {
-                loopBtn.style.color = "#FFFFFF"; ;
-            } else {
-                loopBtn.style.color = "#1cd96a"; 
-            }
-        }
-        audio.addEventListener('ended', () => {
-            if (isLooping) {
-                loadSong(songIndex);
-                playSong();
-            } else {
-                songIndex = (songIndex + 1) % currentPlaylist.length;
-                loadSong(songIndex);
-                playSong();
-            }
-        });
+       
 });
