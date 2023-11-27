@@ -1,3 +1,13 @@
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('service-worker.js')
+		.then(function (registration) {
+			console.log('Service Worker registered with scope:', registration.scope);
+		})
+		.catch(function (error) {
+			console.log('Service Worker registration failed:', error);
+		});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const musicContainer = document.getElementById('music-container');
 	const audio = document.getElementById('audio');
@@ -26,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey','snowman'],
 		'mix': ['paint-the-town-red','somebody-that-i-used-to-know','somebodys-watching-me',"ballin'",'bad-habit','luxury','everybody-wants-to-rule-the-world','the-box','the-perfect-girl'],
-        'rap':['all-girls-are-the-same','the-box',"ballin'"]
+    'rap':['all-girls-are-the-same','the-box', 'ballin']
 	};
 
 	let currentPlaylist = [];
@@ -264,8 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function setProgress(e) {
-		const width = this.clientWidth;
-		const clickX = e.offsetX;
+		const rect = progressContainer.getBoundingClientRect();
+		const width = rect.width;
+		const clickX = e.clientX - rect.left;
 		const duration = audio.duration;
 		const newTime = (clickX / width) * duration;
 		audio.currentTime = newTime;
