@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey','snowman'],
 		'mix': ['paint-the-town-red','somebody-that-i-used-to-know','somebodys-watching-me',"ballin'",'bad-habit','luxury','everybody-wants-to-rule-the-world','the-box','the-perfect-girl'],
-        'rap':['all-girls-are-the-same','the-box',"ballin'"]
+        'rap':['all-girls-are-the-same','the-box',"ballin'",'sicko-mode'],
+		'classical':['violin-concerto-in-e-minor']
 	};
 
 	let currentPlaylist = [];
