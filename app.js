@@ -35,8 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
 		'lofi-jazz': ['circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey','snowman'],
+<<<<<<< HEAD
 		'mix': ['paint-the-town-red','somebody-that-i-used-to-know','somebodys-watching-me',"ballin'",'bad-habit','luxury','everybody-wants-to-rule-the-world','the-box','the-perfect-girl'],
     'rap':['all-girls-are-the-same','the-box', 'ballin']
+=======
+		'pop1': ['paint-the-town-red','somebody-that-i-used-to-know','somebodys-watching-me',"ballin'",'bad-habit','luxury','everybody-wants-to-rule-the-world','the-box','the-perfect-girl'],
+        'rap':['all-girls-are-the-same','the-box',"ballin'",'sicko-mode'],
+		'classical':['violin-concerto-in-e-minor']
+>>>>>>> 4be6f008f406e8f68c7422452c8a13ea5f3b4d63
 	};
 
 	let currentPlaylist = [];
