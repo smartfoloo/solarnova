@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const searchInput = document.getElementById('searchInput');
 	const playlistCards = document.querySelectorAll('.playlist-card');
 
+	alert("WHATS UP!! Heads up, this music player is in beta and many features are probably broken. Please report any bugs or songs you want in the request a song link at the bottom of the page. Enjoy your listening!")
 
 	let playlists = {
 		'liked-songs': [],
