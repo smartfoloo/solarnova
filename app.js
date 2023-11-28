@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'rap': ['all-girls-are-the-same', 'the-box', 'ballin', 'sicko-mode'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata']
-	};
+	}
 
 	let currentPlaylist = [];
 	let queue = [];
