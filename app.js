@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Create a span element for the song title
 			const titleSpan = document.createElement('span');
-			titleSpan.innerText = currentPlaylist[i].replace(/-/g, " ");;
+			titleSpan.innerText = currentPlaylist[i].replace(/-/g, " ");
 
 			listItem.appendChild(titleSpan);
 
@@ -323,8 +323,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function updatePlaylistIndicator() {
-		const playlistName = getPlaylistNameBySong(currentPlaylist[songIndex]);
-		playlistIndicator.innerText = `Playing from: ${playlistName.replace(/-/g, " ");}`;
+		const playlistNamee = getPlaylistNameBySong(currentPlaylist[songIndex]);
+		const playlistName = playlistNamee.replace(/-/g, " ");
+		playlistIndicator.innerText = `Playing from: ${playlistName}`;
 	}
 
 	function getPlaylistNameBySong(song) {
@@ -364,4 +365,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
-})
+});
