@@ -1,14 +1,5 @@
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('service-worker.js')
-		.then(function (registration) {
-			console.log('Service Worker registered with scope:', registration.scope);
-		})
-		.catch(function (error) {
-			console.log('Service Worker registration failed:', error);
-		});
-}
-
 document.addEventListener('DOMContentLoaded', () => {
+	const playlistCards = document.querySelectorAll('.playlist-card');
 	const musicContainer = document.getElementById('music-container');
 	const audio = document.getElementById('audio');
 	const playBtn = document.getElementById('play');
@@ -21,9 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const queueList = document.getElementById('queue-list');
 	const likeBtn = document.getElementById('like-btn');
 	const shuffleBtn = document.getElementById('shuffle-btn'); // Add this line
-	const searchInput = document.getElementById('searchInput');
-	const playlistCards = document.querySelectorAll('.playlist-card');
-
 
 	let playlists = {
 		'liked-songs': [],
@@ -36,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-    'rap':['all-girls-are-the-same', 'the-box', 'ballin'],
+		'rap': ['all-girls-are-the-same', 'the-box', 'ballin'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-    'rap':['all-girls-are-the-same', 'the-box', 'ballin', 'sicko-mode'],
-		'classical':['violin-concerto-in-e-minor']
+		'rap': ['all-girls-are-the-same', 'the-box', 'ballin', 'sicko-mode'],
+		'classical': ['violin-concerto-in-e-minor']
 	};
 
 	let currentPlaylist = [];
@@ -62,45 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		shufflePlaylist();
 	});
 
-
-	const loopBtn = document.getElementById('loop');
-	let isLooping = false;
-
-	loopBtn.addEventListener('click', () => {
-		if (isLooping==false){
-			isLooping = true;
-			updateLoopButton();
-		}else{
-			isLooping = false;
-			updateLoopButton();
-		}
-	});
-
-	function updateLoopButton() {
-		if (isLooping) {
-			loopBtn.style.color = "#FFFFFF"; ;
-		} else {
-			loopBtn.style.color = "#1cd96a"; 
-		}
-	}
-	audio.addEventListener('ended', () => {
-		if (isLooping) {
-			loadSong(songIndex);
-			playSong();
-		} else {
-			songIndex = (songIndex + 1) % currentPlaylist.length;
-			loadSong(songIndex);
-			playSong();
-		}
-	});
-
 	let songIndex = 0;
 
 	const playlistIndicator = document.getElementById('playlist-indicator');
 
 	function loadSong(index) {
 		let selectedSong;
-		
+
 		if (currentPlaylist.length > 0 && index >= 0 && index < currentPlaylist.length) {
 			selectedSong = currentPlaylist[index];
 			console.log('Loading song:', selectedSong); // Log the selected song
@@ -124,22 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Play the song (if needed)
 			playSong();
-            navigator.mediaSession.metadata = new MediaMetadata({
-                title: selectedSong.replace(/-/g, " "),
-                artist: "Platformer.io Music",
-                artwork: [
-                  {
-                    src: cover.src,
-                    sizes: "140x140",
-                    type: "image/jpeg",
-                  },
-                ],
-              });
+
+			navigator.mediaSession.metadata = new MediaMetadata({
+				title: selectedSong.replace(/-/g, " "),
+				artist: "various artists",
+				artwork: [
+					{
+						src: cover.src,
+						sizes: "140x140",
+						type: "image/jpeg",
+					},
+				],
+			});
+
 		} else {
 			console.error('Invalid song index or playlist');
 		}
 	}
-
 
 
 	function playSong() {
@@ -147,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		playBtn.querySelector('i.fas').classList.remove('fa-play');
 		playBtn.querySelector('i.fas').classList.add('fa-pause');
 		audio.play();
-        navigator.mediaSession.playbackState = "playing";
+		navigator.mediaSession.playbackState = "playing";
 	}
 
 	function pauseSong() {
@@ -155,33 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		playBtn.querySelector('i.fas').classList.add('fa-play');
 		playBtn.querySelector('i.fas').classList.remove('fa-pause');
 		audio.pause();
-        navigator.mediaSession.playbackState = "paused";
+		navigator.mediaSession.playbackState = "paused";
 	}
-    
 
 	playBtn.addEventListener('click', () => {
 		const isPlaying = musicContainer.classList.contains('play');
 		if (isPlaying) {
 			pauseSong();
-            
-		} else {
-			playSong();
-		}
-	});
-	navigator.mediaSession.setActionHandler("play", () => {
-		const isPlaying = musicContainer.classList.contains('play');
-		if (isPlaying) {
-			pauseSong();
-            
-		} else {
-			playSong();
-		}
-	});
-	navigator.mediaSession.setActionHandler("pause", () => {
-		const isPlaying = musicContainer.classList.contains('play');
-		if (isPlaying) {
-			pauseSong();
-            
 		} else {
 			playSong();
 		}
@@ -201,17 +138,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			title: selectedSong.replace(/-/g, " "),
 			artist: "smartfoloo-musicplayer",
 			artwork: [
-			  {
-				src: cover.src,
-				sizes: "300x300",
-				type: "image/jpeg",
-				src: cover.src,
-				sizes: "2000x2000",
-				type: "image/jpeg",
-			  },
+				{
+					src: cover.src,
+					sizes: "300x300",
+					type: "image/jpeg",
+					src: cover.src,
+					sizes: "2000x2000",
+					type: "image/jpeg",
+				},
 			],
 		});
 	});
+
 	navigator.mediaSession.setActionHandler("previoustrack", () => {
 		songIndex = (songIndex - 1 + currentPlaylist.length) % currentPlaylist.length;
 		loadSong(songIndex);
@@ -220,17 +158,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			title: selectedSong.replace(/-/g, " "),
 			artist: "smartfoloo-musicplayer",
 			artwork: [
-			  {
-				src: cover.src,
-				sizes: "300x300",
-				type: "image/jpeg",
-				src: cover.src,
-				sizes: "2000x2000",
-				type: "image/jpeg",
-			  },
+				{
+					src: cover.src,
+					sizes: "300x300",
+					type: "image/jpeg",
+					src: cover.src,
+					sizes: "2000x2000",
+					type: "image/jpeg",
+				},
 			],
 		});
 	});
+
 	nextBtn.addEventListener('click', () => {
 		songIndex = (songIndex + 1) % currentPlaylist.length;
 		loadSong(songIndex);
@@ -239,17 +178,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			title: selectedSong.replace(/-/g, " "),
 			artist: "smartfoloo-musicplayer",
 			artwork: [
-			  {
-				src: cover.src,
-				sizes: "300x300",
-				type: "image/jpeg",
-				src: cover.src,
-				sizes: "2000x2000",
-				type: "image/jpeg",
-			  },
+				{
+					src: cover.src,
+					sizes: "300x300",
+					type: "image/jpeg",
+					src: cover.src,
+					sizes: "2000x2000",
+					type: "image/jpeg",
+				},
 			],
 		});
 	});
+
 	navigator.mediaSession.setActionHandler("nexttrack", () => {
 		songIndex = (songIndex + 1) % currentPlaylist.length;
 		loadSong(songIndex);
@@ -258,18 +198,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			title: selectedSong.replace(/-/g, " "),
 			artist: "smartfoloo-musicplayer",
 			artwork: [
-			  {
-				src: cover.src,
-				sizes: "300x300",
-				type: "image/jpeg",
-				src: cover.src,
-				sizes: "2000x2000",
-				type: "image/jpeg",
-			  },
+				{
+					src: cover.src,
+					sizes: "300x300",
+					type: "image/jpeg",
+					src: cover.src,
+					sizes: "2000x2000",
+					type: "image/jpeg",
+				},
 			],
 		});
 	});
-
 	function updateProgress(e) {
 		const { duration, currentTime } = e.srcElement;
 		const progressPercent = (currentTime / duration) * 100;
@@ -277,9 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function setProgress(e) {
-		const rect = progressContainer.getBoundingClientRect();
-		const width = rect.width;
-		const clickX = e.clientX - rect.left;
+		const width = this.clientWidth;
+		const clickX = e.offsetX;
 		const duration = audio.duration;
 		const newTime = (clickX / width) * duration;
 		audio.currentTime = newTime;
@@ -289,8 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			audio.play();
 		}
 	}
-
-	
 
 
 	function DurTime(e) {
@@ -344,14 +280,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Create an img element for the song image
 			const img = document.createElement('img');
-			img.src = `/music/images/${currentPlaylist[i]}.jpeg`;
+			img.src = `music/images/${currentPlaylist[i]}.jpeg`;
 			img.alt = currentPlaylist[i];
 
 			listItem.appendChild(img);
 
 			// Create a span element for the song title
 			const titleSpan = document.createElement('span');
-			titleSpan.innerText = currentPlaylist[i].replace(/-/g, " ");
+			titleSpan.innerText = currentPlaylist[i];
 
 			listItem.appendChild(titleSpan);
 
@@ -371,6 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			likeBtn.innerHTML = '<i class="far fa-heart"></i>';
 		}
 	}
+
 	function updateLikedSongs() {
 		if (isLiked) {
 			if (!playlists['liked-songs'].includes(currentPlaylist[songIndex])) {
@@ -398,6 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		return 'Unknown Playlist';
 	}
 
+	// Function to shuffle the current playlist
 	function shufflePlaylist() {
 		for (let i = currentPlaylist.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -406,19 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		loadSong(0);
 		playSong();
 	}
-
-	searchInput.addEventListener('input', function () {
-		const searchText = this.value.toLowerCase();
-
-		playlistCards.forEach(card => {
-			const title = card.querySelector('.title').textContent.toLowerCase();
-			if (title.includes(searchText)) {
-				card.style.display = 'block';
-			} else {
-				card.style.display = 'none';
-			}
-		});
-	});
 
 	audio.addEventListener('timeupdate', updateProgress);
 	progressContainer.addEventListener('click', setProgress);
@@ -438,6 +363,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
-    
-       
 });
