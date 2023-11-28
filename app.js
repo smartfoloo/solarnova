@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	let playlists = {
 		'liked-songs': [],
 		'yoasobi': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター'],
-		'phonk': ['metamorphosis', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'baixo', 'classical-phonk', 'ghost!', 'devil-eyes','sahara','gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'tokyo-drift', 'hyptonic-data', 'avoid-me', 'neon-blade'],
+		'phonk': ['metamorphosis', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes','sahara','rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'baixo', 'classical-phonk', 'ghost!', 'devil-eyes','sahara','gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'tokyo-drift', 'hyptonic-data', 'avoid-me', 'neon-blade'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
-		'meme-songs': ['whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem','king-on-a-budget-bk'],
+		'meme-songs': ['king-on-a-budget-bk','whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
 		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
 		'lofi-jazz': ['circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'rap': ['all-girls-are-the-same', 'the-box', 'ballin'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
     'rap':['all-girls-are-the-same', 'the-box', 'ballin', 'sicko-mode'],
-		'classical':['violin-concerto-in-e-minor']
+		'classical':['violin-concerto-in-e-minor','adagio-albinoni','trio-no-2-in-e-minor','moonlight-sonata']
 	};
 
 	let currentPlaylist = [];
