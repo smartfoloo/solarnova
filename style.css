@@ -25,14 +25,60 @@ h2 {
 p {
   font-size: 14px;
 }
+
 a{
   text-decoration:none;
-  color:#FFFFFF;
+  color: #FFFFFF;
 }
+
 a:hover{
   color:#1cd96a;
   text-shadow: #222;
 }
+
+.sidebar {
+  margin: 15px 0px 15px 15px;
+  background: #16181c;
+  border-radius: 15px;
+  padding: 20px;
+  width: 15%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.sidebar li {
+  display: flex;
+  gap: 10px;
+}
+
+.sidebar li a,
+.sidebar li .fa-solid{
+  transition: all 300ms !important;
+}
+
+.nav-link {
+  color: #fff;
+  transition-duration: 300ms;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.nav-link:hover{
+  opacity: 0.6;
+  color: #fff;
+}
+
+.sidebar li a:hover {
+  color: #fff;
+}
+
 .music-container {
   background: #000;
   display: flex;
@@ -166,30 +212,28 @@ a:hover{
   border-radius: 10px;
 }
 #cover{
-    border-radius:10px;
-    width:45px;
-    height:45px;
-    overflow:hidden;
-    background-image:cover;
+  border-radius:10px;
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  background-image: cover;
 }
 
 .main-content {
   margin: 15px;
-  margin-top: 72px;
   background: #16181c;
   border-radius: 15px;
   padding: 20px;
-  width: 70%;
+  width: 60%;
 }
 
 #queue-container {
   margin: 15px;
-  margin-top: 72px;
   margin-left: 0px;
   background: #16181c;
   border-radius: 15px;
   padding: 20px;
-  width: 30%;
+  width: 25%;
   list-style-type: none;
   text-overflow: ellipsis;
 }
@@ -283,6 +327,10 @@ a:hover{
 
   .action-btn {
     margin: 0px 5px;
+  }
+
+  .sidebar {
+    display: none;
   }
 }
 
@@ -416,7 +464,7 @@ input {
   border: none;
   padding: 15px 20px;
   font-size: 16px;
-  width: 50vw;
+  width: 50%;
   color: #fff;
   text-align: center;
   margin: 10px;
