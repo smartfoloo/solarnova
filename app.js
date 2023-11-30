@@ -31,6 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)']
 	}
 
+	const songToArtistMap = {
+		'metamorphosis': 'INTERWORLD',
+		'close-eyes': 'DVRST',
+		'close-eyes-sped-up': 'DVRST',
+		'close-eyes-slowed-reverb': 'DVRST', 
+		'song3.mp3': 'Artist3',
+  	};
+  
+	function getArtistForSong(songnamee) {
+		return songToArtistMap[songnamee] || 'Unknown Artist';
+	}
+	const currentSongFileName = selectedSong;
+	const artist = getArtistForSong(currentSongFileName);
+
 	let currentPlaylist = [];
 	let queue = [];
 	let isLiked = false;
@@ -84,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: selectedSong.replace(/-/g, " "),
-				artist: "various artists",
+				artist: artist,
 				artwork: [
 					{
 						src: cover.src,
@@ -364,8 +378,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
-	const mutag = window.mutag
-	mutag.fetch(audio.src).then((tags) => {
-		console.log(tags);
-  });
 });
