@@ -24,12 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['from-the-start','cupid','circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['all-girls-are-the-same', 'the-box', 'ballin'],
+		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
 		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)']
 	}
+
 
 	let currentPlaylist = [];
 	let queue = [];
@@ -81,10 +82,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Play the song (if needed)
 			playSong();
+			const songToArtistMap = {
+				'metamorphosis': 'INTERWORLD',
+				'close-eyes': 'DVRST',
+				'close-eyes-slowed-reverb': 'DVRST',
+				'close-eyes-sped-up': 'DVRST',
+				'lovely-bastards': 'ZWE1HVNDXR, yatashigang',
+				'memory-reboot': 'VOJ, narvent',
+				'devil-eyes': 'zodvic',
+				'rave': 'dxrk',
+				'aircraft': 'dxrk',
+				'sahara': 'hensonn',
+				'classical-phonk': 'BEETHOVEN HIMSELF!!!!!!',
+			};
+			
+			function getArtistForSong(songNamee) {
+				return songToArtistMap[songNamee] || 'Unknown Artist';
+			}
+			
+			const currentSongFileName = selectedSong;
+			const artist = getArtistForSong(currentSongFileName);
 
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: selectedSong.replace(/-/g, " "),
-				artist: "various artists",
+				artist: artist,
 				artwork: [
 					{
 						src: cover.src,
