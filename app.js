@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'rap': ['all-girls-are-the-same', 'the-box', 'ballin'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
-    'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'la-marseillaise'],
+    'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
 		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)']
 	}
 
