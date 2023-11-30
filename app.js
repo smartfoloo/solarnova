@@ -100,6 +100,17 @@ document.addEventListener('DOMContentLoaded', () => {
 				'ballin': 'roddy ricch, mustard',
 				'fkumean': 'gunna',
 				'no-role-modelz': 'j. cole',
+				// rap
+				'paint-the-town-red': '✨💅doja cat!1!💅✨',
+				'somebody-that-i-used-to-know': 'gotye (official aussie)',
+				'somebodys-watching-me': '👀 rockwell',
+				'bad-habit': 'steve lacy',
+				'luxury': 'azealia banks',
+				'everybody-wants-to-rule-the-world': 'tears for fears',
+				'the-perfect-girl': 'mareux',
+				// seasonal
+				'mariahcarey': 'all i want for christmas is youuuuu 🎄',
+				'snowman': 'sia',
 			};
 			
 			function getArtistForSong(songNamee) {
