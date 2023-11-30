@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['from-the-start','cupid','circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz'],
+		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','what-are-you-so-afraid-of'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
@@ -96,11 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				'classical-phonk': 'BEETHOVEN HIMSELF!!!!!!',
 				// rap
 				'all-girls-are-the-same': 'xxxtentacion',
+				'what-are-you-so-afraid-of': 'xxxtentacion',
 				'the-box': 'roddy ricch',
 				'ballin': 'roddy ricch, mustard',
 				'fkumean': 'gunna',
 				'no-role-modelz': 'j. cole',
-				// rap
+				// pop
 				'paint-the-town-red': '✨💅doja cat!1!💅✨',
 				'somebody-that-i-used-to-know': 'gotye (official aussie)',
 				'somebodys-watching-me': '👀 rockwell',
@@ -111,6 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
 				// seasonal
 				'mariahcarey': 'all i want for christmas is youuuuu 🎄',
 				'snowman': 'sia',
+				// top hits
+				'greedy': 'tate mcrae',
+				'it-girl': "aliyah's interlude",
+				'ecstasy': 'su1c1de idol',
+				'moonlight': 'kali uchis',
+				'only-in-my-mind': 'kenya grace',
+				'strangers': 'kenya grace',
+				'smooth-operator-(tiktok-remix)': 'sade',
 			};
 			
 			function getArtistForSong(songNamee) {
