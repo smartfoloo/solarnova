@@ -364,4 +364,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
+	const mutag = window.mutag
+	mutag.fetch(audio.src).then((tags) => {
+		console.log(tags);
+  });
 });
