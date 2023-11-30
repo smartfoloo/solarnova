@@ -31,19 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)']
 	}
 
-	const songToArtistMap = {
-		'metamorphosis': 'INTERWORLD',
-		'close-eyes': 'DVRST',
-		'close-eyes-sped-up': 'DVRST',
-		'close-eyes-slowed-reverb': 'DVRST', 
-		'song3.mp3': 'Artist3',
-  	};
-  
-	function getArtistForSong(songnamee) {
-		return songToArtistMap[songnamee] || 'Unknown Artist';
-	}
-	const currentSongFileName = selectedSong;
-	const artist = getArtistForSong(currentSongFileName);
 
 	let currentPlaylist = [];
 	let queue = [];
@@ -95,6 +82,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Play the song (if needed)
 			playSong();
+			const songToArtistMap = {
+				'metamorphosis': 'INTERWORLD',
+				'close-eyes': 'DVRST',
+				'close-eyes-slowed-reverb': 'DVRST',
+				'close-eyes-sped-up': 'DVRST',
+				'lovely-bastards': 'ZWE1HVNDXR, yatashigang',
+				'memory-reboot': 'VOJ, narvent',
+				'devil-eyes': 'zodvic',
+				'rave': 'dxrk',
+				'aircraft': 'dxrk',
+				'sahara': 'hensonn',
+				'classical-phonk': 'BEETHOVEN HIMSELF!!!!!!',
+			};
+			
+			function getArtistForSong(songNamee) {
+				return songToArtistMap[songNamee] || 'Unknown Artist';
+			}
+			
+			const currentSongFileName = selectedSong;
+			const artist = getArtistForSong(currentSongFileName);
 
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: selectedSong.replace(/-/g, " "),
