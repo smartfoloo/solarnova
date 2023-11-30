@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['from-the-start','cupid','circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','what-are-you-so-afraid-of'],
-		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
+		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','what-are-you-so-afraid-of','chain-gang'],
+		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker','luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
 		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)']
@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				'ballin': 'roddy ricch, mustard',
 				'fkumean': 'gunna',
 				'no-role-modelz': 'j. cole',
+				'chain-gang': 'anti da menace',
 				// pop
 				'paint-the-town-red': '✨💅doja cat!1!💅✨',
 				'somebody-that-i-used-to-know': 'gotye (official aussie)',
@@ -138,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				'luxury': 'azealia banks',
 				'everybody-wants-to-rule-the-world': 'tears for fears',
 				'the-perfect-girl': 'mareux',
+				'sleepwalker': 'akiaura, LONOWN, STM',
 				// seasonal
 				'mariahcarey': 'all i want for christmas is youuuuu 🎄',
 				'snowman': 'sia',
