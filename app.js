@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Log the audio source being set
 			console.log('Audio source:', audio.src);
+      
 
 			// Play the song (if needed)
 			playSong();
@@ -123,6 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
         'neon-blade': 'MoonDeity',
+        // gaming 
+        'my-ordinary-life': 'The Living Tombstone',
+        'after-dark': 'Mr. Kitty',
+        'chug-jug-with-you': 'LeviathanJPTV',
+        'kerosene': 'Crystal Castles',
+        'past-lives': 'sapientdream',
 				// rap
 				'all-girls-are-the-same': 'xxxtentacion',
 				'what-are-you-so-afraid-of': 'xxxtentacion',
@@ -151,6 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				'only-in-my-mind': 'kenya grace',
 				'strangers': 'kenya grace',
 				'smooth-operator-(tiktok-remix)': 'sade',
+        // national anthems 
+        'soviet-anthem': 'Soviet Union',
+        'heil-dir-im-siegerkranz': 'Heinrich Harrie',
+        'horst-wessel-lied': 'Horst Wessel',
+        'deutschlandlied': 'Joseph Haydn',
+        'la-marseillaise': 'Claude Joseph Rouget de Lisle'
 			};
 			
 			function getArtistForSong(songNamee) {
@@ -159,6 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 			const currentSongFileName = selectedSong;
 			const artist = getArtistForSong(currentSongFileName);
+
+      const artistElement = document.getElementById('artist');
+      artistElement.innerText = artist || 'Unknown Artist'; 
 
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: selectedSong.replace(/-/g, " "),

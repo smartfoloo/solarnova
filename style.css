@@ -22,8 +22,13 @@ h2 {
   font-size: 18px;
 }
 
+h4 {
+  line-height: 1.2;
+}
+
 p {
   font-size: 14px;
+  line-height: 1.2;
 }
 
 a{
