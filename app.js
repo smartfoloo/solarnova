@@ -288,6 +288,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			],
 		});
 	});
+	navigator.mediaSession.setActionHandler("play", () => {
+		navigator.mediaSession.playbackState = "playing";
+		playSong()
+	  });
+	  navigator.mediaSession.setActionHandler("pause", () => {
+		navigator.mediaSession.playbackState = "paused";
+		pauseSong()
+	});
 	function updateProgress(e) {
 		const { duration, currentTime } = e.srcElement;
 		const progressPercent = (currentTime / duration) * 100;
@@ -442,4 +450,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
+	
 });
