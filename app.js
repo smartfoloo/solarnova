@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['from-the-start','cupid','circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','what-are-you-so-afraid-of','chain-gang'],
+		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','what-are-you-so-afraid-of','chain-gang','wet-dreamz','passionfruit','teenage-fever'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker','luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
@@ -125,12 +125,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'tokyo-drift': 'PRXSXNT FXTURE',
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
-        'neon-blade': 'MoonDeity',
+        'neon-blade': 'moondeity',
         // gaming 
-        'my-ordinary-life': 'The Living Tombstone',
-        'after-dark': 'Mr. Kitty',
-        'chug-jug-with-you': 'LeviathanJPTV',
-        'kerosene': 'Crystal Castles',
+        'my-ordinary-life': 'the living tombstone',
+        'after-dark': 'mr. kitty',
+        'chug-jug-with-you': 'leviathanJPTV',
+        'kerosene': 'crystal castles',
         'past-lives': 'sapientdream',
 				// rap
 				'all-girls-are-the-same': 'xxxtentacion',
@@ -139,7 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				'ballin': 'roddy ricch, mustard',
 				'fkumean': 'gunna',
 				'no-role-modelz': 'j. cole',
+				'wet-dreamz': 'j. cole',
 				'chain-gang': 'anti da menace',
+				'passionfruit': 'drake',
+				'teenage-fever': 'drake',
 				// pop
 				'paint-the-town-red': '✨💅doja cat!1!💅✨',
 				'somebody-that-i-used-to-know': 'gotye (official aussie)',
@@ -161,11 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
 				'strangers': 'kenya grace',
 				'smooth-operator-(tiktok-remix)': 'sade',
         // national anthems 
-        'soviet-anthem': 'Soviet Union',
-        'heil-dir-im-siegerkranz': 'Heinrich Harrie',
-        'horst-wessel-lied': 'Horst Wessel',
-        'deutschlandlied': 'Joseph Haydn',
-        'la-marseillaise': 'Claude Joseph Rouget de Lisle'
+        'soviet-anthem': 'soviet union',
+        'heil-dir-im-siegerkranz': 'heinrich harrie',
+        'horst-wessel-lied': 'horst wessel',
+        'deutschlandlied': 'joseph haydn',
+        'la-marseillaise': 'claude joseph rouget de lisle',
+		// classyical
+        'violin-concerto-in-e-minor': 'felix mendelsshon',
+        'adagio-albinoni': 'tomaso albinoni',
+        'trio-no-2-in-e-minor': 'franz schubert',
+        'moonlight-sonata': 'beethoven'
 			};
 			
 			function getArtistForSong(songNamee) {
