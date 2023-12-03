@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let playlists = {
 		'liked-songs': [],
 		'yoasobi': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター'],
-    'phonk': ['metamorphosis', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'tokyo-drift', 'hyptonic-data', 'avoid-me', 'neon-blade'],
+    'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'scopin', 'tokyo-drift', 'hyptonic-data', 'avoid-me', 'neon-blade'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
 		'meme-songs': ['king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'ミスター': 'YOASOBI',
         // phonk
 				'metamorphosis': 'INTERWORLD',
+        'rapture': 'INTERWORLD',
 				'close-eyes': 'DVRST',
 				'close-eyes-slowed-reverb': 'DVRST',
 				'close-eyes-sped-up': 'DVRST',
@@ -120,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'brazilian-danca-phonk': '6YNTHMANE',
         'unholy': 'kordhell, dxrk',
         'murder-in-my-mind': 'kordhell',
+        'scopin': 'kordhell',
         'tokyo-drift': 'PRXSXNT FXTURE',
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
