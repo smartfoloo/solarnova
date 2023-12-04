@@ -1,17 +1,16 @@
 {
-  "lang": "en",
   "name": "smartfoloo-music-player",
   "short_name": "sfmp",
-  "background_color": "#000",
-  "theme_color": "#1cd96a",
-  "display": "standalone",
-  "orientation": "natural",
-  "start_url": "/",
-  "icons":[
+  "start_url": "index.html",
+  "scope": "./",
+  "icons": [
     {
-      "src": "https://avatars.githubusercontent.com/u/127369979?v=4",
-      "sizes" : "294x294",
-      "type": "image\/jpeg"
+      "src": "liked.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#ffd31d",
+  "background_color": "#333",
+  "display": "standalone"
 }
