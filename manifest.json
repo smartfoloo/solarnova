@@ -1,15 +1,17 @@
 {
-  "name": "gsdfgdfs",
-  "short_name": "PWA Short Name",
-  "start_url": "./index.html",
+  "lang": "en",
+  "name": "smartfoloo-music-player",
+  "short_name": "sfmp",
+  "background_color": "#000",
+  "theme_color": "#1cd96a",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "icons": [
+  "orientation": "natural",
+  "start_url": "/",
+  "icons":[
     {
-      "src": "path_to_your_icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "https://avatars.githubusercontent.com/u/127369979?v=4",
+      "sizes" : "294x294",
+      "type": "image\/jpeg"
     }
   ]
 }
