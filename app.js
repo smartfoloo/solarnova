@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			console.log('Loading song:', selectedSong); // Log the selected song
 
 			title.innerText = selectedSong.replace(/-/g, " ");
-			audio.src = `/music/songs/${selectedSong}.mp3`; // Check if the path and file name match your audio files
-			cover.src = `/music/images/${selectedSong}.jpeg`;
+			audio.src = `music/songs/${selectedSong}.mp3`; // Check if the path and file name match your audio files
+			cover.src = `music/images/${selectedSong}.jpeg`;
 			songIndex = index;
 
 			updateQueueList();
