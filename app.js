@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	const queueList = document.getElementById('queue-list');
 	const likeBtn = document.getElementById('like-btn');
 	const shuffleBtn = document.getElementById('shuffle-btn'); // Add this line
+	const installApp = document.getElementById('installApp');
+
+	//PWA GODS
+	function PWAGODS(){
+		if (deferredPrompt !== null) {
+			deferredPrompt.prompt();
+		}
+	};
 
 	let playlists = {
 		'liked-songs': [],
