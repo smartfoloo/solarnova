@@ -32,11 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['from-the-start','cupid','circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','what-are-you-so-afraid-of','chain-gang','wet-dreamz','passionfruit','teenage-fever'],
+		'rap': ['lovin-on-me','all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','solo','what-are-you-so-afraid-of','chain-gang','wet-dreamz','passionfruit','teenage-fever','i-hate-police'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker','luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
-		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)']
+		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)'],
+		'drakeywakey' :['passionfruit','teenage-fever','idgaf-(frick)'],
+		'xxxtentacion' :['sad!','all-girls-are-the-same','what-are-you-so-afraid-of']
 	}
 
 
@@ -149,8 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				'no-role-modelz': 'j. cole',
 				'wet-dreamz': 'j. cole',
 				'chain-gang': 'anti da menace',
-				'passionfruit': 'drake',
-				'teenage-fever': 'drake',
+				'i-hate-police': 'N.W.A',
+				'lovin-on-me': 'jack harlow',
+				'sad!': 'xxxtentacion',
 				// pop
 				'paint-the-town-red': '✨💅doja cat!1!💅✨',
 				'somebody-that-i-used-to-know': 'gotye (official aussie)',
@@ -181,7 +184,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'violin-concerto-in-e-minor': 'felix mendelsshon',
         'adagio-albinoni': 'tomaso albinoni',
         'trio-no-2-in-e-minor': 'franz schubert',
-        'moonlight-sonata': 'beethoven'
+        'moonlight-sonata': 'beethoven',
+		// drakewakey
+		'passionfruit': 'drake',
+		'teenage-fever': 'drake',
+		'idgaf-(frick)': 'drake',
 			};
 			
 			function getArtistForSong(songNamee) {
