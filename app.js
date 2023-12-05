@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	let playlists = {
 		'liked-songs': [],
 		'yoasobi': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター'],
-    'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'scopin', 'tokyo-drift', 'hyptonic-data', 'avoid-me', 'neon-blade'],
+    'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'scopin', 'tokyo-drift', 'avoid-me', 'neon-blade'],
+    'siglikore': ['youre-too-slow', 'hyptonic-data'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
 		'meme-songs': ['king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
@@ -134,6 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
         'neon-blade': 'moondeity',
+        // siglikore
+        'youre-too-slow': 'odetari',
         // gaming 
         'my-ordinary-life': 'the living tombstone',
         'after-dark': 'mr. kitty',
@@ -336,18 +339,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		progress.style.width = `${progressPercent}%`;
 	}
 
-	function setProgress(e) {
-		const width = this.clientWidth;
-		const clickX = e.offsetX;
-		const duration = audio.duration;
-		const newTime = (clickX / width) * duration;
-		audio.currentTime = newTime;
+  function setProgress(e) {
+    const width = this.clientWidth;
+    const clickX = e.type.includes('touch') ? e.touches[0].clientX - this.getBoundingClientRect().left : e.clientX - this.getBoundingClientRect().left;
+    const duration = audio.duration;
+    const newTime = (clickX / width) * duration;
+    audio.currentTime = newTime;
 
-		const isPaused = audio.paused;
-		if (!isPaused) {
-			audio.play();
-		}
-	}
+    const isPaused = audio.paused;
+    if (!isPaused) {
+      audio.play();
+    }
+  }
 
 
 	function DurTime(e) {
