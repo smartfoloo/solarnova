@@ -141,12 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
         'neon-blade': 'moondeity',
-<<<<<<< Updated upstream
         // siglikore
         'youre-too-slow': 'odetari',
-=======
 		'montagem-celestial-de-atena': 'dj orbital',
->>>>>>> Stashed changes
         // gaming 
         'my-ordinary-life': 'the living tombstone',
         'after-dark': 'mr. kitty',
