@@ -1,6 +1,7 @@
 <p align = "center">
 <h1 align = "center" >Music Player</h1>
 A statically deployable music player built with vanilla javascript.
+<br>
 <img src="https://img.shields.io/github/license/smartfoloo/M]music-player?style=for-the-badge" alt="LICENSE">
 <img src="https://img.shields.io/github/repo-size/smartfoloo/music-player?style=for-the-badge" alt="Repository Size"> <br>
 <img src="https://img.shields.io/github/forks/smartfoloo/music-player?style=for-the-badge" alt="Forks">
