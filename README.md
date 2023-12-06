@@ -1,3 +1,4 @@
+<p align = "center">
 <h1 align = "center" >Music Player</h1>
 A statically deployable music player built with vanilla javascript.
 
