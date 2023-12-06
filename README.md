@@ -1,16 +1,16 @@
 <p align = "center">
 <h1 align = "center" >Music Player</h1>
 A statically deployable music player built with vanilla javascript.
-<br>
-<p align="center">
-<img src="https://img.shields.io/github/license/smartfoloo/M]music-player?style=for-the-badge" alt="LICENSE">
-<img src="https://img.shields.io/github/repo-size/smartfoloo/music-player?style=for-the-badge" alt="Repository Size"> <br>
-<img src="https://img.shields.io/github/forks/smartfoloo/music-player?style=for-the-badge" alt="Forks">
-<img src="https://img.shields.io/github/stars/smartfoloo/music-player?style=for-the-badge" alt="Stars">
-<img src="https://img.shields.io/github/watchers/smartfoloo/music-player?style=for-the-badge" alt="Watchers">
-<img src="https://img.shields.io/github/commit-activity/w/smartfoloo/music-player?style=for-the-badge" alt="Commit Activity">
-<img src="https://img.shields.io/github/issues/smartfoloo/music-player?style=for-the-badge" alt="Issues">
-</p>
+
+## Features
+
+✨ Clean UI
+
+🎵 100+ Songs
+
+⏭️ Playlist and Queue
+
+📱 Mobile Support
 
 ## Deployment
 
