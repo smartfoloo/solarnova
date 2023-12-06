@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'lofi-jazz': ['from-the-start','cupid','circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['lovin-on-me','all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','solo','bad','what-are-you-so-afraid-of','chain-gang','wet-dreamz','passionfruit','teenage-fever','i-hate-police','great-gatsby','butterfly-effect','space-cadet','zeze','not-fair'],
+		'rap': ['lovin-on-me','all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','solo','bad','what-are-you-so-afraid-of','chain-gang','wet-dreamz','passionfruit','teenage-fever','i-hate-police','great-gatsby','butterfly-effect','space-cadet','zeze','not-fair','223s','look-back-at-it'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker','luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
@@ -165,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				'space-cadet': 'metro boomin',
 				'not-fair': 'the kid laroi',
 				'bad': 'xxxtentacion',
+				'223s': 'YNW melly',
+				'look-back-at-it': 'a boogie wit da hoodie',
 				// pop
 				'paint-the-town-red': '✨💅doja cat!1!💅✨',
 				'somebody-that-i-used-to-know': 'gotye (official aussie)',
