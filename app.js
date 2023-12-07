@@ -485,6 +485,40 @@ document.addEventListener('DOMContentLoaded', () => {
 		playSong();
 	}
 
+  function createArtistCards() {
+    const artistContainer = document.getElementById('artist-container');
+
+    // Get all unique artists from the playlists
+    const allArtists = new Set(Object.values(songToArtistMap));
+    const sortedArtists = Array.from(allArtists).sort();
+
+    sortedArtists.forEach(artist => {
+      const artistCard = document.createElement('div');
+      artistCard.classList.add('artist-card');
+      artistCard.setAttribute('data-artist', artist);
+
+      const title = document.createElement('h3');
+      title.classList.add('title');
+      title.innerText = artist;
+
+      artistCard.appendChild(title);
+      artistContainer.appendChild(artistCard);
+
+      // Add click event listener to play songs by the artist
+      artistCard.addEventListener('click', () => {
+        const songsByArtist = Object.keys(songToArtistMap).filter(song => songToArtistMap[song] === artist);
+        if (songsByArtist.length > 0) {
+          currentPlaylist = songsByArtist;
+          loadSong(0);
+          playSong();
+        }
+      });
+    });
+  }
+
+  // Call the function to create and append artist cards
+  createArtistCards();
+
 	audio.addEventListener('timeupdate', updateProgress);
 	progressContainer.addEventListener('click', setProgress);
 
