@@ -166,6 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				'bad': 'xxxtentacion',
 				'223s': 'YNW melly',
 				'look-back-at-it': 'a boogie wit da hoodie',
+				'swervin': 'a boogie wit da hoodie',
+				'rockstar': 'da baby',
+				'humble': 'kendrick lamar',
 				// pop
 				'paint-the-town-red': '✨💅doja cat!1!💅✨',
 				'somebody-that-i-used-to-know': 'gotye (official aussie)',
