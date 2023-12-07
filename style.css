@@ -563,3 +563,9 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.artist-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+  gap: 20px;
+}

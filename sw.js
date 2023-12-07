@@ -17,6 +17,7 @@ self.addEventListener('install', e => {
                 "/index.html",
                 "/playlists.html",
                 "/greeting.js",
+                "/jolly.gif",
                 "/app.js",
                 "/search.js",
                 "/service-worker.js",
