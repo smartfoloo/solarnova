@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		'drakeywakey' :['passionfruit','teenage-fever','idgaf-(frick)'],
 		'xxxtentacion' :['sad!','all-girls-are-the-same','bad'],
 		'chill-chill':['passionfruit','bad-habit','snowman','moonlight','only-in-my-mind','smooth-operator-(tiktok-remix)','cupid','from-the-start'],
-		'nirvana': ['scentless-apprentice','serve-the-slaves','i-hate-myself','moist-viagra','sappy','dump','reap-me','heart-shaped-box'],
-		'kurt-cobain' :['poisons_gone','and-i-love-her','aberdeen','you-cant-change-me','rehash','clean-up-before-she-comes','burn-the-rain','what-more-can-i-say','been-a-son','the-yodel-song','do-re-mi-medley']
+		'nirvana': ['scentless-apprentice','serve-the-slaves','i-hate-myself','moist-viagra','sappy','dumb','reap-me','heart-shaped-box','been-a-son'],
+		'kurt-cobain' :['poisons_gone','and-i-love-her','aberdeen','you-cant-change-me','rehash','clean-up-before-she-comes','burn-the-rain','what-more-can-i-say','the-yodel-song','do-re-mi-medley']
 	}
 
 
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'clean-up-before-she-comes': 'kurt cobain',
 		'burn-the-rain': 'kurt cobain',
 		'what-more-can-i-say': 'kurt cobain',
-		'been-a-son': 'kurt cobain',
+		'been-a-son': 'nirvana',
 		'the-yodel-song': 'kurt cobain',
 		'do-re-mi-medley': 'kurt cobain',
 		//j-pop
