@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let playlists = {
 		'liked-songs': [],
-		'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', 'うっせえわ'],
+		'j-pop': ['usseewa','怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'tokyo-drift', 'avoid-me', 'neon-blade','montagem-celestial-de-atenas'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
@@ -39,7 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
 		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)'],
 		'drakeywakey' :['passionfruit','teenage-fever','idgaf-(frick)'],
-		'xxxtentacion' :['sad!','all-girls-are-the-same','what-are-you-so-afraid-of','bad']
+		'xxxtentacion' :['sad!','all-girls-are-the-same','bad'],
+		'chill-chill':['passionfruit','bad-habit','snowman','moonlight','only-in-my-mind','smooth-operator-(tiktok-remix)','cupid','from-the-start'],
+		'nirvana': ['scentless-apprentice','serve-the-slaves','i-hate-myself','moist-viagra','sappy','dumb','reap-me','heart-shaped-box','been-a-son'],
+		'kurt-cobain' :['poisons_gone','and-i-love-her','aberdeen','you-cant-change-me','rehash','clean-up-before-she-comes','burn-the-rain','what-more-can-i-say','the-yodel-song','do-re-mi-medley']
 	}
 
 
@@ -207,6 +210,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		'passionfruit': 'drake',
 		'teenage-fever': 'drake',
 		'idgaf-(frick)': 'drake',
+		//nirvana
+		'reap-me': 'nirvana',
+		'heart-shaped-box': 'nirvana',
+		'dumb': 'nirvana',
+		'sappy': 'nirvana',
+		'moist-viagra': 'nirvana',
+		'i-hate-myself': 'nirvana',
+		'serve-the-slaves': 'GET BACK 2 WORK (nirvana)',
+		'scentless-apprentice': 'nirvana',
+		//kurt cobain
+		'poisons-gone': 'kurt cobain',
+		'and-i-love-her': 'kurt cobain',
+		'aberdeen': 'kurt cobain',
+		'you-cant-change-me': 'kurt cobain',
+		'rehash': 'kurt cobain',
+		'clean-up-before-she-comes': 'kurt cobain',
+		'burn-the-rain': 'kurt cobain',
+		'what-more-can-i-say': 'kurt cobain',
+		'been-a-son': 'nirvana',
+		'the-yodel-song': 'kurt cobain',
+		'do-re-mi-medley': 'kurt cobain',
+		//j-pop
+		'usseewa': 'ado',
+
 			};
 			
 			function getArtistForSong(songNamee) {
