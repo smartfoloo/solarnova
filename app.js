@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let playlists = {
 		'liked-songs': [],
-		'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', 'アイドル', 'night-dancer', '蕾', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アイドル', 'night-dancer', '蕾', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
-		'meme-songs': ['king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
+    'meme-songs': ['indian-sleigh-ride-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
 		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
 		'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'もう少しだけ': 'YOASOBI',
         'もしも命が描けたら': 'YOASOBI',
         'ミスター': 'YOASOBI',
+        '優しい彗星': 'YOASOBI',
         'アイドル': 'YOASOBI',
         'うっせえわ': 'Ado',
         'night-dancer': 'imase',
@@ -150,6 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // siglikore
         'youre-too-slow': 'odetari',
 		    'montagem-celestial-de-atena': 'dj orbital',
+        // meme 
+        'indian-sleigh-ride-remix': 'Vindaloo Singh',
         // gaming 
         'my-ordinary-life': 'the living tombstone',
         'after-dark': 'mr. kitty',
@@ -212,33 +215,31 @@ document.addEventListener('DOMContentLoaded', () => {
         'adagio-albinoni': 'tomaso albinoni',
         'trio-no-2-in-e-minor': 'franz schubert',
         'moonlight-sonata': 'beethoven',
-		// drakewakey
-		'passionfruit': 'drake',
-		'teenage-fever': 'drake',
-		'idgaf-(frick)': 'drake',
-		//nirvana
-		'reap-me': 'nirvana',
-		'heart-shaped-box': 'nirvana',
-		'dumb': 'nirvana',
-		'sappy': 'nirvana',
-		'moist-viagra': 'nirvana',
-		'i-hate-myself': 'nirvana',
-		'serve-the-slaves': 'GET BACK 2 WORK (nirvana)',
-		'scentless-apprentice': 'nirvana',
-		//kurt cobain
-		'poisons-gone': 'kurt cobain',
-		'and-i-love-her': 'kurt cobain',
-		'aberdeen': 'kurt cobain',
-		'you-cant-change-me': 'kurt cobain',
-		'rehash': 'kurt cobain',
-		'clean-up-before-she-comes': 'kurt cobain',
-		'burn-the-rain': 'kurt cobain',
-		'what-more-can-i-say': 'kurt cobain',
-		'been-a-son': 'nirvana',
-		'the-yodel-song': 'kurt cobain',
-		'do-re-mi-medley': 'kurt cobain',
-		//j-pop
-		'usseewa': 'ado',
+        // drakewakey
+        'passionfruit': 'drake',
+        'teenage-fever': 'drake',
+        'idgaf-(frick)': 'drake',
+        //nirvana
+        'reap-me': 'nirvana',
+        'heart-shaped-box': 'nirvana',
+        'dumb': 'nirvana',
+        'sappy': 'nirvana',
+        'moist-viagra': 'nirvana',
+        'i-hate-myself': 'nirvana',
+        'serve-the-slaves': 'GET BACK 2 WORK (nirvana)',
+        'scentless-apprentice': 'nirvana',
+        //kurt cobain
+        'poisons-gone': 'kurt cobain',
+        'and-i-love-her': 'kurt cobain',
+        'aberdeen': 'kurt cobain',
+        'you-cant-change-me': 'kurt cobain',
+        'rehash': 'kurt cobain',
+        'clean-up-before-she-comes': 'kurt cobain',
+        'burn-the-rain': 'kurt cobain',
+        'what-more-can-i-say': 'kurt cobain',
+        'been-a-son': 'nirvana',
+        'the-yodel-song': 'kurt cobain',
+        'do-re-mi-medley': 'kurt cobain',
 
 			};
 			
