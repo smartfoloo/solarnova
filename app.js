@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let playlists = {
 		'liked-songs': [],
-		'j-pop': ['usseewa', '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', 'うっせえわ'],
+		'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', 'アイドル', 'night-dancer', '蕾', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
-    'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
+    'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
 		'meme-songs': ['king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
@@ -110,6 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'もう少しだけ': 'YOASOBI',
         'もしも命が描けたら': 'YOASOBI',
         'ミスター': 'YOASOBI',
+        'アイドル': 'YOASOBI',
+        'うっせえわ': 'Ado',
+        'night-dancer': 'imase',
+        '蕾': 'GReeeen',
         // phonk
 				'metamorphosis': 'INTERWORLD',
         'rapture': 'INTERWORLD',
@@ -136,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'unholy': 'kordhell, dxrk',
         'murder-in-my-mind': 'kordhell',
         'scopin': 'kordhell',
+        'murder-plot': 'kordhell',
         'live-another-day': 'kordhell',
         'a-million-ways-to-murder': 'kordhell',
         'tokyo-drift': 'PRXSXNT FXTURE',
