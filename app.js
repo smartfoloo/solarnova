@@ -23,26 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let playlists = {
 		'liked-songs': [],
-		'j-pop': ['usseewa','怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', 'うっせえわ'],
+		'j-pop': ['usseewa', '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
-    'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'tokyo-drift', 'avoid-me', 'neon-blade','montagem-celestial-de-atenas'],
+    'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
 		'meme-songs': ['king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
 		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
 		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
-		'lofi-jazz': ['from-the-start','cupid','circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
+		'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
 		'seasonal': ['mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap': ['lovin-on-me','all-girls-are-the-same', 'the-box', 'ballin','fkumean','no-role-modelz','solo','bad','what-are-you-so-afraid-of','chain-gang','wet-dreamz','passionfruit','teenage-fever','i-hate-police','great-gatsby','butterfly-effect','space-cadet','zeze','not-fair','223s','look-back-at-it','humble','like-this','overtime','rockstar','swervin'],
-		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker','luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
+		'rap': ['lovin-on-me', 'all-girls-are-the-same', 'the-box', 'ballin', 'fkumean', 'no-role-modelz', 'solo', 'bad', 'what-are-you-so-afraid-of', 'chain-gang', 'wet-dreamz', 'passionfruit', 'teenage-fever', 'i-hate-police', 'great-gatsby', 'butterfly-effect', 'space-cadet', 'zeze', 'not-fair', '223s', 'look-back-at-it', 'humble', 'like-this', 'overtime', 'rockstar', 'swervin'],
+		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
-		'tth': ['greedy','it-girl','ecstasy','moonlight','only-in-my-mind','strangers','smooth-operator-(tiktok-remix)'],
-		'drakeywakey' :['passionfruit','teenage-fever','idgaf-(frick)'],
-		'xxxtentacion' :['sad!','all-girls-are-the-same','bad'],
-		'chill-chill':['passionfruit','bad-habit','snowman','moonlight','only-in-my-mind','smooth-operator-(tiktok-remix)','cupid','from-the-start'],
-		'nirvana': ['scentless-apprentice','serve-the-slaves','i-hate-myself','moist-viagra','sappy','dumb','reap-me','heart-shaped-box','been-a-son'],
-		'kurt-cobain' :['poisons_gone','and-i-love-her','aberdeen','you-cant-change-me','rehash','clean-up-before-she-comes','burn-the-rain','what-more-can-i-say','the-yodel-song','do-re-mi-medley']
+		'tth': ['greedy', 'it-girl', 'ecstasy', 'moonlight', 'only-in-my-mind', 'strangers', 'smooth-operator-(tiktok-remix)'],
+		'drakeywakey' :['passionfruit', 'teenage-fever', 'idgaf-(frick)'],
+		'xxxtentacion' :['sad!', 'all-girls-are-the-same', 'bad'],
+		'chill-chill':['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
+		'nirvana': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
+		'kurt-cobain' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley']
 	}
 
 
@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'unholy': 'kordhell, dxrk',
         'murder-in-my-mind': 'kordhell',
         'scopin': 'kordhell',
+        'live-another-day': 'kordhell',
         'a-million-ways-to-murder': 'kordhell',
         'tokyo-drift': 'PRXSXNT FXTURE',
         'hyptonic-data': 'odetari',
