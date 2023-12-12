@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'chill-chill':['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
 		'nirvana': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
 		'kurt-cobain' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
-    'retro-mix': ['踊り子', '初恋']
+    'retro-mix': ['踊り子', '初恋'],
 	}
 
 
