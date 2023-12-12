@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let playlists = {
 		'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アイドル', 'night-dancer', '蕾', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		'xxxtentacion' :['sad!', 'all-girls-are-the-same', 'bad'],
 		'chill-chill':['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
 		'nirvana': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
-		'kurt-cobain' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley']
+		'kurt-cobain' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
+    'retro-mix': ['踊り子', '初恋']
 	}
 
 
@@ -115,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'うっせえわ': 'Ado',
         'night-dancer': 'imase',
         '蕾': 'GReeeen',
+        'odoriko': 'vaundy',
         // phonk
 				'metamorphosis': 'INTERWORLD',
         'rapture': 'INTERWORLD',
@@ -240,6 +242,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'been-a-son': 'nirvana',
         'the-yodel-song': 'kurt cobain',
         'do-re-mi-medley': 'kurt cobain',
+        // retro
+        '踊り子': 'Kozo Murashita',
+        '初恋': 'Kozo Murashita'
 
 			};
 			
