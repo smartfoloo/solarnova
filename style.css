@@ -577,7 +577,7 @@ input:checked + .slider:before {
   margin: 15px 0px 15px 15px;
   background: #16181c;
   border-radius: 15px;
-  padding: 20px;
+  padding: 20px 20px 20px 15px;
 }
 
 .playlist-rows {
@@ -590,12 +590,12 @@ input:checked + .slider:before {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 50px;
   gap: 10px;
-  padding: 7px;
+  padding: 5px;
   margin: 10px 0px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 7px;
+  transition: 300ms;
 }
 
 .playlist-row:hover {
@@ -605,4 +605,6 @@ input:checked + .slider:before {
 .playlist-row-image {
   height: 100%;
   border-radius: 5px;
+  width: 40px;
+  height: 40px;
 }
