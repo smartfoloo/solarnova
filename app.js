@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const playlistCards = document.querySelectorAll('.playlist-card');
+  const playlistRows = document.querySelectorAll('.playlist-row');
 	const musicContainer = document.getElementById('music-container');
 	const audio = document.getElementById('audio');
 	const playBtn = document.getElementById('play');
@@ -63,6 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	});
+
+  playlistRows.forEach(row => {
+    row.addEventListener('click', () => {
+      const playlistName = row.getAttribute('data-playlist');
+      currentPlaylist = playlists[playlistName] || [];
+      if (currentPlaylist.length > 0) {
+        loadSong(0);
+        playSong();
+      }
+    });
+  });
 
 	// Add the shuffle functionality
 	shuffleBtn.addEventListener('click', () => {

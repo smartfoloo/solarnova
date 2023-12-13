@@ -14,22 +14,33 @@
   </head>
   <body>
     <div class="main-container">
-      <nav class="sidebar">
-        <ul class="nav-links">
-          <li class="nav-link">
-            <i class="fa-solid fa-house"></i>
-            <a href="/">Home</a>
-          </li>
-          <li class="nav-link">
-            <i class="fa-solid fa-list"></i>
-            <a href="/playlists.html">Playlists</a>
-          </li>
-          <li class="nav-link">
-            <i class="fa-solid fa-bullhorn"></i>
-            <a href="https://forms.gle/1vvH7326PSUexSXL6" target="_blank">Song Request</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="sidebar">
+        <nav class="sidenavbar">
+          <ul class="nav-links">
+            <li class="nav-link">
+              <i class="fa-solid fa-house"></i>
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-link">
+              <i class="fa-solid fa-list"></i>
+              <a href="/playlists.html">Playlists</a>
+            </li>
+            <li class="nav-link">
+              <i class="fa-solid fa-bullhorn"></i>
+              <a href="https://forms.gle/1vvH7326PSUexSXL6" target="_blank">Song Request</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="library">
+          <h2>Library</h2>
+          <div class="playlist-rows">
+            <div class="playlist-row" data-playlist="liked-songs">
+              <img src="liked.png" class="playlist-row-image">
+              <h4 class="title">Liked Songs</h4>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="main-content">
         <h1 id="greeting" style=></h1>
         <hr style="margin-bottom:20px;">

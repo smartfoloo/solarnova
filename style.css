@@ -52,11 +52,14 @@ a:hover{
 }
 
 .sidebar {
+  width: 15%;
+}
+
+.sidenavbar {
   margin: 15px 0px 15px 15px;
   background: #16181c;
   border-radius: 15px;
   padding: 20px;
-  width: 15%;
 }
 
 .nav-links {
@@ -568,4 +571,38 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   margin: 20px 0px;
   gap: 20px;
+}
+
+.library {
+  margin: 15px 0px 15px 15px;
+  background: #16181c;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.playlist-rows {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.playlist-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  gap: 10px;
+  padding: 7px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.playlist-row:hover {
+  background: #1f2228;
+}
+
+.playlist-row-image {
+  height: 100%;
+  border-radius: 5px;
 }
