@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
 		'gaming-tracks': ['my-ordinary-life', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'after-dark', 'chug-jug-with-you', 'kerosene', 'past-lives'],
-    'meme-songs': ['indian-sleigh-ride-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
-		'slowed-and-reverb': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed'],
+    'meme-songs': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'soviet-anthem'],
+		'slowed-and-reverbed': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed', 'lovely-bastards-slowed'],
 		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
 		'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
-		'seasonal': ['mariahcarey', 'snowman'],
+    'holiday-party': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'rap': ['lovin-on-me', 'all-girls-are-the-same', 'the-box', 'ballin', 'fkumean', 'no-role-modelz', 'solo', 'bad', 'what-are-you-so-afraid-of', 'chain-gang', 'wet-dreamz', 'passionfruit', 'teenage-fever', 'i-hate-police', 'great-gatsby', 'butterfly-effect', 'space-cadet', 'zeze', 'not-fair', '223s', 'look-back-at-it', 'humble', 'like-this', 'overtime', 'rockstar', 'swervin'],
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'classical': ['violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
+		'classical': ['la-campanella', 'violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
 		'tth': ['greedy', 'it-girl', 'ecstasy', 'moonlight', 'only-in-my-mind', 'strangers', 'smooth-operator-(tiktok-remix)'],
 		'drakeywakey' :['passionfruit', 'teenage-fever', 'idgaf-(frick)'],
@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		'chill-chill':['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
 		'nirvana': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
 		'kurt-cobain' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
-    'retro-mix': ['踊り子', '初恋'],
+    'retro-mix': ['memory-reboot', 'never-gonna-give-you-up', 'neglect', '踊り子', '初恋'],
+    'modern-rock': ['little-dark-age']
 	}
 
 
@@ -121,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				'metamorphosis': 'INTERWORLD',
         'rapture': 'INTERWORLD',
 				'close-eyes': 'DVRST',
-				'close-eyes-slowed-reverb': 'DVRST',
 				'close-eyes-sped-up': 'DVRST',
 				'lovely-bastards': 'ZWE1HVNDXR, yatashigang',
 				'memory-reboot': 'VOJ, narvent',
@@ -150,6 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
         'neon-blade': 'moondeity',
+        // slowed and reverbed
+        'close-eyes-slowed-reverb': 'DVRST',
+        'metamorphosis-slowed-reverb': 'INTERWORLD',
+        'lovely-bastards-slowed': 'ZWE1HVNDXR, yatashigang',
+        'memory-reboot-slowed': 'VOJ, narvent',
         // siglikore
         'youre-too-slow': 'odetari',
 		    'montagem-celestial-de-atena': 'dj orbital',
@@ -212,7 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'horst-wessel-lied': 'horst wessel',
         'deutschlandlied': 'joseph haydn',
         'la-marseillaise': 'claude joseph rouget de lisle',
-		// classyical
+		    // classyical
+        'la-campanella': 'Rousseau',
         'violin-concerto-in-e-minor': 'felix mendelsshon',
         'adagio-albinoni': 'tomaso albinoni',
         'trio-no-2-in-e-minor': 'franz schubert',
@@ -243,9 +249,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'the-yodel-song': 'kurt cobain',
         'do-re-mi-medley': 'kurt cobain',
         // retro
+        'never-gonna-give-you-up': 'Rick Astley',
         '踊り子': 'Kozo Murashita',
-        '初恋': 'Kozo Murashita'
-
+        '初恋': 'Kozo Murashita',
+        'neglect': 'Mr. Kitty',
+        // modern rock 
+        'little-dark-age': 'MGMT',
 			};
 			
 			function getArtistForSong(songNamee) {
