@@ -238,6 +238,7 @@ a:hover{
   height: 45px;
   overflow: hidden;
   background-image: cover;
+  object-fit: cover;
 }
 
 .main-content {
