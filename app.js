@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'chill-chill':['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
 		'nirvana': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
 		'kurt-cobain' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
-    'retro-mix': ['memory-reboot', 'never-gonna-give-you-up', 'neglect', '踊り子', '初恋'],
+    'retro-mix': ['memory-reboot', 'never-gonna-give-you-up', 'kyrie', 'careless-whisper', 'eye-in-the-sky', 'neglect', '踊り子', '初恋'],
     'modern-rock': ['little-dark-age']
 	}
 
@@ -114,26 +114,26 @@ document.addEventListener('DOMContentLoaded', () => {
 			playSong();
 			const songToArtistMap = {
         // yoasobi
-        '怪物': 'YOASOBI',
-        'ハルジオン': 'YOASOBI',
-        'ハルカ': 'YOASOBI',
-        '夜に駆ける': 'YOASOBI',
-        'あの夢をなぞって': 'YOASOBI',
-        '三原色': 'YOASOBI',
-        '祝福': 'YOASOBI',
-        'セブンティーン': 'YOASOBI',
-        'もう少しだけ': 'YOASOBI',
-        'もしも命が描けたら': 'YOASOBI',
-        'ミスター': 'YOASOBI',
-        '優しい彗星': 'YOASOBI',
-        'アイドル': 'YOASOBI',
-        'うっせえわ': 'Ado',
+        '怪物': 'yoasobi',
+        'ハルジオン': 'yoasobi',
+        'ハルカ': 'yoasobi',
+        '夜に駆ける': 'yoasobi',
+        'あの夢をなぞって': 'yoasobi',
+        '三原色': 'yoasobi',
+        '祝福': 'yoasobi',
+        'セブンティーン': 'yoasobi',
+        'もう少しだけ': 'yoasobi',
+        'もしも命が描けたら': 'yoasobi',
+        'ミスター': 'yoasobi',
+        '優しい彗星': 'yoasobi',
+        'アイドル': 'yoasobi',
+        'うっせえわ': 'ado',
         'night-dancer': 'imase',
         '蕾': 'GReeeen',
         'odoriko': 'vaundy',
-        '白日': 'King Gnu',
-        '一途': 'King Gnu',
-        'boy': 'King Gnu',
+        '白日': 'king gnu',
+        '一途': 'king gnu',
+        'boy': 'king gnu',
         'odoriko-dazbee-cover': 'dazbee, vaundy',
         // phonk
 				'metamorphosis': 'INTERWORLD',
@@ -268,14 +268,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'the-yodel-song': 'kurt cobain',
         'do-re-mi-medley': 'kurt cobain',
         // retro
-        'never-gonna-give-you-up': 'Rick Astley',
-        '踊り子': 'Kozo Murashita',
-        '初恋': 'Kozo Murashita',
-        'neglect': 'Mr. Kitty',
+        'never-gonna-give-you-up': 'rick astley',
+        '踊り子': 'kozo murashita',
+        '初恋': 'kozo murashita',
+        'neglect': 'mr. kitty',
+        'kyrie': 'mr. Mister', 
+        'eye-in-the-sky': 'the alan parsons project',
         // modern rock 
-        'little-dark-age': 'MGMT',
+        'little-dark-age': 'mgmt',
         // hits de internet 
-        'all-my-fellas': 'Frizk',
+        'all-my-fellas': 'frizk',
 			};
 			
 			function getArtistForSong(songNamee) {
