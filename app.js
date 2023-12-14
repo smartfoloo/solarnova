@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let playlists = {
 		'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'odoriko-dazbee-cover', '白日', '一途', 'boy', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', '白日', 'カメレオン', '一途', 'boy', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -133,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'odoriko': 'vaundy',
         '白日': 'king gnu',
         '一途': 'king gnu',
+        'カメレオン': 'king gnu',
+        'sleepwalk': 'natori',
         'boy': 'king gnu',
         'odoriko-dazbee-cover': 'dazbee, vaundy',
         // phonk
@@ -272,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '踊り子': 'kozo murashita',
         '初恋': 'kozo murashita',
         'neglect': 'mr. kitty',
-        'kyrie': 'mr. Mister', 
+        'kyrie': 'mr. mister', 
         'eye-in-the-sky': 'the alan parsons project',
         // modern rock 
         'little-dark-age': 'mgmt',
