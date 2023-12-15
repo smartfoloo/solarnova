@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let playlists = {
 		'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', '白日', 'カメレオン', '一途', 'boy', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', '白日', 'カメレオン', '一途', 'boy', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
     'hits-de-internet': ['after-dark', 'my-ordinary-life', 'kerosene', 'past-lives', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas'],
     'meme-songs': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem'],
 		'slowed-and-reverbed': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed', 'lovely-bastards-slowed', 'memory-reboot-slowed'],
-		'vibes': ['blueberry-faygo', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
+		'vibes': ['blueberry-faygo', 'kamikaze', 'back-to-you', 'love-you-better', 'living-life-in-the-night-slowed', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'mathematical-disrespect', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
 		'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
     'holiday-party': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'mariahcarey', 'snowman'],
 		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
@@ -131,7 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'ミスター': 'yoasobi',
         '優しい彗星': 'yoasobi',
         'アイドル': 'yoasobi',
+        'たぶん': 'yoasobi',
         'うっせえわ': 'ado',
+        '阿修羅ちゃん': 'ado',
         'night-dancer': 'imase',
         '蕾': 'GReeeen',
         'odoriko': 'vaundy',
@@ -284,6 +286,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'little-dark-age': 'mgmt',
         // hits de internet 
         'all-my-fellas': 'frizk',
+
+        // vibes
+        'blueberry-faygo': 'lil mosey',
+        'kamikaze': 'lil mosey',
 			};
 			
 			function getArtistForSong(songNamee) {
