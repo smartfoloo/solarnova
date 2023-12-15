@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const playlistCards = document.querySelectorAll('.playlist-card');
   const playlistRows = document.querySelectorAll('.playlist-row');
+  const mainContent = document.querySelectorAll('.main-content');
+  const sidebar = document.querySelectorAll('.sidebar');
 	const musicContainer = document.getElementById('music-container');
 	const audio = document.getElementById('audio');
 	const playBtn = document.getElementById('play');
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const likeBtn = document.getElementById('like-btn');
 	const shuffleBtn = document.getElementById('shuffle-btn'); // Add this line
 	const installApp = document.getElementById('installApp');
+  const queueButton = document.getElementById('queue-btn');
+  const queueContainer = document.getElementById('queue-container');
 
 	//PWA GODS
 	function PWAGODS(){
@@ -583,4 +587,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 	
+  queueButton.addEventListener('click', () => {
+    if (queueContainer.style.display === 'block') {
+      queueContainer.style.display = 'none';
+      mainContent.style.width = '85%';
+    } else {
+      queueContainer.style.display = 'block';
+      mainContent.style.width = '60%';
+    }
+  });
+
 });

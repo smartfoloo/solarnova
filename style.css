@@ -246,7 +246,7 @@ a:hover{
   background: #16181c;
   border-radius: 15px;
   padding: 20px;
-  width: 60%;
+  width: 85%;
 }
 
 #queue-container {
@@ -258,6 +258,11 @@ a:hover{
   width: 25%;
   list-style-type: none;
   text-overflow: ellipsis;
+  display: none;
+}
+
+.show-queue {
+  display: block;
 }
 
 .main-container {
