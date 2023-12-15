@@ -182,9 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'youre-too-slow': 'odetari',
 		    'montagem-celestial-de-atena': 'dj orbital',
         // meme 
-        'indian-sleigh-ride-remix': 'Vindaloo Singh',
-        'indian-last-christmas-remix': 'Vindaloo Singh',
-        'careless-whisper': 'George Michael',
+        'indian-sleigh-ride-remix': 'vindaloo singh',
+        'indian-last-christmas-remix': 'vindaloo singh',
+        'careless-whisper': 'george michael',
         // gaming 
         'my-ordinary-life': 'the living tombstone',
         'after-dark': 'mr. kitty',
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'deutschlandlied': 'joseph haydn',
         'la-marseillaise': 'claude joseph rouget de lisle',
 		    // classyical
-        'la-campanella': 'Rousseau',
+        'la-campanella': 'rousseau',
         'violin-concerto-in-e-minor': 'felix mendelsshon',
         'adagio-albinoni': 'tomaso albinoni',
         'trio-no-2-in-e-minor': 'franz schubert',
