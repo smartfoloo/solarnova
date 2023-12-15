@@ -127,7 +127,7 @@ a:hover{
   align-items: center;
   justify-content: flex-end;
   z-index: 1;
-  width: 30vw;
+  width: 40vw;
 }
 
 .action-btn {
@@ -163,7 +163,7 @@ a:hover{
 
 .music-info {
   display: flex;
-  width: 30vw;
+  width: 40vw;
   align-items: center !important;
   gap: 20px;
 }
