@@ -590,10 +590,14 @@ document.addEventListener('DOMContentLoaded', () => {
   queueButton.addEventListener('click', () => {
     if (queueContainer.style.display === 'block') {
       queueContainer.style.display = 'none';
-      mainContent.style.width = '85%';
+      mainContent.forEach(content => {
+        content.style.width = '85%';
+      });
     } else {
       queueContainer.style.display = 'block';
-      mainContent.style.width = '60%';
+      mainContent.forEach(content => {
+        content.style.width = '60%';
+      });
     }
   });
 
