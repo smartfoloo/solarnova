@@ -175,6 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
         'neon-blade': 'moondeity',
+		//lofi
+		'from-the-start': 'laufey',
         // slowed and reverbed
         'close-eyes-slowed-reverb': 'DVRST',
         'metamorphosis-slowed-reverb': 'INTERWORLD',
@@ -230,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				// seasonal
 				'mariahcarey': 'all i want for christmas is youuuuu 🎄',
 				'snowman': 'sia',
+				'last-rizzmas-i-gave-you-my-gyatt': 'every fortnite kid',
 				// top hits
 				'greedy': 'tate mcrae',
 				'it-girl': "aliyah's interlude",
