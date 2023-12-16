@@ -46,12 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		'pop1': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
 		'classical': ['la-campanella', 'violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
-		'tth': ['greedy', 'it-girl', 'ecstasy', 'moonlight', 'only-in-my-mind', 'strangers', 'smooth-operator-(tiktok-remix)'],
-		'drakeywakey' :['passionfruit', 'teenage-fever', 'idgaf-(frick)'],
-		'xxxtentacion' :['sad!', 'all-girls-are-the-same', 'bad'],
+		'todays-top-hits': ['greedy', 'it-girl', 'ecstasy', 'moonlight', 'only-in-my-mind', 'strangers', 'smooth-operator-(tiktok-remix)'],
+		'drake-mix' :['passionfruit', 'teenage-fever', 'idgaf-(frick)'],
+		'xxxtentacion-mix' :['sad!', 'all-girls-are-the-same', 'bad'],
 		'chill-chill':['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
-		'nirvana': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
-		'kurt-cobain' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
+		'nirvana-mix': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
+		'kurt-cobain-mix' :['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
     'retro-mix': ['memory-reboot', 'never-gonna-give-you-up', 'kyrie', 'careless-whisper', 'eye-in-the-sky', 'neglect', '踊り子', '初恋'],
     'modern-rock': ['little-dark-age']
 	}
