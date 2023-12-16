@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const musicContainer = document.getElementById('music-container');
 	const audio = document.getElementById('audio');
 	const playBtn = document.getElementById('play');
+	const playPlaylistBtn = document.getElementById('playPlaylist');
 	const prevBtn = document.getElementById('prev');
 	const nextBtn = document.getElementById('next');
 	const progress = document.getElementById('progress');
@@ -19,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const queueButton = document.getElementById('queue-btn');
   const queueContainer = document.getElementById('queue-container');
   const urlParams = new URLSearchParams(window.location.search);
+  
   const playlistId = urlParams.get('id');
-
 	//PWA GODS
 	function PWAGODS(){
 		if (deferredPrompt !== null) {
@@ -329,6 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (playlist) {
       const playlistName = playlistId.replace(/-/g, " "); // Transform playlist ID to display name
+	  
 
       // Set playlist logo
       const playlistLogo = document.getElementById('playlist-logo');
@@ -362,6 +364,12 @@ document.addEventListener('DOMContentLoaded', () => {
         listItem.appendChild(img);
         listItem.appendChild(span);
         songsContainer.appendChild(listItem);
+		const playlistName = playlistId
+		currentPlaylist = playlists[playlistName] || [];
+		if (currentPlaylist.length > 0) {
+				loadSong(0);
+				playSong();
+		}
       });
     } else {
       console.error('Playlist not found');
@@ -374,7 +382,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	function playSong() {
 		musicContainer.classList.add('play');
 		playBtn.querySelector('i.fas').classList.remove('fa-play');
+		playPlaylistBtn.querySelector('i.fas').classList.remove('fa-play');
 		playBtn.querySelector('i.fas').classList.add('fa-pause');
+		playPlaylistBtn.querySelector('i.fas').classList.add('fa-pause');
 		audio.play();
 		navigator.mediaSession.playbackState = "playing";
 	}
@@ -383,6 +393,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		musicContainer.classList.remove('play');
 		playBtn.querySelector('i.fas').classList.add('fa-play');
 		playBtn.querySelector('i.fas').classList.remove('fa-pause');
+		playPlaylistBtn.querySelector('i.fas').classList.add('fa-play');
+		playPlaylistBtn.querySelector('i.fas').classList.remove('fa-pause');
 		audio.pause();
 		navigator.mediaSession.playbackState = "paused";
 	}
@@ -393,6 +405,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			pauseSong();
 		} else {
 			playSong();
+		}
+	});
+	playPlaylistBtn.addEventListener('click', () => {
+		const isPlaying = musicContainer.classList.contains('play');
+		if (isPlaying) {
+			pauseSong();
+		} else {
+			playSong();
+			
 		}
 	});
 
