@@ -331,7 +331,7 @@ a:hover{
   }
 
   .main-content {
-    width: 100%;
+    width: calc(100% - 30px);
   }
 
   .music-container {
@@ -357,6 +357,14 @@ a:hover{
 
   .sidebar {
     display: none;
+  }
+
+  #playlist-logo {
+    width: 30vw !important;
+  }
+
+  .playlist-info h1 {
+    font-size: 24px;
   }
 }
 
@@ -634,7 +642,7 @@ input:checked + .slider:before {
 }
 
 #playlist-logo {
-  width: 40%;
+  width: 10vw;
   border-radius: 20px;;
 }
 
