@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+fdocument.addEventListener('DOMContentLoaded', () => {
 	const playlistCards = document.querySelectorAll('.playlist-card');
   const playlistRows = document.querySelectorAll('.playlist-row');
   const mainContent = document.querySelectorAll('.main-content');
