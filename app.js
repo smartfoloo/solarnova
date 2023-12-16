@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const installApp = document.getElementById('installApp');
   const queueButton = document.getElementById('queue-btn');
   const queueContainer = document.getElementById('queue-container');
+  const urlParams = new URLSearchParams(window.location.search);
+  const playlistId = urlParams.get('id');
 
 	//PWA GODS
 	function PWAGODS(){
@@ -101,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			cover.src = `music/images/${selectedSong}.jpeg`;
 			songIndex = index;
 
-			updateQueueList();
+			updateQueueList(); 
 
 			// Update like button state
 			isLiked = playlists['liked-songs'].includes(currentPlaylist[songIndex]);
@@ -321,6 +323,52 @@ document.addEventListener('DOMContentLoaded', () => {
 			console.error('Invalid song index or playlist');
 		}
 	}
+
+  function loadSongs(playlistId) {
+    const playlist = playlists[playlistId];
+
+    if (playlist) {
+      const playlistName = playlistId.replace(/-/g, " "); // Transform playlist ID to display name
+
+      // Set playlist logo
+      const playlistLogo = document.getElementById('playlist-logo');
+      playlistLogo.src = `music/images/${playlistId}.jpeg`;
+
+      // Set playlist name
+      const playlistNameElement = document.getElementById('playlist-name');
+      playlistNameElement.textContent = playlistName;
+
+      // Set song count
+      const songCountElement = document.getElementById('song-count');
+      const songCount = playlist.length;
+      songCountElement.textContent = `${songCount} ${songCount === 1 ? 'song' : 'songs'}`;
+
+      // Get the container for songs
+      const songsContainer = document.querySelector('.songs-container');
+
+      // Clear any existing songs
+      songsContainer.innerHTML = '';
+
+      // Iterate through songs and create HTML elements
+      playlist.forEach(songName => {
+        const listItem = document.createElement('li');
+        const img = document.createElement('img');
+        const span = document.createElement('span');
+
+        img.src = `music/images/${songName}.jpeg`;
+        img.alt = songName;
+        span.textContent = songName.replace(/-/g, " ");
+
+        listItem.appendChild(img);
+        listItem.appendChild(span);
+        songsContainer.appendChild(listItem);
+      });
+    } else {
+      console.error('Playlist not found');
+    }
+  }
+
+  loadSongs(playlistId);
 
 
 	function playSong() {

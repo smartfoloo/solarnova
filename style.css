@@ -322,7 +322,7 @@ a:hover{
   }
 
   .playlist-card {
-    max-width: calc(50% - 10px);
+    max-width: calc(50% - 10px) !important;
   }
 
   .playlist-card img {
@@ -612,4 +612,45 @@ input:checked + .slider:before {
   border-radius: 5px;
   width: 40px;
   height: 40px;
+}
+
+.playlist-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.playlist-info-container .action-btn-big {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #1cd96a;
+}
+
+.playlist-info {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+#playlist-logo {
+  width: 40%;
+  border-radius: 20px;;
+}
+
+.songs-container li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 7px;
+  text-overflow: ellipsis;
+}
+
+.songs-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  object-fit: cover;
 }
