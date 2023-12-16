@@ -61,17 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	let queue = [];
 	let isLiked = false;
 
-	playlistCards.forEach(card => {
-		card.addEventListener('click', () => {
-			const playlistName = card.getAttribute('data-playlist');
-			currentPlaylist = playlists[playlistName] || [];
-			if (currentPlaylist.length > 0) {
-				loadSong(0);
-				playSong();
-			}
-		});
-	});
-
   playlistRows.forEach(row => {
     row.addEventListener('click', () => {
       const playlistName = row.getAttribute('data-playlist');
