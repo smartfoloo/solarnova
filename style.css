@@ -165,6 +165,10 @@ a:hover{
   color: #000;
 }
 
+.action-btn-big:active {
+  transform: scale(1);
+}
+
 .music-info {
   display: flex;
   width: 40vw;
