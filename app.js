@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'humble': 'kendrick lamar',
         'overtime': 'ken carson',
         'like-this': 'ken carson',
-        
+
         // pop
         'paint-the-town-red': '✨💅doja cat!1!💅✨',
         'somebody-that-i-used-to-know': 'gotye (official aussie)',
@@ -296,11 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // vibes
         'blueberry-faygo': 'lil mosey',
         'kamikaze': 'lil mosey',
-        'back-to-you': 'kam prada',
-        'love-you-better': 'tiagz',
-        'sea-of-theives': 'snackrunner',
-        'i-see-london-i-see-france': 'bbno$'
-        ''
       };
 
       function getArtistForSong(songNamee) {
