@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', '勇者', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '優しい彗星': 'yoasobi',
         'アドベンチャー': 'yoasobi',
         'アンコール': 'yoasobi',
+        '勇者': 'yoasobi',
         'romance': 'yoasobi',
         'アイドル': 'yoasobi',
         'たぶん': 'yoasobi',
