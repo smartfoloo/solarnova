@@ -381,20 +381,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function playSong() {
     musicContainer.classList.add('play');
-    playBtn.querySelector('i.fas').classList.remove('fa-play');
-    playPlaylistBtn.querySelector('i.fas').classList.remove('fa-play');
-    playBtn.querySelector('i.fas').classList.add('fa-pause');
-    playPlaylistBtn.querySelector('i.fas').classList.add('fa-pause');
+    playBtn.querySelector('i.fa-solid').classList.remove('fa-play');
+    playPlaylistBtn.querySelector('i.fa-solid').classList.remove('fa-play');
+    playBtn.querySelector('i.fa-solid').classList.add('fa-pause');
+    playPlaylistBtn.querySelector('i.fa-solid').classList.add('fa-pause');
     audio.play();
     navigator.mediaSession.playbackState = "playing";
   }
 
   function pauseSong() {
     musicContainer.classList.remove('play');
-    playBtn.querySelector('i.fas').classList.add('fa-play');
-    playBtn.querySelector('i.fas').classList.remove('fa-pause');
-    playPlaylistBtn.querySelector('i.fas').classList.add('fa-play');
-    playPlaylistBtn.querySelector('i.fas').classList.remove('fa-pause');
+    playBtn.querySelector('i.fa-solid').classList.add('fa-play');
+    playBtn.querySelector('i.fa-solid').classList.remove('fa-pause');
+    playPlaylistBtn.querySelector('i.fa-solid').classList.add('fa-play');
+    playPlaylistBtn.querySelector('i.fa-solid').classList.remove('fa-pause');
     audio.pause();
     navigator.mediaSession.playbackState = "paused";
   }
@@ -603,7 +603,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateLikeButton() {
     if (isLiked) {
-      likeBtn.innerHTML = '<i class="fas fa-heart"></i>';
+      likeBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
     } else {
       likeBtn.innerHTML = '<i class="far fa-heart"></i>';
     }
