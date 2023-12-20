@@ -22,12 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
 
   const playlistId = urlParams.get('id');
-  //PWA GODS
-  function PWAGODS() {
-    if (deferredPrompt !== null) {
-      deferredPrompt.prompt();
-    }
-  };
 
   let playlists = {
     'liked-songs': [],
@@ -327,6 +321,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function loadLiked(){
+    const liked = localStorage.getItem("liked-songs")
+    playlists['liked-songs'].push(liked);
+
+  }
+
   function loadSongs(playlistId) {
     const playlist = playlists[playlistId];
 
@@ -349,6 +349,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Get the container for songs
       const songsContainer = document.querySelector('.songs-container');
+
+      loadLiked();
 
       // Clear any existing songs
       songsContainer.innerHTML = '';
@@ -615,11 +617,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isLiked) {
       if (!playlists['liked-songs'].includes(currentPlaylist[songIndex])) {
         playlists['liked-songs'].push(currentPlaylist[songIndex]);
+        localStorage.setItem("liked-songs", playlists['liked-songs'].toString())
+
       }
     } else {
       const indexToRemove = playlists['liked-songs'].indexOf(currentPlaylist[songIndex]);
       if (indexToRemove !== -1) {
         playlists['liked-songs'].splice(indexToRemove, 1);
+        localStorage.setItem("liked-songs", playlists['liked-songs'].toString())
       }
     }
   }
