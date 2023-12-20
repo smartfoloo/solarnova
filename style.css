@@ -724,3 +724,9 @@ input:checked + .slider:before {
   justify-content: space-between;
   align-items: center;
 }
+
+.library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
