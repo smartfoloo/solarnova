@@ -32,21 +32,29 @@
           </ul>
         </nav>
         <div class="library">
-          <h2 style="margin: 0px 5px">Library</h2>
+          <div class="library-header">
+            <h2 style="margin: 0px 5px">Library</h2>
+            <button id="add-playlist-btn" class="action-btn" style="margin: 0px;">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
           <div class="playlist-rows">
             <div class="playlist-row" data-playlist="liked-songs">
               <img src="liked.png" class="playlist-row-image">
               <span class="title">Liked Songs</span>
             </div>
-            <div class="playlist-row" data-playlist="liked-songs">
-              <img src="" class="playlist-row-image">
-              <span class="title">Add Playlist</span>
-            </div>
           </div>
         </div>
       </div>
       <div class="main-content">
-        <h1 id="greeting" style=></h1>
+        <div class="banner-top">
+          <h1 id="greeting"></h1>
+          <a href="/settings.html">
+            <button id="play" class="action-btn">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+          </a>
+        </div>
         <p style="margin-bottom: 10px;">Made by smartfoloo and hotmayonaise</p>
         <hr style="margin-bottom:20px;">
         <div class="banner" style="border-radius:px;" style="position: relative;text-align: center;color: white;">
@@ -197,17 +205,8 @@
             </a>
           </div>
         </div>
-
-        <h2 style="margin-top:20px;">Artists</h2>
-        <hr style="margin-bottom:20px;margin-top:10px;">
-
-
-        <div id="artist-container">
-
-        </div>
-      <hr style="margin-bottom:20px;margin-top:20px;">
-      <p>All songs belong to their respective owners.</p>
-    </div>
+        <p>All songs belong to their respective owners.</p>
+      </div>
       <div id="queue-container">
         <div class="queue-title">
           <h2 style="margin-bottom: 20px;">Queue</h2>

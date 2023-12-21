@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', '勇者', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', 'アイドル', 'night-dancer', '蕾', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', '勇者', 'ラブレター', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', 'アイドル', 'night-dancer', '蕾', '世界の秘密', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'ミスター': 'yoasobi',
         '優しい彗星': 'yoasobi',
         'アドベンチャー': 'yoasobi',
+        'ラブレター': 'yoasobi',
         'アンコール': 'yoasobi',
         '勇者': 'yoasobi',
         'romance': 'yoasobi',
@@ -127,10 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'night-dancer': 'imase',
         '蕾': 'GReeeen',
         'odoriko': 'vaundy',
+        '世界の秘密': 'vaundy',
         '白日': 'king gnu',
         '一途': 'king gnu',
         'カメレオン': 'king gnu',
         'sleepwalk': 'natori',
+        'overdose': 'natori',
         'boy': 'king gnu',
         'odoriko-dazbee-cover': 'dazbee, vaundy',
         '最高到達点': 'sekai no owari',
@@ -687,3 +690,102 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+var tab = localStorage.getItem("tab");
+
+if (tab) {
+  try {
+    var tabData = JSON.parse(tab);
+  } catch {
+    var tabData = {};
+  }
+} else {
+  var tabData = {};
+}
+
+if (tabData.title) {
+  document.getElementById("title").value = tabData.title;
+}
+if (tabData.icon) {
+  document.getElementById("icon").value = tabData.icon;
+}
+
+var settingsDefaultTab = {
+  title: "Music Player",
+  icon: "/favicon.png",
+};
+
+function setTitle(title = "") {
+  if (title) {
+    document.title = title;
+  } else {
+    document.title = settingsDefaultTab.title;
+  }
+
+  var tab = localStorage.getItem("tab");
+
+  if (tab) {
+    try {
+      var tabData = JSON.parse(tab);
+    } catch {
+      var tabData = {};
+    }
+  } else {
+    var tabData = {};
+  }
+
+  if (title) {
+    tabData.title = title;
+  } else {
+    delete tabData.title;
+  }
+
+  localStorage.setItem("tab", JSON.stringify(tabData));
+}
+
+function setFavicon(icon) {
+  if (icon) {
+    document.querySelector("link[rel='icon']").href = icon;
+  } else {
+    document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
+  }
+
+  var tab = localStorage.getItem("tab");
+
+  if (tab) {
+    try {
+      var tabData = JSON.parse(tab);
+    } catch {
+      var tabData = {};
+    }
+  } else {
+    var tabData = {};
+  }
+
+  if (icon) {
+    tabData.icon = icon;
+  } else {
+    delete tabData.icon;
+  }
+
+  localStorage.setItem("tab", JSON.stringify(tabData));
+}
+
+var tab = localStorage.getItem('tab');
+if (tab) {
+  try {
+    var tabData = JSON.parse(tab);
+  } catch {
+    var tabData = {};
+  }
+} else {
+  var tabData = {};
+}
+
+if (tabData.title) {
+  document.title = tabData.title;
+}
+
+if (tabData.icon) {
+  document.querySelector('link[rel="icon"]').href = tabData.icon;
+}

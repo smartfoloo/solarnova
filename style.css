@@ -111,6 +111,7 @@ a:hover{
   bottom: 0px;
   gap: 20px;
   height: 84px !important;
+  z-index: 999999;
 }
 
 .img-container {
@@ -501,12 +502,29 @@ body {
   margin: 10px 0px;
 }
 
-input {
+.input-div input {
   background: transparent;
   border: none;
   padding: 15px 20px;
   font-size: 16px;
   width: 50%;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  text-decoration-style: solid;
+  text-decoration-color: #fff;
+  transition: 500ms;
+  outline: 1px solid #495057;
+}
+
+input {
+  background: transparent;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  width: 250px;
   color: #fff;
   text-align: center;
   margin: 10px;
@@ -669,4 +687,46 @@ input:checked + .slider:before {
   height: 40px;
   border-radius: 5px;
   object-fit: cover;
+}
+
+.banner-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#google_translate_element {
+  margin: 20px 0px;
+}
+
+#google_translate_element select {
+  background: #1f2228;
+  font-family: 'Inter';
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  transition: 300ms;
+  border: none;
+}
+
+#google_translate_element label {
+  font-family: 'Inter';
+}
+
+#google_translate_element option {
+  font-family: 'Inter';
+  color: #fff;
+  padding: 5px;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
