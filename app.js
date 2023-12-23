@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', '勇者', 'ラブレター', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', 'アイドル', 'night-dancer', '蕾', '世界の秘密', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', '勇者', 'ラブレター', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', 'アイドル', 'night-dancer', 'ヒロイン', '蕾', '世界の秘密', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'chill-chill': ['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
     'nirvana-mix': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
     'kurt-cobain-mix': ['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
-    'retro-mix': ['memory-reboot', 'never-gonna-give-you-up', 'kyrie', 'careless-whisper', 'eye-in-the-sky', 'neglect', 'everlasting-love', 'overkill', 'down-under', '踊り子', '初恋'],
+    'retro-mix': ['memory-reboot', 'never-gonna-give-you-up', 'kyrie', 'careless-whisper', 'eye-in-the-sky', 'neglect', 'everlasting-love', 'overkill', 'down-under', 'everywhere', '踊り子', '初恋'],
     'modern-rock': ['little-dark-age'],
     'hip-hop-mix': ['blueberry-faygo', 'love-you-better', 'back-to-you', 'living-life-in-the-night-slowed', 'mathematical-disrespect', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
   }
@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'うっせえわ': 'ado',
         '阿修羅ちゃん': 'ado',
         'night-dancer': 'imase',
+        'ヒロイン': 'imase',
         '蕾': 'GReeeen',
         'odoriko': 'vaundy',
         '世界の秘密': 'vaundy',
@@ -287,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'everlasting-love': 'howard jones',
         'overkill': 'men at work',
         'down-under': 'men at work',
+        'everywhere': 'fleetwood mac',
         // modern rock 
         'little-dark-age': 'mgmt',
         // hits de internet 
