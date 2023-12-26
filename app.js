@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cover = document.getElementById('cover');
   const queueList = document.getElementById('queue-list');
   const likeBtn = document.getElementById('like-btn');
-  const shuffleBtn = document.getElementById('shuffle-btn'); // Add this line
+  const shuffleBtn = document.getElementById('shuffle-btn');
   const installApp = document.getElementById('installApp');
   const queueButton = document.getElementById('queue-btn');
   const queueContainer = document.getElementById('queue-container');
@@ -30,18 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
     'hits-de-internet': ['after-dark', 'my-ordinary-life', 'kerosene', 'past-lives', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas'],
-    'meme-songs': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem','shimmy-shimmy-ay'],
+    'meme-songs': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem', 'shimmy-shimmy-ay'],
     'slowed-and-reverbed': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed', 'lovely-bastards-slowed', 'memory-reboot-slowed'],
     'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
-    'holiday-party': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'mariahcarey', 'snowman','carol-of-the-bells','christmas-eve-==-sarajevo'],
-		'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'rap-mix': ['blueberry-faygo', 'lovin-on-me', 'all-girls-are-the-same', 'the-box', 'ballin', 'fkumean', 'no-role-modelz', 'solo', 'bad', 'what-are-you-so-afraid-of', 'chain-gang', 'wet-dreamz', 'passionfruit', 'teenage-fever', 'i-hate-police', 'great-gatsby', 'butterfly-effect', 'space-cadet', 'zeze', 'not-fair', '223s', 'look-back-at-it', 'humble', 'like-this', 'overtime', 'rockstar', 'swervin','got-it-on-me','wat-u-want-2','frick-love'],
-		'pop-mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-		'classical': ['la-campanella', 'violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
+    'holiday-party': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'mariahcarey', 'snowman', 'carol-of-the-bells', 'christmas-eve-==-sarajevo'],
+    'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
+    'rap-mix': ['blueberry-faygo', 'lovin-on-me', 'all-girls-are-the-same', 'the-box', 'ballin', 'fkumean', 'no-role-modelz', 'solo', 'bad', 'what-are-you-so-afraid-of', 'chain-gang', 'wet-dreamz', 'passionfruit', 'teenage-fever', 'i-hate-police', 'great-gatsby', 'butterfly-effect', 'space-cadet', 'zeze', 'not-fair', '223s', 'look-back-at-it', 'humble', 'like-this', 'overtime', 'rockstar', 'swervin', 'got-it-on-me', 'wat-u-want-2', 'frick-love'],
+    'pop-mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
+    'classical': ['la-campanella', 'violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
     'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
     'todays-top-hits': ['greedy', 'it-girl', 'ecstasy', 'moonlight', 'only-in-my-mind', 'strangers', 'smooth-operator-(tiktok-remix)'],
     'drake-mix': ['passionfruit', 'teenage-fever', 'idgaf-(frick)'],
-    'xxxtentacion-mix': ['sad!', 'bad','frick-love'],
+    'xxxtentacion-mix': ['sad!', 'bad', 'frick-love'],
     'chill-chill': ['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
     'nirvana-mix': ['scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son'],
     'kurt-cobain-mix': ['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'modern-rock': ['little-dark-age'],
     'hip-hop-mix': ['blueberry-faygo', 'love-you-better', 'back-to-you', 'living-life-in-the-night-slowed', 'mathematical-disrespect', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
   }
-
 
   let currentPlaylist = [];
   let queue = [];
@@ -66,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add the shuffle functionality
   shuffleBtn.addEventListener('click', () => {
     shufflePlaylist();
   });
@@ -80,30 +78,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentPlaylist.length > 0 && index >= 0 && index < currentPlaylist.length) {
       selectedSong = currentPlaylist[index];
-      console.log('Loading song:', selectedSong); // Log the selected song
+      console.log('Loading song:', selectedSong);
 
       title.innerText = selectedSong.replace(/-/g, " ");
-      audio.src = `music/songs/${selectedSong}.mp3`; // Check if the path and file name match your audio files
+      audio.src = `music/songs/${selectedSong}.mp3`;
       cover.src = `music/images/${selectedSong}.jpeg`;
       songIndex = index;
 
       updateQueueList();
 
-      // Update like button state
       isLiked = playlists['liked-songs'].includes(currentPlaylist[songIndex]);
       updateLikeButton();
 
-      // Update playlist indicator
       updatePlaylistIndicator();
 
-      // Log the audio source being set
       console.log('Audio source:', audio.src);
 
-
-      // Play the song (if needed)
       playSong();
       const songToArtistMap = {
-        // yoasobi
+
         '怪物': 'yoasobi',
         'ハルジオン': 'yoasobi',
         'ハルカ': 'yoasobi',
@@ -143,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'boy': 'king gnu',
         'odoriko-dazbee-cover': 'dazbee, vaundy',
         '最高到達点': 'sekai no owari',
-        // phonk,
+
         'metamorphosis': 'INTERWORLD',
         'rapture': 'INTERWORLD',
         'close-eyes': 'DVRST',
@@ -175,28 +168,28 @@ document.addEventListener('DOMContentLoaded', () => {
         'hyptonic-data': 'odetari',
         'avoid-me': 'KUTE',
         'neon-blade': 'moondeity',
-        //lofi
+
         'from-the-start': 'laufey',
-        // slowed and reverbed
+
         'close-eyes-slowed-reverb': 'DVRST',
         'metamorphosis-slowed-reverb': 'INTERWORLD',
         'lovely-bastards-slowed': 'ZWE1HVNDXR, yatashigang',
         'memory-reboot-slowed': 'VOJ, narvent',
-        // siglikore
+
         'youre-too-slow': 'odetari',
         'montagem-celestial-de-atena': 'dj orbital',
-        // meme 
+
         'indian-sleigh-ride-remix': 'vindaloo singh',
         'indian-last-christmas-remix': 'vindaloo singh',
         'careless-whisper': 'george michael',
         'shimmy-shimmy-ay': 'shimmy ah',
-        // gaming 
+
         'my-ordinary-life': 'the living tombstone',
         'after-dark': 'mr. kitty',
         'chug-jug-with-you': 'leviathanJPTV',
         'kerosene': 'crystal castles',
         'past-lives': 'sapientdream',
-        // rap
+
         'all-girls-are-the-same': 'juice wrld',
         'what-are-you-so-afraid-of': 'xxxtentacion',
         'frick-love': 'xxxtentacion',
@@ -225,7 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'overtime': 'ken carson',
         'like-this': 'ken carson',
 
-        // pop
         'paint-the-town-red': '✨💅doja cat!1!💅✨',
         'somebody-that-i-used-to-know': 'gotye (official aussie)',
         'somebodys-watching-me': '👀 rockwell',
@@ -234,11 +226,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'everybody-wants-to-rule-the-world': 'tears for fears',
         'the-perfect-girl': 'mareux',
         'sleepwalker': 'akiaura, LONOWN, STM',
-        // seasonal
+
         'mariahcarey': 'all i want for christmas is youuuuu 🎄',
         'snowman': 'sia',
         'last-rizzmas-i-gave-you-my-gyatt': 'every fortnite kid',
-        // top hits
+
         'greedy': 'tate mcrae',
         'it-girl': "aliyah's interlude",
         'ecstasy': 'su1c1de idol',
@@ -246,23 +238,23 @@ document.addEventListener('DOMContentLoaded', () => {
         'only-in-my-mind': 'kenya grace',
         'strangers': 'kenya grace',
         'smooth-operator-(tiktok-remix)': 'sade',
-        // national anthems 
+
         'soviet-anthem': 'soviet union',
         'heil-dir-im-siegerkranz': 'heinrich harrie',
         'horst-wessel-lied': 'horst wessel',
         'deutschlandlied': 'joseph haydn',
         'la-marseillaise': 'claude joseph rouget de lisle',
-        // classyical
+
         'la-campanella': 'rousseau',
         'violin-concerto-in-e-minor': 'felix mendelsshon',
         'adagio-albinoni': 'tomaso albinoni',
         'trio-no-2-in-e-minor': 'franz schubert',
         'moonlight-sonata': 'beethoven',
-        // drakewakey
+
         'passionfruit': 'drake',
         'teenage-fever': 'drake',
         'idgaf-(frick)': 'drake',
-        //nirvana
+
         'reap-me': 'nirvana',
         'heart-shaped-box': 'nirvana',
         'dumb': 'nirvana',
@@ -271,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'i-hate-myself': 'nirvana',
         'serve-the-slaves': 'GET BACK 2 WORK (nirvana)',
         'scentless-apprentice': 'nirvana',
-        //kurt cobain
+
         'poisons-gone': 'kurt cobain',
         'and-i-love-her': 'kurt cobain',
         'aberdeen': 'kurt cobain',
@@ -283,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'been-a-son': 'nirvana',
         'the-yodel-song': 'kurt cobain',
         'do-re-mi-medley': 'kurt cobain',
-        // retro
+
         'never-gonna-give-you-up': 'rick astley',
         '踊り子': 'kozo murashita',
         '初恋': 'kozo murashita',
@@ -294,18 +286,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'overkill': 'men at work',
         'down-under': 'men at work',
         'everywhere': 'fleetwood mac',
-        // modern rock 
+
         'little-dark-age': 'mgmt',
-        // hits de internet 
+
         'all-my-fellas': 'frizk',
 
-        // vibes
         'blueberry-faygo': 'lil mosey',
         'kamikaze': 'lil mosey',
 
-        // holiday 
         'carol-of-the-bells': 'lindsey stirling',
-        'christmas-eve-==-sarajevo' : 'trans-siberian orchestra'
+        'christmas-eve-==-sarajevo': 'trans-siberian orchestra'
 
       };
 
@@ -336,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function loadLiked(){
+  function loadLiked() {
     const liked = localStorage.getItem("liked-songs")
     playlists['liked-songs'].push(liked);
 
@@ -346,31 +336,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const playlist = playlists[playlistId];
 
     if (playlist) {
-      const playlistName = playlistId.replace(/-/g, " "); // Transform playlist ID to display name
+      const playlistName = playlistId.replace(/-/g, " ");
 
-
-      // Set playlist logo
       const playlistLogo = document.getElementById('playlist-logo');
       playlistLogo.src = `music/images/${playlistId}.jpeg`;
 
-      // Set playlist name
       const playlistNameElement = document.getElementById('playlist-name');
       playlistNameElement.textContent = playlistName;
 
-      // Set song count
       const songCountElement = document.getElementById('song-count');
       const songCount = playlist.length;
       songCountElement.textContent = `${songCount} ${songCount === 1 ? 'song' : 'songs'}`;
 
-      // Get the container for songs
       const songsContainer = document.querySelector('.songs-container');
 
       loadLiked();
 
-      // Clear any existing songs
       songsContainer.innerHTML = '';
 
-      // Iterate through songs and create HTML elements
       playlist.forEach(songName => {
         const listItem = document.createElement('li');
         const img = document.createElement('img');
@@ -396,7 +379,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   loadSongs(playlistId);
-
 
   function playSong() {
     musicContainer.classList.add('play');
@@ -437,9 +419,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   likeBtn.addEventListener('click', () => {
-    isLiked = !isLiked; // Toggle like state
+    isLiked = !isLiked;
     updateLikeButton();
-    updateLikedSongs(); // Update liked songs playlist
+    updateLikedSongs();
   });
 
   prevBtn.addEventListener('click', () => {
@@ -548,7 +530,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
   function DurTime(e) {
     const { duration, currentTime } = e.srcElement;
     let sec;
@@ -598,21 +579,19 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = songIndex; i < currentPlaylist.length; i++) {
       const listItem = document.createElement('li');
 
-      // Create an img element for the song image
       const img = document.createElement('img');
       img.src = `music/images/${currentPlaylist[i]}.jpeg`;
       img.alt = currentPlaylist[i];
 
       listItem.appendChild(img);
 
-      // Create a span element for the song title
       const titleSpan = document.createElement('span');
       titleSpan.innerText = currentPlaylist[i].replace(/-/g, " ");;
 
       listItem.appendChild(titleSpan);
 
       if (i === songIndex) {
-        // Add an outline to indicate the currently playing song
+
         listItem.classList.add('current-song');
       }
 
@@ -658,7 +637,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return 'Unknown Playlist';
   }
 
-  // Function to shuffle the current playlist
   function shufflePlaylist() {
     for (let i = currentPlaylist.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
