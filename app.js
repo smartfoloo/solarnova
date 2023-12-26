@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', '勇者', 'ラブレター', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', '世界の秘密', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', '三原色', '祝福', 'たぶん', 'アンコール', '勇者', 'ラブレター', 'romance', 'セブンティーン', 'もう少しだけ', 'もしも命が描けたら', 'ミスター', '優しい彗星', 'アドベンチャー', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', '怪獣の花唄', '世界の秘密', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', '白日', 'カメレオン', '一途', 'boy', '最高到達点', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -132,10 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
         '蕾': 'GReeeen',
         'odoriko': 'vaundy',
         '世界の秘密': 'vaundy',
+        '怪獣の花唄': 'vaundy',
         '白日': 'king gnu',
         '一途': 'king gnu',
         'カメレオン': 'king gnu',
         'sleepwalk': 'natori',
+        'フライデー・ナイト': 'natori',
+        '猿芝居': 'natori',
         'overdose': 'natori',
         'boy': 'king gnu',
         'odoriko-dazbee-cover': 'dazbee, vaundy',
