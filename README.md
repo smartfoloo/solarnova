@@ -1,6 +1,6 @@
 <p align = "center">
-<h1 align = "center" >Music Player</h1>
-A statically deployable music player built with vanilla javascript.
+<h1 align = "center" >skark</h1>
+A statically deploy music player built with vanilla javascript.
 
 ## Features
 

@@ -1,5 +1,5 @@
 {
-  "name": "music player",
+  "name": "skark",
   "short_name": "sfmp",
   "start_url": "index.html",
   "scope": "./",
