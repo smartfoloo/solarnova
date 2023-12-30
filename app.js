@@ -533,6 +533,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const newTime = (clickX / width) * duration;
     audio.currentTime = newTime;
 
+    // Update progress bar visually without resetting it
+    const progressPercent = (newTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
+
     const isPaused = audio.paused;
     if (!isPaused) {
       audio.play();
