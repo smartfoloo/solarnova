@@ -527,15 +527,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setProgress(e) {
+    e.stopPropagation(); // Prevents the default behavior (page reload) on progress bar click
+
     const width = this.clientWidth;
     const clickX = e.type.includes('touch') ? e.touches[0].clientX - this.getBoundingClientRect().left : e.clientX - this.getBoundingClientRect().left;
     const duration = audio.duration;
     const newTime = (clickX / width) * duration;
     audio.currentTime = newTime;
-
-    // Update progress bar visually without resetting it
-    const progressPercent = (newTime / duration) * 100;
-    progress.style.width = `${progressPercent}%`;
 
     const isPaused = audio.paused;
     if (!isPaused) {
