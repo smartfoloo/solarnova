@@ -1,12 +1,12 @@
 {
   "name": "skark",
-  "short_name": "sfmp",
+  "short_name": "skark",
   "start_url": "index.html",
   "scope": "./",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "192x192",
+      "src": "mobile-logo.png",
+      "sizes": "120x120",
       "type": "image/png"
     }
   ],
