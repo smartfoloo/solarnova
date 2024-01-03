@@ -5,8 +5,8 @@
   "scope": "./",
   "icons": [
     {
-      "src": "mobile-logo.png",
-      "sizes": "120x120",
+      "src": "favicon.png",
+      "sizes": "192x192",
       "type": "image/png"
     }
   ],
