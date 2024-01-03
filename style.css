@@ -46,11 +46,6 @@ a{
   color: #FFFFFF;
 }
 
-a:hover{
-  color:#1cd96a;
-  text-shadow: #222;
-}
-
 .sidebar {
   width: 15%;
 }
@@ -729,4 +724,24 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.playlist-menu {
+  margin-bottom: 15px;
+}
+.playlist-menu li{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  list-style-type: none;
+  background: #1f2228;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.playlist-menu li:hover {
+  transform: scale(0.95);
 }
