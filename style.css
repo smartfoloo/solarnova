@@ -52,7 +52,7 @@ a{
 
 .sidenavbar {
   margin: 15px 0px 15px 15px;
-  background: #16181c;
+  background: #111111;
   border-radius: 15px;
   padding: 20px;
 }
@@ -211,18 +211,18 @@ a{
 
 .playlist-card {
   max-width: calc(20% - 16px);
-  background-color: #1f2228;
+  background-color: #161616;
   padding: 15px;
   border-radius: 15px;
   display: inline-block;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: 300ms;
   text-align: center;
   width: 170px;
 }
 
 .playlist-card:hover {
-  transform: scale(1.05);
+  background-color: #282828;
 }
 
 .playlist-card h3 {
@@ -247,7 +247,7 @@ a{
 
 .main-content {
   margin: 15px;
-  background: #16181c;
+  background: #111111;
   border-radius: 15px;
   padding: 20px;
   width: 60%;
@@ -256,7 +256,7 @@ a{
 #queue-container {
   margin: 15px;
   margin-left: 0px;
-  background: #16181c;
+  background: #111111;
   border-radius: 15px;
   padding: 20px;
   width: 25%;
@@ -538,7 +538,7 @@ input {
 }
 .main-content-settings {
   margin: 15px;
-  background: #16181c;
+  background: #111111;
   border-radius: 15px;
   padding: 20px;
   width: 80%;
@@ -609,7 +609,7 @@ input:checked + .slider:before {
 
 .library {
   margin: 15px 0px 15px 15px;
-  background: #16181c;
+  background: #111111;
   border-radius: 15px;
   padding: 20px 20px 20px 15px;
 }
@@ -633,7 +633,7 @@ input:checked + .slider:before {
 }
 
 .playlist-row:hover {
-  background: #1f2228;
+  background: #161616;
 }
 
 .playlist-row-image {
@@ -694,7 +694,7 @@ input:checked + .slider:before {
 }
 
 #google_translate_element select {
-  background: #1f2228;
+  background: #161616;
   font-family: 'Inter';
   color: #fff;
   border-radius: 5px;
@@ -734,7 +734,7 @@ input:checked + .slider:before {
   font-size: 20px;
   border-radius: 20px;
   list-style-type: none;
-  background: #1f2228;
+  background: #161616;
   display: flex;
   justify-content: center;
   align-items: center;
