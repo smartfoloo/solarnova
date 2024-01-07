@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', '怪獣の花唄', '世界の秘密', '不可幸力', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', '白日', 'カメレオン', '一途', 'boy', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', '怪獣の花唄', '世界の秘密', '不可幸力', 'napori', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', '白日', 'カメレオン', '一途', 'boy', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '世界の秘密': 'vaundy',
         '怪獣の花唄': 'vaundy',
         '不可幸力': 'vaundy',
+        'napori': 'vaundy',
         '白日': 'king gnu',
         '一途': 'king gnu',
         'カメレオン': 'king gnu',
@@ -368,17 +369,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       playlist.forEach(songName => {
         const listItem = document.createElement('li');
-        const img = document.createElement('img');
-        const span = document.createElement('span');
+        const queueSongDesc = document.createElement('div');
+        queueSongDesc.classList.add('queue-song-desc');
 
+        const img = document.createElement('img');
         img.src = `music/images/${songName}.jpeg`;
         img.alt = songName;
+
+        const span = document.createElement('span');
         span.textContent = songName.replace(/-/g, " ");
 
-        listItem.appendChild(img);
-        listItem.appendChild(span);
+        queueSongDesc.appendChild(img);
+        queueSongDesc.appendChild(span);
+        listItem.appendChild(queueSongDesc);
+
         songsContainer.appendChild(listItem);
-        const playlistName = playlistId
+
+        const playlistName = playlistId;
         currentPlaylist = playlists[playlistName] || [];
         if (currentPlaylist.length > 0) {
           loadSong(0);
@@ -392,6 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadSongs(playlistId);
 
+
   function playSong() {
     musicContainer.classList.add('play');
     playBtn.querySelector('i.fa-solid').classList.remove('fa-play');
@@ -400,6 +408,13 @@ document.addEventListener('DOMContentLoaded', () => {
     playPlaylistBtn.querySelector('i.fa-solid').classList.add('fa-pause');
     audio.play();
     navigator.mediaSession.playbackState = "playing";
+    const currentSong = document.querySelector('.current-song');
+    if (currentSong) {
+      const visualizer = currentSong.querySelector('.visualizer');
+      if (visualizer) {
+        visualizer.style.display = 'block'; // Hide the visualizer
+      }
+    }
   }
 
   function pauseSong() {
@@ -410,6 +425,13 @@ document.addEventListener('DOMContentLoaded', () => {
     playPlaylistBtn.querySelector('i.fa-solid').classList.remove('fa-pause');
     audio.pause();
     navigator.mediaSession.playbackState = "paused";
+    const currentSong = document.querySelector('.current-song');
+    if (currentSong) {
+      const visualizer = currentSong.querySelector('.visualizer');
+      if (visualizer) {
+        visualizer.style.display = 'none'; // Hide the visualizer
+      }
+    }
   }
 
   playBtn.addEventListener('click', () => {
@@ -590,28 +612,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateQueueList() {
     queueList.innerHTML = '';
-    for (let i = songIndex; i < currentPlaylist.length; i++) {
-      const listItem = document.createElement('li');
 
-      const img = document.createElement('img');
-      img.src = `music/images/${currentPlaylist[i]}.jpeg`;
-      img.alt = currentPlaylist[i];
+    for (let i = 0; i < currentPlaylist.length; i++) {
+      if (i >= songIndex) { // Check if the song is yet to be played or currently playing
+        const listItem = document.createElement('li');
 
-      listItem.appendChild(img);
+        const queueSongDesc = document.createElement('div');
+        queueSongDesc.classList.add('queue-song-desc');
 
-      const titleSpan = document.createElement('span');
-      titleSpan.innerText = currentPlaylist[i].replace(/-/g, " ");;
+        const img = document.createElement('img');
+        img.src = `music/images/${currentPlaylist[i]}.jpeg`;
+        img.alt = currentPlaylist[i];
 
-      listItem.appendChild(titleSpan);
+        queueSongDesc.appendChild(img);
 
-      if (i === songIndex) {
+        const titleSpan = document.createElement('span');
+        titleSpan.innerText = currentPlaylist[i].replace(/-/g, " ");
 
-        listItem.classList.add('current-song');
+        queueSongDesc.appendChild(titleSpan);
+        listItem.appendChild(queueSongDesc);
+
+        if (i === songIndex) {
+          listItem.classList.add('current-song');
+
+          const visualizerDiv = document.createElement('div');
+          visualizerDiv.classList.add('visualizer');
+          for (let j = 0; j < 4; j++) {
+            const barDiv = document.createElement('div');
+            barDiv.classList.add('bar');
+            visualizerDiv.appendChild(barDiv);
+          }
+          listItem.appendChild(visualizerDiv);
+        }
+
+        queueList.appendChild(listItem);
       }
-
-      queueList.appendChild(listItem);
     }
   }
+
+
 
   function updateLikeButton() {
     if (isLiked) {
