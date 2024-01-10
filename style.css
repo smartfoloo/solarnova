@@ -505,24 +505,11 @@ body {
 }
 
 .input-div input {
-  background: transparent;
-  border: none;
-  padding: 15px 20px;
-  font-size: 16px;
-  width: 50%;
-  color: #fff;
-  text-align: center;
-  margin: 10px;
-  border-radius: 24px;
-  -webkit-border-radius: 24px;
-  text-decoration-style: solid;
-  text-decoration-color: #fff;
-  transition: 500ms;
-  outline: 1px solid #495057;
+  width: 80%;
 }
 
 input {
-  background: transparent;
+  background: #282828;
   border: none;
   padding: 15px 20px;
   font-size: 16px;
@@ -535,7 +522,7 @@ input {
   text-decoration-style: solid;
   text-decoration-color: #fff;
   transition: 500ms;
-  outline: 1px solid #495057;
+  outline: none;
 }
 
 ::placeholder {

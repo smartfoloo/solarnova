@@ -368,8 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const songsContainer = document.querySelector('.songs-container');
 
-      loadLiked();
-
+      // Clear existing content
       songsContainer.innerHTML = '';
 
       playlist.forEach(songName => {
@@ -388,19 +387,29 @@ document.addEventListener('DOMContentLoaded', () => {
         queueSongDesc.appendChild(span);
         listItem.appendChild(queueSongDesc);
 
-        songsContainer.appendChild(listItem);
+        listItem.addEventListener('click', () => {
+          const songIndex = playlist.indexOf(songName);
+          currentPlaylist = playlist;
+          if (currentPlaylist.length > 0 && songIndex >= 0 && songIndex < currentPlaylist.length) {
+            loadSong(songIndex);
+            playSong(); // Play the song after loading it
+          }
+        });
 
-        const playlistName = playlistId;
-        currentPlaylist = playlists[playlistName] || [];
-        if (currentPlaylist.length > 0) {
-          loadSong(0);
-          playSong();
-        }
+        songsContainer.appendChild(listItem);
       });
+
+      // Load the first song in the playlist by default
+      if (playlist.length > 0) {
+        currentPlaylist = playlist;
+        loadSong(0);
+      }
     } else {
       console.error('Playlist not found');
     }
   }
+
+
 
   loadSongs(playlistId);
 
@@ -836,4 +845,10 @@ if (tabData.title) {
 
 if (tabData.icon) {
   document.querySelector('link[rel="icon"]').href = tabData.icon;
+}
+
+if (window.self !== window.top) {
+  if (window.location !== 'http://127.0.0.1:3000/') {
+    window.location.href = 'https://boulderbugle.com/article-art-class-e63TTX8G';
+  }
 }
