@@ -676,18 +676,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateLikedSongs() {
     if (isLiked) {
-      if (!playlists['liked-songs'].includes(currentPlaylist[songIndex])) {
-        playlists['liked-songs'].push(currentPlaylist[songIndex]);
-        localStorage.setItem("liked-songs", playlists['liked-songs'].toString())
-
-      }
+      playlists['liked-songs'].push(currentPlaylist[songIndex]);
     } else {
-      const indexToRemove = playlists['liked-songs'].indexOf(currentPlaylist[songIndex]);
-      if (indexToRemove !== -1) {
-        playlists['liked-songs'].splice(indexToRemove, 1);
-        localStorage.setItem("liked-songs", playlists['liked-songs'].toString())
+      const index = playlists['liked-songs'].indexOf(currentPlaylist[songIndex]);
+      if (index !== -1) {
+        playlists['liked-songs'].splice(index, 1);
       }
     }
+    localStorage.setItem('liked-songs', playlists['liked-songs']);
+  }
+
+  function loadLikedSongsPlaylist() {
+    const likedSongs = localStorage.getItem('liked-songs');
+    if (likedSongs) {
+      playlists['liked-songs'] = likedSongs.split(',');
+    }
+
+    loadSongs('liked-songs');
   }
 
   function updatePlaylistIndicator() {
