@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', '怪獣の花唄', '世界の秘密', '不可幸力', 'napori', 'そんなbitterな話', '花占い', 'chainsaw-blood', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'きらり', 'インフェルノ', 'ダンスホール', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', '怪獣の花唄', '世界の秘密', '不可幸力', 'napori', 'そんなbitterな話', '花占い', 'chainsaw-blood', 'tokyo-flash', 'odoriko', 'odoriko-dazbee-cover', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'きらり', 'インフェルノ', 'ダンスホール', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'kurt-cobain-mix': ['poisons_gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley'],
     'retro-mix': ['memory-reboot', 'never-gonna-give-you-up', 'kyrie', 'careless-whisper', 'eye-in-the-sky', 'neglect', 'everlasting-love', 'overkill', 'down-under', 'who-can-it-be-now', 'everywhere', 'africa', 'material-girl', 'morning-train', 'smooth-criminal', 'take-on-me', 'dont-stop-believin', 'dont-you-want-me', 'maneater', '空も飛べるはず', '踊り子', '初恋'],
     'modern-rock': ['little-dark-age'],
-    'hip-hop-mix': ['blueberry-faygo', 'love-you-better', 'back-to-you', 'living-life-in-the-night-slowed', 'mathematical-disrespect', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never'],
+    'hip-hop-mix': ['blueberry-faygo', 'love-you-better', 'back-to-you', 'living-life-in-the-night-slowed', 'mathematical-disrespect', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never', 'curry', 'billie-eilish'],
   }
 
   let currentPlaylist = [];
@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'napori': 'vaundy',
         'chainsaw-blood': 'vaundy',
         'そんなbitterな話': 'vaundy',
+        'tokyo-flash': 'vaundy',
         '花占い': 'vaundy',
         '白日': 'king gnu',
         '一途': 'king gnu',
@@ -150,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'きらり': 'fujii kaze',
         'インフェルノ': 'mrs. green apple',
         'ダンスホール': 'mrs. green apple',
+        '残機': 'zutomayo',
 
         'metamorphosis': 'INTERWORLD',
         'rapture': 'INTERWORLD',
@@ -317,6 +319,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         'blueberry-faygo': 'lil mosey',
         'kamikaze': 'lil mosey',
+        'curry': 'vic sage',
+        'billie-eilish': 'armani white',
 
         'carol-of-the-bells': 'lindsey stirling',
         'christmas-eve-==-sarajevo': 'trans-siberian orchestra'
