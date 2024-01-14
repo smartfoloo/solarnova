@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;700&display=swap');
 
 :root {
   --primary-color: #302AE6;
@@ -6,7 +6,7 @@
   --font-color: #fff;
   --bg-color: #000;
   --heading-color: #292922;
-  --font-family:'Inter'
+  --font-family:'Lexend'
 }
 * {
   box-sizing: border-box;
@@ -528,7 +528,7 @@ input {
 ::placeholder {
   color: #757575;
   font-size: 16px;
-  font-family: 'Inter';
+  font-family: 'Lexend';
 }
 .main-content-settings {
   margin: 15px;
@@ -695,7 +695,7 @@ input:checked + .slider:before {
 
 #google_translate_element select {
   background: #161616;
-  font-family: 'Inter';
+  font-family: 'Lexend';
   color: #fff;
   border-radius: 5px;
   padding: 5px;
@@ -705,11 +705,11 @@ input:checked + .slider:before {
 }
 
 #google_translate_element label {
-  font-family: 'Inter';
+  font-family: 'Lexend';
 }
 
 #google_translate_element option {
-  font-family: 'Inter';
+  font-family: 'Lexend';
   color: #fff;
   padding: 5px;
 }
