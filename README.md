@@ -1,5 +1,5 @@
 <p align = "center">
-<h1 align = "center" >skark</h1>
+<h1 align = "center" >solarnova</h1>
 A statically deploy music player built with vanilla javascript.
 
 ## Features
