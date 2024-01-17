@@ -12,6 +12,8 @@ A statically deploy music player built with vanilla javascript.
 
 📱 Mobile Support
 
+🔡 Experimental Lyrics Support
+
 ## Deployment
 
 [![Deploy with Netlify](https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/smartfoloo/music-player)
@@ -23,7 +25,7 @@ A statically deploy music player built with vanilla javascript.
 
 #### Can you add this song?
 
-You can request a game on our site on the navbar. Your request will be viewed in 1-2 days.
+You can request a song from [here](https://forms.gle/1eK3Qi4pTs1mNvCPA). Your request won't be viewed for around 1 week, due to high demand. Your song may not be added due to issues. Sorry :)
 
 ## License
 
