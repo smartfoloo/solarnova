@@ -214,15 +214,20 @@
         </div>
         <p>All songs belong to their respective owners.</p>
       </div>
-      <div id="queue-container">
-        <div class="queue-title">
-          <h2 style="margin-bottom: 20px;">Queue</h2>
-          <div id="shuffle-container">
-            <button id="shuffle-btn" class="action-btn"><i class="fa-solid fa-random"></i></button>
+      <div class="right">
+        <div id="queue-container">
+          <div class="queue-title">
+            <h2 style="margin-bottom: 20px;">Queue</h2>
+            <div id="shuffle-container">
+              <button id="shuffle-btn" class="action-btn"><i class="fa-solid fa-random"></i></button>
+            </div>
           </div>
+          <ul id="queue-list"></ul>
+          <span id="playlist-indicator">Playing from: </span>
         </div>
-        <ul id="queue-list"></ul>
-        <span id="playlist-indicator">Playing from: </span>
+        <div class="" id="lyrics-container">
+          <span>No Lyrics Available for this Song</span>
+        </div>
       </div>
     </div>
     <div class="music-container" id="music-container">
@@ -257,5 +262,6 @@
     <script src="/app.js" type="text/javascript"></script>
     <script src="/greeting.js" type="text/javascript"></script>
     <script src="/search.js" type="text/javascript"></script>
+    <script src="/lyrics.js" type="text/javascript"></script>
   </body>
 </html>

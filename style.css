@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;700&display=swap');
 
+body,
+html {
+  overscroll-behavior: none;
+}
+
 :root {
   --primary-color: #302AE6;
   --secondary-color: #536390;
@@ -48,6 +53,7 @@ a{
 
 .sidebar {
   width: 15%;
+  height: calc(100vh - 84px);
 }
 
 .sidenavbar {
@@ -251,17 +257,38 @@ a{
   border-radius: 15px;
   padding: 20px;
   width: 60%;
+  height: calc(100vh - 114px);
+  overflow: auto;
+}
+
+.right {
+  padding: 15px; 
+  padding-left: 0px;
+  width: 25%;
+  height: (100vh - 84px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 #queue-container {
-  margin: 15px;
-  margin-left: 0px;
   background: #111111;
   border-radius: 15px;
   padding: 20px;
-  width: 25%;
+  height: calc(50vh - 65px);
   list-style-type: none;
   text-overflow: ellipsis;
+  overflow: auto;
+}
+
+#lyrics-container {
+  background: #111111;
+  border-radius: 15px;
+  padding: 20px;
+  height: calc(50vh - 65px);
+  list-style-type: none;
+  text-overflow: ellipsis;
+  overflow: auto;
 }
 
 .show-queue {
@@ -270,7 +297,7 @@ a{
 
 .main-container {
   display: flex;
-  min-height: 100vh;
+  height: calc(100vh - 84px);
   margin-bottom: 84px !important;
 }
 
@@ -379,18 +406,6 @@ a{
   }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1cd96a;
-  border-radius: 8px;
-}
 body {
   background: #000;
 }
