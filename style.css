@@ -281,7 +281,7 @@ a{
   overflow: auto;
 }
 
-#lyrics-container {
+.lyrics {
   background: #111111;
   border-radius: 15px;
   padding: 20px;

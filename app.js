@@ -1,3 +1,5 @@
+import { loadLyrics } from './lyricsloader.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const playlistRows = document.querySelectorAll('.playlist-row');
   const mainContent = document.querySelectorAll('.main-content');
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const installApp = document.getElementById('installApp');
   const queueButton = document.getElementById('queue-btn');
   const queueContainer = document.getElementById('queue-container');
+  const lyricsContainer = document.getElementById('lyrics-container');
   const urlParams = new URLSearchParams(window.location.search);
 
   const playlistId = urlParams.get('id');
@@ -83,6 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
       audio.src = `music/songs/${selectedSong}.mp3`;
       cover.src = `music/images/${selectedSong}.jpeg`;
       songIndex = index;
+
+      loadLyrics(selectedSong)
+        .then(lyrics => {
+          // Preserve line breaks using template literals
+          const formattedLyrics = lyrics.split('\n').map(line => `${line}<br>`).join('');
+          lyricsContainer.innerHTML = formattedLyrics;
+        })
+        .catch(error => {
+          console.error('Error loading lyrics:', error);
+          lyricsContainer.innerHTML = 'No lyrics available';
+        });
 
       updateQueueList();
 

@@ -225,8 +225,11 @@
           <ul id="queue-list"></ul>
           <span id="playlist-indicator">Playing from: </span>
         </div>
-        <div class="" id="lyrics-container">
-          <span>No Lyrics Available for this Song</span>
+        <div class="lyrics">
+          <h2 style="margin-bottom: 20px;">Lyrics</h2>
+          <div id="lyrics-container">
+        
+          </div>
         </div>
       </div>
     </div>
@@ -259,9 +262,9 @@
       </div>
     </div>
     <audio src="" id="audio" type="audio/mp3"></audio>
-    <script src="/app.js" type="text/javascript"></script>
+    <script type="module" src="/app.js"></script>
     <script src="/greeting.js" type="text/javascript"></script>
     <script src="/search.js" type="text/javascript"></script>
-    <script src="/lyrics.js" type="text/javascript"></script>
+    <script type="module" src="/lyricsloader.js"></script>
   </body>
 </html>
