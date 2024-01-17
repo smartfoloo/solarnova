@@ -89,13 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       loadLyrics(selectedSong)
         .then(lyrics => {
-          // Preserve line breaks using template literals
           const formattedLyrics = lyrics.split('\n').map(line => `${line}<br>`).join('');
           lyricsContainer.innerHTML = formattedLyrics;
         })
         .catch(error => {
           console.error('Error loading lyrics:', error);
-          lyricsContainer.innerHTML = 'No lyrics available';
+          if (error.code === 'ENOENT') {
+            lyricsContainer.textContent = 'No lyrics available for this song';
+          } else {
+            lyricsContainer.textContent = 'Error loading lyrics';
+          }
         });
 
       updateQueueList();
