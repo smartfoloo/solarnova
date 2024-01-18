@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const likeBtn = document.getElementById('like-btn');
   const shuffleBtn = document.getElementById('shuffle-btn');
   const installApp = document.getElementById('installApp');
-  const queueButton = document.getElementById('queue-btn');
+  const toggleButton = document.getElementById('toggle-btn');
   const queueContainer = document.getElementById('queue-container');
-  const lyricsContainer = document.getElementById('lyrics-container');
+  const nowPlaying = document.getElementById('now-playing');
   const urlParams = new URLSearchParams(window.location.search);
 
   const playlistId = urlParams.get('id');
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪獣の花唄', '世界の秘密', '不可幸力', 'napori', 'そんなbitterな話', '花占い', 'chainsaw-blood', 'tokyo-flash', '恋風邪にのせて', 'odoriko', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'インフェルノ', 'ダンスホール', '夏音', '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', 'odoriko-dazbee-cover', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪獣の花唄', '世界の秘密', '不可幸力', 'napori', 'そんなbitterな話', '花占い', 'chainsaw-blood', 'tokyo-flash', '恋風邪にのせて', 'odoriko', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'インフェルノ', 'ダンスホール', 'ベテルギウス', '夏音', 'ドライフラワー', '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', 'odoriko-dazbee-cover', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cover.src = `music/images/${selectedSong}.jpeg`;
       songIndex = index;
 
-      loadLyrics(selectedSong)
+      /*loadLyrics(selectedSong)
         .then(lyrics => {
           const formattedLyrics = lyrics.split('\n').map(line => `${line}<br>`).join('');
           lyricsContainer.innerHTML = formattedLyrics;
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             lyricsContainer.textContent = 'Error loading lyrics';
           }
-        });
+        });*/
 
       updateQueueList();
 
@@ -172,6 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'ダンスホール': 'mrs. green apple',
         '残機': 'zutomayo',
         '夏音': 'yuuri',
+        'ドライフラワー': 'yuuri',
+        'ベテルギウス': 'yuuri',
 
         'metamorphosis': 'INTERWORLD',
         'rapture': 'INTERWORLD',
@@ -356,6 +358,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const artistElement = document.getElementById('artist');
       artistElement.innerText = artist || 'Unknown Artist';
+
+      const songName = selectedSong.replace(/-/g, " ");
+      document.getElementById('now-playing-cover').src = `music/images/${selectedSong}.jpeg`;
+      document.getElementById('now-playing-song').innerText = songName;
+      document.getElementById('now-playing-artist').innerText = artist || 'Unknown Artist';
 
       navigator.mediaSession.metadata = new MediaMetadata({
         title: selectedSong.replace(/-/g, " "),
@@ -767,17 +774,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  queueButton.addEventListener('click', () => {
+  toggleButton.addEventListener('click', () => {
     if (queueContainer.style.display === 'block') {
       queueContainer.style.display = 'none';
-      mainContent.forEach(content => {
-        content.style.width = '85%';
-      });
+      nowPlaying.style.display = 'block';
     } else {
       queueContainer.style.display = 'block';
-      mainContent.forEach(content => {
-        content.style.width = '60%';
-      });
+      nowPlaying.style.display = 'none';
     }
   });
 

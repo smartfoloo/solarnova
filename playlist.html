@@ -83,6 +83,14 @@
       </div>
     </div>
     <div class="right">
+      <div class="now-playing" id="now-playing">
+        <h2 style="margin-bottom: 20px;">Now Playing</h2>
+        <div class="now-playing-container">
+          <img src="" alt="" id="now-playing-cover">
+          <h1 id="now-playing-song"></h1>
+          <p id="now-playing-artist"></p>
+        </div>
+      </div>
       <div id="queue-container">
         <div class="queue-title">
           <h2 style="margin-bottom: 20px;">Queue</h2>
@@ -92,12 +100,6 @@
         </div>
         <ul id="queue-list"></ul>
         <span id="playlist-indicator">Playing from: </span>
-      </div>
-      <div class="lyrics">
-        <h2 style="margin-bottom: 20px;">Lyrics</h2>
-        <div id="lyrics-container">
-
-        </div>
       </div>
     </div>
   </div>
@@ -123,6 +125,9 @@
       </button>
       <button id="next" class="action-btn">
         <i class="fa-solid fa-forward"></i>
+      </button>
+      <button id="toggle-btn" class="action-btn">
+        <i class="fas fa-bars"></i>
       </button>
       <button id="like-btn" class="action-btn">
         <i class="far fa-heart"></i>
