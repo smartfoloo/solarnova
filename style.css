@@ -106,13 +106,21 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 10px 30px;
   position: fixed;
   width: 100%;
   bottom: 0px;
   gap: 20px;
   height: 84px !important;
   z-index: 999999;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 40%;
 }
 
 .img-container {
@@ -136,10 +144,15 @@ a{
   background: transparent;
   border: 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   padding: 5px;
   margin: 0 10px;
+  transition: 50ms;
+}
+
+.navigation .action-btn:hover {
+  transform: scale(1.05);
 }
 
 .action-btn:hover {
@@ -153,10 +166,10 @@ a{
 .action-btn-big {
   color: #000;
   background: #fff;
-  border-radius: 20px;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
+  border-radius: 17.5px;
+  font-size: 20px;
+  width: 35px !important;
+  height: 35px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,11 +188,17 @@ a{
   display: flex;
   width: 40vw;
   align-items: center !important;
-  gap: 20px;
+  gap: 30px;
 }
 
 .music-info h4 {
   margin: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .progress-container {
@@ -244,8 +263,8 @@ a{
 }
 #cover{
   border-radius:10px;
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   overflow: hidden;
   background-image: cover;
   object-fit: cover;
@@ -400,13 +419,13 @@ a{
   }
 
   .navigation {
-    width: 100%;
+    display: none;
   }
 
   .music-info {
     max-width: 40vw;
     text-overflow: ellipsis;
-    gap: 10px;
+    gap: 20px;
     align-items: center !important;
   }
 
@@ -684,10 +703,11 @@ input:checked + .slider:before {
 }
 
 .playlist-info-container .action-btn-big {
-  height: 50px;
-  width: 50px;
+  height: 50px !important;
+  width: 50px !important;
   border-radius: 50%;
   background: #1cd96a;
+  font-size: 24px;
 }
 
 .playlist-info {
@@ -698,7 +718,7 @@ input:checked + .slider:before {
 
 #playlist-logo {
   width: 10vw;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0px 0px 20px 0px #000;
   transition: 100ms;
   cursor: pointer;
