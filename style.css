@@ -383,7 +383,7 @@ a{
   justify-content: space-between;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1664px) {
   .playlist-card {
     max-width: calc(25% - 15px);
   }
