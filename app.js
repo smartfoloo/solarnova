@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
-    'hits-de-internet': ['after-dark', 'my-ordinary-life', 'kerosene', 'past-lives', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas'],
+    'hits-de-internet': ['moment', 'after-dark', 'my-ordinary-life', 'kerosene', 'past-lives', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas'],
     'meme-songs': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem', 'shimmy-shimmy-ay'],
     'slowed-and-reverbed': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed', 'lovely-bastards-slowed', 'memory-reboot-slowed'],
     'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
@@ -230,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'chug-jug-with-you': 'leviathanJPTV',
         'kerosene': 'crystal castles',
         'past-lives': 'sapientdream',
+        'moment': 'vierre cloud',
 
         'all-girls-are-the-same': 'juice wrld',
         'what-are-you-so-afraid-of': 'xxxtentacion',
