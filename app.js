@@ -793,16 +793,6 @@ document.addEventListener('DOMContentLoaded', () => {
     playSong();
   });
 
-  audio.addEventListener('timeupdate', DurTime);
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') {
-      if (musicContainer.classList.contains('play')) {
-        playSong();
-      }
-    }
-  });
-
   toggleButton.addEventListener('click', () => {
     if (queueContainer.style.display === 'block') {
       queueContainer.style.display = 'none';
