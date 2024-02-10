@@ -1,5 +1,3 @@
-import { loadLyrics } from './lyricsloader.js';
-
 document.addEventListener('DOMContentLoaded', () => {
   const playlistRows = document.querySelectorAll('.playlist-row');
   const mainContent = document.querySelectorAll('.main-content');
@@ -27,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪獣の花唄', '世界の秘密', '不可幸力', 'napori', 'そんなbitterな話', '花占い', 'chainsaw-blood', 'tokyo-flash', '恋風邪にのせて', 'まぶた', 'odoriko', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'hana', 'インフェルノ', 'ダンスホール', 'rendez-vous', 'pink', '水平線', '怪盗', '冬と春', 'アイラブユー', 'ベルベットの詩', '黄色', 'ベテルギウス', '夏音', '飛行船', 'ドライフラワー', 'シャッター', 'ビリミリオン', 'ただ君に晴れ', 'だから僕は音楽を辞めた', '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', 'odoriko-dazbee-cover', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', 'tokyo-flash', '恋風邪にのせて', 'まぶた', '世界の秘密', '不可幸力', 'napori', 'odoriko', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'hana', 'インフェルノ', 'ダンスホール', 'rendez-vous', 'pink', '水平線', '怪盗', '冬と春', 'アイラブユー', 'ベルベットの詩', '黄色', '高嶺の花子さん', 'ベテルギウス', '夏音', '飛行船', 'ドライフラワー', 'シャッター', 'ビリミリオン', 'ただ君に晴れ', 'だから僕は音楽を辞めた', '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', 'odoriko-dazbee-cover', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
-    'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
-    'hits-de-internet': ['moment', 'after-dark', 'my-ordinary-life', 'kerosene', 'past-lives', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas'],
+    'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'an-enigmatic-encounter', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
+    'hits-de-internet': ['moment', 'the-perfect-girl-the-motion-retrowave-remix', 'space-song', 'past-lives', 'after-dark', 'my-ordinary-life', 'kerosene', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas'],
     'meme-songs': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem', 'shimmy-shimmy-ay'],
     'slowed-and-reverbed': ['close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed', 'lovely-bastards-slowed', 'memory-reboot-slowed'],
     'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
@@ -104,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'odoriko': 'vaundy',
     '世界の秘密': 'vaundy',
     '怪獣の花唄': 'vaundy',
+    'しわあわせ': 'vaundy',
     '不可幸力': 'vaundy',
     'napori': 'vaundy',
     'chainsaw-blood': 'vaundy',
@@ -148,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'アイラブユー': 'back number',
     'ベルベットの詩': 'back number',
     '黄色': 'back number',
+    '高嶺の花子さん': 'back number',
     'ただ君に晴れ': 'yorushika',
     'だから僕は音楽を辞めた': 'yorushika',
 
@@ -204,6 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'kerosene': 'crystal castles',
     'past-lives': 'sapientdream',
     'moment': 'vierre cloud',
+    'the-perfect-girl-the-motion-retrowave-remix': 'mareux, the motion',
+    'space-song': 'beach house',
 
     'all-girls-are-the-same': 'juice wrld',
     'what-are-you-so-afraid-of': 'xxxtentacion',
@@ -346,20 +348,6 @@ document.addEventListener('DOMContentLoaded', () => {
       cover.src = `music/images/${selectedSong}.jpeg`;
       songIndex = index;
 
-      /*loadLyrics(selectedSong)
-        .then(lyrics => {
-          const formattedLyrics = lyrics.split('\n').map(line => `${line}<br>`).join('');
-          lyricsContainer.innerHTML = formattedLyrics;
-        })
-        .catch(error => {
-          console.error('Error loading lyrics:', error);
-          if (error.code === 'ENOENT') {
-            lyricsContainer.textContent = 'No lyrics available for this song';
-          } else {
-            lyricsContainer.textContent = 'Error loading lyrics';
-          }
-        });*/
-
       updateQueueList();
 
       isLiked = playlists['liked-songs'].includes(currentPlaylist[songIndex]);
@@ -398,12 +386,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       console.error('Invalid song index or playlist');
     }
-  }
-
-  function loadLiked() {
-    const liked = localStorage.getItem("liked-songs")
-    playlists['liked-songs'].push(liked);
-
   }
 
   function loadSongs(playlistId) {
@@ -750,15 +732,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     localStorage.setItem('liked-songs', playlists['liked-songs']);
-  }
-
-  function loadLikedSongsPlaylist() {
-    const likedSongs = localStorage.getItem('liked-songs');
-    if (likedSongs) {
-      playlists['liked-songs'] = likedSongs.split(',');
-    }
-
-    loadSongs('liked-songs');
   }
 
   function updatePlaylistIndicator() {
