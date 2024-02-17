@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', 'まぶた', '美電球', '忘れ物', '裸の勇者', 'odoriko', '世界の秘密', 'napori', '不可幸力', 'tokyo-flash', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'hana', 'インフェルノ', 'ダンスホール', 'rendez-vous', 'pink', '水平線', '怪盗', '冬と春', 'アイラブユー', 'ベルベットの詩', '黄色', '高嶺の花子さん', 'ベテルギウス', '夏音', '飛行船', 'ドライフラワー', 'シャッター', 'ビリミリオン', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ' , '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', 'odoriko-dazbee-cover', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', 'まぶた', '美電球', '忘れ物', '黒子', '裸の勇者', 'odoriko', '世界の秘密', 'napori', '不可幸力', 'tokyo-flash', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'hana', 'インフェルノ', 'ダンスホール', 'rendez-vous', 'pink', '水平線', '怪盗', '冬と春', 'アイラブユー', 'ベルベットの詩', '黄色', '高嶺の花子さん', 'ベテルギウス', '夏音', '飛行船', 'ドライフラワー', 'シャッター', 'ビリミリオン', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ' , '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', '蕾', 'odoriko-dazbee-cover', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'an-enigmatic-encounter', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'しわあわせ': 'vaundy',
     '不可幸力': 'vaundy',
     'napori': 'vaundy',
+    '黒子': 'vaundy',
     'chainsaw-blood': 'vaundy',
     'そんなbitterな話': 'vaundy',
     'tokyo-flash': 'vaundy',
