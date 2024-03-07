@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let playlists = {
     'liked-songs': [],
-    'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', 'まぶた', '美電球', '忘れ物', '黒子', '裸の勇者', 'odoriko', '世界の秘密', 'napori', '不可幸力', 'tokyo-flash', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'hana', 'たけてん', 'アカリ', 'ひらり', 'ハロー カゲロウ', '愛唄', '道', '遥か', '愛し君へ', 'ビリーヴ', '刹那', 'pride', '蕾', 'ボクたちの電光石火', '涙空',  'インフェルノ', 'ダンスホール', 'rendez-vous', 'pink', '水平線', '冬と春', 'アイラブユー', 'ベルベットの詩', 'happy-birthday', '勝手にオリンピック', '黄色', 'エメラルド', '怪盗', '高嶺の花子さん', 'ベテルギウス', '夏音', '飛行船', 'ドライフラワー', 'シャッター', 'ビリミリオン', 'ワタリドリ', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ' , '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', 'odoriko-dazbee-cover', '栄光の架橋', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
+    'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', 'まぶた', '美電球', '忘れ物', '黒子', '裸の勇者', 'odoriko', '世界の秘密', 'napori', '不可幸力', 'tokyo-flash', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'ターミナル', 'きらり', 'hana', '勿忘草', 'たけてん', 'アカリ', 'ひらり', 'ハロー カゲロウ', 'lemonade', 'ジュブナイル', '味方', '愛唄', '道', '遥か', '愛し君へ', 'ビリーヴ', '刹那', 'pride', '蕾', 'ボクたちの電光石火', '涙空',  'インフェルノ', 'ダンスホール', 'rendez-vous', 'pink', '水平線', '冬と春', 'アイラブユー', 'ベルベットの詩', 'happy-birthday', '勝手にオリンピック', '黄色', 'エメラルド', '怪盗', '高嶺の花子さん', 'ベテルギウス', '夏音', '飛行船', 'ドライフラワー', 'シャッター', 'ビリミリオン', 'ワタリドリ', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ' , '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', 'odoriko-dazbee-cover', 'ひまわりの約束', '栄光の架橋', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ'],
     'siglikore': ['youre-too-slow', 'hyptonic-data'],
     'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
     'gaming-tracks': ['metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'an-enigmatic-encounter', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'chill-chill': ['passionfruit', 'bad-habit', 'snowman', 'moonlight', 'only-in-my-mind', 'smooth-operator-(tiktok-remix)', 'cupid', 'from-the-start'],
     '80s-hits': ['never-gonna-give-you-up', 'kyrie', 'careless-whisper', 'eye-in-the-sky', 'rebel-yell', 'everlasting-love', 'overkill', 'down-under', 'who-can-it-be-now', 'everywhere', 'africa', 'material-girl', 'morning-train', 'smooth-criminal', 'take-on-me', 'dont-stop-believin', 'dont-you-want-me', 'maneater', '空も飛べるはず', '踊り子', '初恋'],
     'modern-rock': ['little-dark-age'],
-    'hip-hop-mix': ['blueberry-faygo', 'love-you-better', 'back-to-you', 'living-life-in-the-night-slowed', 'mathematical-disrespect', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'lemonade', 'buster', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never', 'curry', 'billie-eilish', 'dunkin-donuts', 'hope', 'sad!', 'bad', 'frick-love', 'passionfruit', 'teenage-fever', 'idgaf-(frick)'],
+    'hip-hop-mix': ['blueberry-faygo', 'love-you-better', 'back-to-you', 'living-life-in-the-night-slowed', 'mathematical-disrespect', 'sea-of-thieves', 'i-see-london-i-see-france', 'spicy', 'thousand', 'RO7-3ALATOL', 'buster', 'hollywood-perfect', 'holiday', 'barking', 'outside', 'easier', 'slidin', 'mercedes', 'forever-never', 'curry', 'billie-eilish', 'dunkin-donuts', 'hope', 'sad!', 'bad', 'frick-love', 'passionfruit', 'teenage-fever', 'idgaf-(frick)'],
     'rock-mix': ['rebel-yell', 'scentless-apprentice', 'serve-the-slaves', 'i-hate-myself', 'moist-viagra', 'sappy', 'dumb', 'reap-me', 'heart-shaped-box', 'been-a-son', 'poisons-gone', 'and-i-love-her', 'aberdeen', 'you-cant-change-me', 'rehash', 'clean-up-before-she-comes', 'burn-the-rain', 'what-more-can-i-say', 'the-yodel-song', 'do-re-mi-medley']
   }
 
@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'ビリーヴ': 'GReeeen',
     'ひらり': 'GReeeen',
     '涙空': 'GReeeen',
+    'lemonade': 'GReeeen',
+    '勿忘草': 'GReeeen',
+    'ジュブナイル': 'GReeeen',
     'ボクたちの電光石火': 'GReeeen',
     '刹那': 'GReeeen',
     'pride': 'GReeeen',
@@ -157,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'シャッター': 'yuuri',
     'ビリミリオン': 'yuuri',
     '飛行船': 'yuuri',
-    'rendez-vous': 'shy toupe',
-    'pink': 'shy toupe',
+    'rendez-vous': 'shy taupe',
+    'pink': 'shy taupe',
     '水平線': 'back number',
     '怪盗': 'back number',
     '冬と春': 'back number',
@@ -172,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'ただ君に晴れ': 'yorushika',
     'だから僕は音楽を辞めた': 'yorushika',
     'ブルーベリー・ナイツ': 'macaroni empitsu',
+    'ひまわりの約束': 'motohiro hata',
 
     'metamorphosis': 'INTERWORLD',
     'rapture': 'INTERWORLD',
