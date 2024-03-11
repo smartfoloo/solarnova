@@ -593,10 +593,6 @@ if (tabData.icon) {
   document.querySelector('link[rel="icon"]').href = tabData.icon;
 }
 
-if (/iPhone|iPod|Android/i.test(navigator.userAgent)) {
-  window.location.href = '/mobile.html';
-}
-
 if (window.self !== window.top) {
   if (window.location !== 'http://127.0.0.1:3000/') {
     window.location.href = 'https://boulderbugle.com/article-art-class-e63TTX8G';
