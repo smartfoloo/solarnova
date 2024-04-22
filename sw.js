@@ -22,7 +22,7 @@ self.addEventListener('install', e => {
                 "/search.js",
                 "/service-worker.js",
                 "/manifest.json",
-                "/liked.png",
+                "/./music/images/liked.png",
                 "/style.css",
                 "music/songs/the-box.jpeg",
                 "music/images/metamorphosis.mp3",
