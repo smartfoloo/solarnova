@@ -551,6 +551,11 @@ input {
   transform: scale(1.03);
 }
 
+hr {
+  color: var(--font-color);
+  border: var(--font-color);
+}
+
 .songs-container li {
   display: flex;
   align-items: center;
