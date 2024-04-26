@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentPlaylist = [];
   let queue = [];
-  let isLiked = false;
+  let likeCheck = false;
 
   playlistRows.forEach(row => {
     row.addEventListener('click', () => {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       updateQueueList();
 
-      isLiked = playlists['liked-songs'].includes(currentPlaylist[songIndex]);
+      likeCheck = JSON.parse(localStorage.getItem("likedSongs")).includes(currentPlaylist[songIndex]);
       updateLikeButton();
 
       updatePlaylistIndicator();
@@ -149,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
         listItem.appendChild(queueSongDesc);
 
         listItem.addEventListener('click', () => {
-          const songIndex = playlist.indexOf(songName);
-          currentPlaylist = playlist;
+          const songIndex = likedSongsPlaylist.indexOf(songName);
+          currentPlaylist = likedSongsPlaylist;
           if (currentPlaylist.length > 0 && songIndex >= 0 && songIndex < currentPlaylist.length) {
             loadSong(songIndex);
             playSong();
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentSong) {
       const visualizer = currentSong.querySelector('.visualizer');
       if (visualizer) {
-        visualizer.style.display = 'none'; // Hide the visualizer
+        visualizer.style.display = 'none';
       }
     }
   }
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   likeBtn.addEventListener('click', () => {
-    isLiked = !isLiked;
+    likeCheck = !likeCheck;
     updateLikeButton();
     updateLikedSongs();
   });
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playSong();
     navigator.mediaSession.metadata = new MediaMetadata({
       title: selectedSong.replace(/-/g, " "),
-      artist: "smartfoloo-musicplayer",
+      artist: "solarnova",
       artwork: [
         {
           src: cover.src,
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playSong();
     navigator.mediaSession.metadata = new MediaMetadata({
       title: selectedSong.replace(/-/g, " "),
-      artist: "smartfoloo-musicplayer",
+      artist: "solarnova",
       artwork: [
         {
           src: cover.src,
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playSong();
     navigator.mediaSession.metadata = new MediaMetadata({
       title: selectedSong.replace(/-/g, " "),
-      artist: "smartfoloo-musicplayer",
+      artist: "solarnova",
       artwork: [
         {
           src: cover.src,
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playSong();
     navigator.mediaSession.metadata = new MediaMetadata({
       title: selectedSong.replace(/-/g, " "),
-      artist: "smartfoloo-musicplayer",
+      artist: "solarnova",
       artwork: [
         {
           src: cover.src,
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setProgress(e) {
-    e.stopPropagation(); // Prevents the default behavior (page reload) on progress bar click
+    e.stopPropagation();
 
     const width = this.clientWidth;
     const clickX = e.type.includes('touch') ? e.touches[0].clientX - this.getBoundingClientRect().left : e.clientX - this.getBoundingClientRect().left;
@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
     queueList.innerHTML = '';
 
     for (let i = 0; i < currentPlaylist.length; i++) {
-      if (i >= songIndex) { // Check if the song is yet to be played or currently playing
+      if (i >= songIndex) {
         const listItem = document.createElement('li');
 
         const queueSongDesc = document.createElement('div');
@@ -484,24 +484,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateLikeButton() {
-    if (isLiked) {
+    if (likeCheck) {
       likeBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
+      likeBtn.style.color = '#ff0000';
     } else {
       likeBtn.innerHTML = '<i class="far fa-heart"></i>';
+      likeBtn.style.color = '#cad3f5';
+      if (playlistId === 'liked-songs') {
+        window.location.reload();
+      }
     }
   }
 
   function updateLikedSongs() {
-    let likedSongs = JSON.parse(localStorage.getItem("liked-songs"));
+    let likedSongs = JSON.parse(localStorage.getItem("likedSongs"));
 
     if (!likedSongs) {
       likedSongs = [];
     }
 
     const song = currentPlaylist[songIndex];
-    const indexOfSong = likedSongs.indexOf(song);
+    const songExists = likedSongs.includes(song);
 
-    if (indexOfSong > -1) {
+    if (songExists) {
+      const indexOfSong = likedSongs.indexOf(song);
       likedSongs.splice(indexOfSong, 1);
     } else {
       likedSongs.push(song);
@@ -509,8 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
   }
-
-
 
   function updatePlaylistIndicator() {
     const playlistName = getPlaylistNameBySong(currentPlaylist[songIndex]);
