@@ -2,8 +2,6 @@ import { playlists, songToArtistMap } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const playlistRows = document.querySelectorAll('.playlist-row');
-  const mainContent = document.querySelectorAll('.main-content');
-  const sidebar = document.querySelectorAll('.sidebar');
   const musicContainer = document.getElementById('music-container');
   const audio = document.getElementById('audio');
   const playBtn = document.getElementById('play');
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const queueList = document.getElementById('queue-list');
   const likeBtn = document.getElementById('like-btn');
   const shuffleBtn = document.getElementById('shuffle-btn');
-  const installApp = document.getElementById('installApp');
   const toggleButton = document.getElementById('toggle-btn');
   const queueContainer = document.getElementById('queue-container');
   const nowPlaying = document.getElementById('now-playing');
@@ -74,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Audio source:', audio.src);
 
       playSong();
-      
 
       const currentSongFileName = selectedSong;
       const artist = getArtistForSong(currentSongFileName);
@@ -107,7 +103,71 @@ document.addEventListener('DOMContentLoaded', () => {
   function loadSongs(playlistId) {
     const playlist = playlists[playlistId];
 
-    if (playlist) {
+    if (playlistId === "liked-songs") {
+      const likedSongsList = JSON.parse(localStorage.getItem('likedSongs'));
+      const likedSongsPlaylist = likedSongsList || [];
+      const playlistName = "Liked Songs";
+
+      const playlistLogo = document.getElementById('playlist-logo');
+      playlistLogo.src = 'music/images/liked.png';
+
+      const playlistNameElement = document.getElementById('playlist-name');
+      playlistNameElement.textContent = playlistName;
+
+      const songCountElement = document.getElementById('song-count');
+      const songCount = likedSongsPlaylist.length;
+      songCountElement.textContent = `${songCount} ${songCount === 1 ? 'song' : 'songs'}`;
+
+      const songsContainer = document.querySelector('.songs-container');
+
+      songsContainer.innerHTML = '';
+
+      likedSongsPlaylist.forEach(songName => {
+        const listItem = document.createElement('li');
+        const queueSongDesc = document.createElement('div');
+        queueSongDesc.classList.add('queue-song-desc');
+
+        const img = document.createElement('img');
+        img.src = `music/images/${songName}.jpeg`;
+        img.alt = songName;
+
+        const queueSongTitle = document.createElement('div');
+        queueSongTitle.classList.add('queue-song-title');
+
+        const span = document.createElement('span');
+        span.textContent = songName.replace(/-/g, " ");
+
+        const p = document.createElement('p');
+        const artist = getArtistForSong(songName);
+        p.textContent = artist || 'Unknown Artist';
+
+        queueSongTitle.appendChild(span);
+        queueSongTitle.appendChild(p);
+
+        queueSongDesc.appendChild(img);
+        queueSongDesc.appendChild(queueSongTitle);
+        listItem.appendChild(queueSongDesc);
+
+        listItem.addEventListener('click', () => {
+          const songIndex = playlist.indexOf(songName);
+          currentPlaylist = playlist;
+          if (currentPlaylist.length > 0 && songIndex >= 0 && songIndex < currentPlaylist.length) {
+            loadSong(songIndex);
+            playSong();
+          }
+        });
+
+        songsContainer.appendChild(listItem);
+      });
+
+      if (likedSongsPlaylist.length > 0) {
+        currentPlaylist = likedSongsPlaylist;
+        console.log(currentPlaylist);
+        loadSong(0);
+      }
+    }
+
+    else if (playlist) {
       const playlistName = playlistId.replace(/-/g, " ");
 
       const playlistLogo = document.getElementById('playlist-logo');
@@ -122,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const songsContainer = document.querySelector('.songs-container');
 
-      // Clear existing content
       songsContainer.innerHTML = '';
 
       playlist.forEach(songName => {
@@ -156,14 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
           currentPlaylist = playlist;
           if (currentPlaylist.length > 0 && songIndex >= 0 && songIndex < currentPlaylist.length) {
             loadSong(songIndex);
-            playSong(); // Play the song after loading it
+            playSong();
           }
         });
 
         songsContainer.appendChild(listItem);
       });
 
-      // Load the first song in the playlist by default
       if (playlist.length > 0) {
         currentPlaylist = playlist;
         loadSong(0);
@@ -173,10 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
-
   loadSongs(playlistId);
-
 
   function playSong() {
     musicContainer.classList.add('play');
@@ -190,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentSong) {
       const visualizer = currentSong.querySelector('.visualizer');
       if (visualizer) {
-        visualizer.style.display = 'block'; // Hide the visualizer
+        visualizer.style.display = 'block';
       }
     }
   }
@@ -428,8 +483,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
-
   function updateLikeButton() {
     if (isLiked) {
       likeBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
@@ -439,16 +492,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateLikedSongs() {
-    if (isLiked) {
-      playlists['liked-songs'].push(currentPlaylist[songIndex]);
-    } else {
-      const index = playlists['liked-songs'].indexOf(currentPlaylist[songIndex]);
-      if (index !== -1) {
-        playlists['liked-songs'].splice(index, 1);
-      }
+    let likedSongs = JSON.parse(localStorage.getItem("liked-songs"));
+
+    if (!likedSongs) {
+      likedSongs = [];
     }
-    localStorage.setItem('liked-songs', playlists['liked-songs']);
+
+    const song = currentPlaylist[songIndex];
+    const indexOfSong = likedSongs.indexOf(song);
+
+    if (indexOfSong > -1) {
+      likedSongs.splice(indexOfSong, 1);
+    } else {
+      likedSongs.push(song);
+    }
+
+    localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
   }
+
+
 
   function updatePlaylistIndicator() {
     const playlistName = getPlaylistNameBySong(currentPlaylist[songIndex]);
