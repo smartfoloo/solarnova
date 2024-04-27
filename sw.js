@@ -1,43 +1,18 @@
-function registerServiceWorker(){
-    if ('serviceWorker' in navigator){
-        navigator.serviceWorker.register('sw.js', { scope: '/' }).then(() => {
-            print("registarred");
+// This is the "Offline copy of pages" service worker
 
-        }).catch(error => {
-            console.log("oopsie daisy- failed to register", error);
-        });
-    }
-}
+const CACHE = "pwabuilder-offline";
 
-self.addEventListener('install', e => {
-    e.waitUntil(
-        caches.open('music-player-cache').then(cache => {
-            return cache.addAll([
-                "/",
-                "/index.html",
-                "/playlists.html",
-                "/greeting.js",
-                "/jolly.gif",
-                "/app.js",
-                "/search.js",
-                "/service-worker.js",
-                "/manifest.json",
-                "/./music/images/liked.png",
-                "/style.css",
-                "music/songs/the-box.jpeg",
-                "music/images/metamorphosis.mp3",
-                "music/images/metamorphosis.jpeg",
-                "music/songs/rapture.mp3",
-                "music/images/rapture.jpeg",
-                "music/songs/close-eyes.mp3",
-                "music/images/close-eyes.jpeg",
-                "music/songs/lovely-bastards.mp3",
-                "music/images/lovely-bastards.jpeg",
-                "music/songs/memory-reboot.mp3",
-                "music/images/memory-reboot.jpeg",
-                "music/songs/devil-eyes.mp3",
-                "music/images/devil-eyes.jpeg"  
-            ]);
-        })
-    );
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
+
+workbox.routing.registerRoute(
+  new RegExp('/*'),
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: CACHE
+  })
+);
