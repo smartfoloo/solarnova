@@ -1,7 +1,6 @@
 import { playlists, songToArtistMap } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const playlistRows = document.querySelectorAll('.playlist-row');
   const musicContainer = document.getElementById('music-container');
   const audio = document.getElementById('audio');
   const playBtn = document.getElementById('play');
@@ -26,17 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let queue = [];
   let likeCheck = false;
 
-  playlistRows.forEach(row => {
-    row.addEventListener('click', () => {
-      const playlistName = row.getAttribute('data-playlist');
-      currentPlaylist = playlists[playlistName] || [];
-      if (currentPlaylist.length > 0) {
-        loadSong(0);
-        playSong();
-      }
-    });
-  });
-
   shuffleBtn.addEventListener('click', () => {
     shufflePlaylist();
   });
@@ -52,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function loadSong(index) {
     let selectedSong;
 
+    if (!localStorage.getItem('likedSongs')) {
+      localStorage.setItem('likedSongs', '[]');
+    }
+
     if (currentPlaylist.length > 0 && index >= 0 && index < currentPlaylist.length) {
       selectedSong = currentPlaylist[index];
       console.log('Loading song:', selectedSong);
@@ -63,8 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       updateQueueList();
 
-      likeCheck = JSON.parse(localStorage.getItem("likedSongs")).includes(currentPlaylist[songIndex]);
-      updateLikeButton();
+      setLikeButton();
 
       updatePlaylistIndicator();
 
@@ -168,7 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     else if (playlist) {
-      const playlistName = playlistId.replace(/-/g, " ");
+      const words = playlistId.split("-");
+      const capitalize = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+      const playlistName = capitalize.join(" ");
 
       const playlistLogo = document.getElementById('playlist-logo');
       playlistLogo.src = `music/images/${playlistId}.jpeg`;
@@ -483,21 +476,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function updateLikeButton() {
-    if (likeCheck) {
+  function setLikeButton() {
+    if (JSON.parse(localStorage.getItem('likedSongs')).includes(currentPlaylist[songIndex])) {
       likeBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
       likeBtn.style.color = '#ff0000';
     } else {
       likeBtn.innerHTML = '<i class="far fa-heart"></i>';
       likeBtn.style.color = '#cad3f5';
+    }
+  }
+
+  function updateLikeButton() {
+    if (JSON.parse(localStorage.getItem('likedSongs')).includes(currentPlaylist[songIndex])) {
+      likeBtn.innerHTML = '<i class="far fa-heart"></i>';
+      likeBtn.style.color = '#cad3f5';
       if (playlistId === 'liked-songs') {
         window.location.reload();
       }
+    } else {
+      likeBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
+      likeBtn.style.color = '#ff0000';
     }
   }
 
   function updateLikedSongs() {
-    let likedSongs = JSON.parse(localStorage.getItem("likedSongs"));
+    let likedSongs = JSON.parse(localStorage.getItem('likedSongs'));
 
     if (!likedSongs) {
       likedSongs = [];
@@ -513,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
       likedSongs.push(song);
     }
 
-    localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
+    localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
   }
 
   function updatePlaylistIndicator() {
