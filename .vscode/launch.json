@@ -4,7 +4,8 @@
       "type": "chrome",
       "name": "http://127.0.0.1:3000/index.html",
       "request": "launch",
-      "url": "http://127.0.0.1:3000/index.html"
+      "url": "http://127.0.0.1:3000/index.html",
+      "purpose": "maskable"
     }
   ]
 }
