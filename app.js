@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const playlistName = capitalize.join(" ");
 
       const playlistLogo = document.getElementById('playlist-logo');
-      playlistLogo.src = `music/images/${playlistId}.jpeg`;
+      playlistLogo.src = `music/images/${playlistId}.webp`;
 
       const playlistNameElement = document.getElementById('playlist-name');
       playlistNameElement.textContent = playlistName;
