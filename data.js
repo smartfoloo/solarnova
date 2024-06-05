@@ -2,6 +2,7 @@ const playlists = {
   'liked-songs': [],
   'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', 'まぶた', '美電球', '忘れ物', '黒子', '裸の勇者', 'odoriko', '世界の秘密', 'napori', '不可幸力', 'tokyo-flash', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', '金木犀', 'ターミナル', 'きらり', 'hana', '満ちてゆく', '谺する', 'まちがいさがし', 'ラストシーン', '虹', 'ロングホープ・フィリア', '星を仰ぐ', '見たこともない景色', 'さよならエレジー', 'keep-on-running', 'ユアーズ', 'subtitle', 'pretender', 'i-love', 'universe', '宿命', 'パラボラ', 'hello', 'cry-baby', 'mixed-nuts', '115万キロのフィルム', '日常', '異端なスター', 'yesterday', 'white-noise', 'apoptosis', 'tattoo', 'driver', 'laughter', '幾億光年', '勿忘草', 'たけてん', 'アカリ', 'ひらり', 'ハロー カゲロウ', 'lemonade', 'ジュブナイル', '味方', '栞', '愛唄', '道', '遥か', '愛し君へ', 'ビリーヴ', '刹那', 'pride', 'green-boys', '蕾', 'ボクたちの電光石火', '涙空', 'hikari', 'インフェルノ', 'ダンスホール', 'rendez-vous', 'pink', '水平線', '冬と春', 'アイラブユー', 'ベルベットの詩', 'happy-birthday', 'クリスマスソング', '勝手にオリンピック', '黄色', 'エメラルド', '怪盗', '高嶺の花子さん', 'ベテルギウス', '夏音', '飛行船', 'ドライフラワー', 'シャッター', 'ビリミリオン', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ', '怪物', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'heart-beat', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'セブンティーン', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'アドベンチャー', 'romance', '好きだ', 'アイドル', 'night-dancer', 'ヒロイン', 'nagisa', 'odoriko-dazbee-cover', 'ひまわりの約束', '栄光の架橋', '白日', 'カメレオン', '一途', 'boy', '青のすみか', '残機', '打上花火', 'ピースサイン', '最高到達点', 'habit', '阿修羅ちゃん', 'うっせえわ', 'tomorrow-never-knows',],
   'siglikore': ['youre-too-slow', 'hyptonic-data'],
+  'sped-up': ['kompa-pasión', 'bounce'],
   'phonk': ['metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
   'hits-de-internet': ['moment', 'the-perfect-girl-the-motion-retrowave-remix', 'space-song', 'past-lives', 'after-dark', 'my-ordinary-life', 'kerosene', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'an-enigmatic-encounter', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
   'meme-songs': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem', 'shimmy-shimmy-ay'],
@@ -9,7 +10,7 @@ const playlists = {
   'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
   'holiday-party': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'mariahcarey', 'snowman', 'carol-of-the-bells', 'christmas-eve-==-sarajevo'],
   'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-  'pop-mix': ['beautiful-things', 'i-like-the-way-you-kiss-me', 'paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
+  'pop-mix': ['beautiful-things', 'i-like-the-way-you-kiss-me', 'stay', 'paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
   'classical': ['la-campanella', 'violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
   'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
   'todays-top-hits': ['greedy', 'it-girl', 'ecstasy', 'moonlight', 'only-in-my-mind', 'strangers', 'smooth-operator-(tiktok-remix)'],
@@ -20,6 +21,28 @@ const playlists = {
 }
 
 const songToArtistMap = {
+  'mockingbird': 'eminem',
+  'walk-up': 'mills',
+  'blueberry-faygo': 'lil mosey',
+  'kamikaze': 'lil mosey',
+  'curry': 'vic sage',
+  'billie-eilish': 'armani white',
+  'dunkin-donuts': 'jakes birthday',
+
+  'kompa-pasión': 'фрози',
+  'bounce': 'фрози',
+
+  'stay': 'the kid laroi, justin bieber',
+  'beautiful-things': 'benson boone',
+  'i-like-the-way-you-kiss-me': 'artemas',
+  'paint-the-town-red': '✨💅doja cat!1!💅✨',
+  'somebody-that-i-used-to-know': 'gotye (official aussie)',
+  'somebodys-watching-me': '👀 rockwell',
+  'bad-habit': 'steve lacy',
+  'luxury': 'azealia banks',
+  'everybody-wants-to-rule-the-world': 'tears for fears',
+  'the-perfect-girl': 'mareux',
+  'sleepwalker': 'akiaura, LONOWN, STM',
 
   '怪物': 'yoasobi',
   'ハルジオン': 'yoasobi',
@@ -248,17 +271,6 @@ const songToArtistMap = {
   'overtime': 'ken carson',
   'like-this': 'ken carson',
 
-  'beautiful-things': 'benson boone',
-  'i-like-the-way-you-kiss-me': 'artemas',
-  'paint-the-town-red': '✨💅doja cat!1!💅✨',
-  'somebody-that-i-used-to-know': 'gotye (official aussie)',
-  'somebodys-watching-me': '👀 rockwell',
-  'bad-habit': 'steve lacy',
-  'luxury': 'azealia banks',
-  'everybody-wants-to-rule-the-world': 'tears for fears',
-  'the-perfect-girl': 'mareux',
-  'sleepwalker': 'akiaura, LONOWN, STM',
-
   'mariahcarey': 'all i want for christmas is youuuuu 🎄',
   'snowman': 'sia',
   'last-rizzmas-i-gave-you-my-gyatt': 'every fortnite kid',
@@ -333,14 +345,6 @@ const songToArtistMap = {
   'little-dark-age': 'mgmt',
 
   'all-my-fellas': 'frizk',
-
-  'mockingbird': 'eminem',
-  'walk-up': 'mills',
-  'blueberry-faygo': 'lil mosey',
-  'kamikaze': 'lil mosey',
-  'curry': 'vic sage',
-  'billie-eilish': 'armani white',
-  'dunkin-donuts': 'jakes birthday',
 
   'carol-of-the-bells': 'lindsey stirling',
   'christmas-eve-==-sarajevo': 'trans-siberian orchestra',
