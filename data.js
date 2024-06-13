@@ -10,7 +10,7 @@ const playlists = {
   'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
   'holiday-party': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'mariahcarey', 'snowman', 'carol-of-the-bells', 'christmas-eve-==-sarajevo'],
   'mix': ['paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
-  'pop-mix': ['beautiful-things', 'i-like-the-way-you-kiss-me', 'stay', 'pedro', 'slay-x-dancin-(krono-remix)', 'paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
+  'pop-mix': ['beautiful-things', 'pick-up-the-phone', 'i-like-the-way-you-kiss-me', 'stay', 'pedro', 'slay-x-dancin-(krono-remix)', 'paint-the-town-red', 'somebody-that-i-used-to-know', 'somebodys-watching-me', 'ballin', 'bad-habit', 'sleepwalker', 'luxury', 'everybody-wants-to-rule-the-world', 'the-box', 'the-perfect-girl'],
   'classical': ['la-campanella', 'violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
   'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
   'todays-top-hits': ['greedy', 'it-girl', 'ecstacy', 'moonlight', 'only-in-my-mind', 'strangers', 'smooth-operator-(tiktok-remix)'],
@@ -34,6 +34,7 @@ const songToArtistMap = {
 
   'stay': 'the kid laroi, justin bieber',
   'pedro': 'jaxomy',
+  'pick-up-the-phone': 'henry moodie',
   'beautiful-things': 'benson boone',
   'i-like-the-way-you-kiss-me': 'artemas',
   'paint-the-town-red': '✨💅doja cat!1!💅✨',
