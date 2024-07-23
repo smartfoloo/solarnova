@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function loadSong(index) {
     let selectedSong;
+    let lowercaseSelectedSong;
 
     if (!localStorage.getItem('likedSongs')) {
       localStorage.setItem('likedSongs', '[]');
@@ -46,11 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentPlaylist.length > 0 && index >= 0 && index < currentPlaylist.length) {
       selectedSong = currentPlaylist[index];
+      lowercaseSelectedSong = selectedSong.toLowerCase();
       console.log('Loading song:', selectedSong);
 
       title.innerText = selectedSong.replace(/-/g, " ");
-      audio.src = `music/songs/${selectedSong}.mp3`;
-      cover.src = `music/images/${selectedSong}.jpeg`;
+      audio.src = `music/songs/${lowercaseSelectedSong}.mp3`;
+      cover.src = `music/images/${lowercaseSelectedSong}.jpeg`;
       songIndex = index;
 
       updateQueueList();
