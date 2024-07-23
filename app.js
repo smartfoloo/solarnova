@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function loadSong(index) {
     let selectedSong;
-    let lowercaseSelectedSong;
 
     if (!localStorage.getItem('likedSongs')) {
       localStorage.setItem('likedSongs', '[]');
@@ -47,12 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentPlaylist.length > 0 && index >= 0 && index < currentPlaylist.length) {
       selectedSong = currentPlaylist[index];
-      lowercaseSelectedSong = selectedSong.toLowerCase();
+      let lowercaseSong;
+      lowercaseSong = selectedSong.toLowerCase();
       console.log('Loading song:', selectedSong);
 
       title.innerText = selectedSong.replace(/-/g, " ");
-      audio.src = `music/songs/${lowercaseSelectedSong}.mp3`;
-      cover.src = `music/images/${lowercaseSelectedSong}.jpeg`;
+      audio.src = `music/songs/${lowercaseSong}.mp3`;
+      cover.src = `music/images/${lowercaseSong}.jpeg`;
       songIndex = index;
 
       updateQueueList();
@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       playSong();
 
-      const currentSongFileName = lowercaseSelectedSong;
-      const artist = getArtistForSong(selectedSong);
+      const currentSongFileName = selectedSong;
+      const artist = getArtistForSong(currentSongFileName);
 
       const artistElement = document.getElementById('artist');
       artistElement.innerText = artist || 'Unknown Artist';
 
       const songName = selectedSong.replace(/-/g, " ");
-      document.getElementById('now-playing-cover').src = `music/images/${lowercaseSelectedSong}.jpeg`;
+      document.getElementById('now-playing-cover').src = `music/images/${lowercaseSong}.jpeg`;
       document.getElementById('now-playing-song').innerText = songName;
       document.getElementById('now-playing-artist').innerText = artist || 'Unknown Artist';
 
