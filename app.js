@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       playSong();
 
-      const currentSongFileName = lowercaseSelectedSongselectedSong;
-      const artist = getArtistForSong(currentSongFileName);
+      const currentSongFileName = lowercaseSelectedSong;
+      const artist = getArtistForSong(selectedSong);
 
       const artistElement = document.getElementById('artist');
       artistElement.innerText = artist || 'Unknown Artist';
 
       const songName = selectedSong.replace(/-/g, " ");
-      document.getElementById('now-playing-cover').src = `music/images/${lowercaseSelectedSongselectedSong}.jpeg`;
+      document.getElementById('now-playing-cover').src = `music/images/${lowercaseSelectedSong}.jpeg`;
       document.getElementById('now-playing-song').innerText = songName;
       document.getElementById('now-playing-artist').innerText = artist || 'Unknown Artist';
 
