@@ -183,9 +183,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const listItem = document.createElement('li');
         const queueSongDesc = document.createElement('div');
         queueSongDesc.classList.add('queue-song-desc');
+        let lowercaseSong = songName.toLowerCase();
 
         const img = document.createElement('img');
-        img.src = `music/images/${songName}.jpeg`;
+        img.src = `music/images/${lowercaseSong}.jpeg`;
         img.alt = songName;
 
         const queueSongTitle = document.createElement('div');
