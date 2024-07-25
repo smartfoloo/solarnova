@@ -9,7 +9,7 @@ const playlists = {
   'hits-de-internet': ['moment', 'the-perfect-girl-the-motion-retrowave-remix', 'space-song', 'past-lives', 'after-dark', 'my-ordinary-life', 'kerosene', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'an-enigmatic-encounter', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
   'meme-songs': ['burgers-in-the-back', 'last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem', 'shimmy-shimmy-ay'],
   'slowed-and-reverbed': ['funk-estranho-(super-slowed)', 'funked-up-(slowed)', 'close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed', 'lovely-bastards-slowed', 'memory-reboot-slowed'],
-  'lofi-jazz': ['from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
+  'lofi-jazz': ['Brave' , 'from-the-start', 'cupid', 'circus', 'that-kyoto-vibe', 'brazilian-beach-rumba', 'kyoto-nights', 'cactus-cafe', 'coffee-moments', 'jazz-in-my-coffee', 'sushi'],
   'holiday-party': ['last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'mariahcarey', 'snowman', 'carol-of-the-bells', 'christmas-eve-==-sarajevo'],
   'classical': ['la-campanella', 'violin-concerto-in-e-minor', 'adagio-albinoni', 'trio-no-2-in-e-minor', 'moonlight-sonata'],
   'national-anthems': ['soviet-anthem', 'heil-dir-im-siegerkranz', 'horst-wessel-lied', 'deutschlandlied', 'la-marseillaise'],
@@ -241,6 +241,7 @@ const songToArtistMap = {
   'neon-blade': 'moondeity',
 
   'from-the-start': 'laufey',
+  'Brave': 'こーじゅん',
 
   'close-eyes-slowed-reverb': 'DVRST',
   'metamorphosis-slowed-reverb': 'INTERWORLD',
