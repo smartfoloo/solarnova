@@ -1,6 +1,6 @@
 const playlists = {
   'liked-songs': [],
-  'hip-hop-mix': ['BAND4BAND', 'Not-Like-Us', 'Mockingbird', 'WALK-UP', 'Blueberry-Faygo', 'Love-You-Better', 'Back-To-You', 'Sea-of-Thieves', 'i-see-london-i-see-france', 'BILLIE-EILISH.', 'Hope', 'SAD', 'bad', 'Ballin (With Roddy Ricch)'],
+  'hip-hop-mix': ['BAND4BAND', 'Not-Like-Us', 'Mockingbird', 'WALK-UP', 'Blueberry-Faygo', 'Love-You-Better', 'Back-To-You', 'Sea-of-Thieves', 'i-see-london-i-see-france', 'BILLIE-EILISH.', 'Hope', 'SAD', 'bad', 'Ballin-(With-Roddy-Ricch)'],
   'pop-mix': ['Beautiful-Things', 'Espresso', 'drunk-text', 'you-were-there-for-me', 'pick-up-the-phone', 'i-like-the-way-you-kiss-me', 'STAY-(with-Justin-Bieber)', 'Pedro', 'Dancin-(feat.-Luvli)-Sped-Up-Version', 'Somebody-That-I-Used-To-Know', 'Ballin (With Roddy Ricch)', 'Bad-Habit', 'Sleepwalker', 'Luxury', 'Everybody-Wants-To-Rule-The-World', 'The-Perfect-Girl'],
   'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', '美電球', '裸の勇者', 'odoriko', '世界の秘密', 'tokyo-flash', '名前は片想い', 'どうして', '備忘録-Self-Cover-Ver', 'Kaikai-Kitan', 'Subtitle', 'Pretender', 'I-Love', 'Universe', '宿命', 'パラボラ', 'Hello', 'Override', '青のすみか', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'きらり', 'hana', '満ちてゆく', '谺する', 'まちがいさがし', 'ラストシーン', '虹', 'ロングホープ・フィリア', '星を仰ぐ', '見たこともない景色', 'さよならエレジー', 'Cry-Baby', 'Mixed-Nuts', '115万キロのフィルム', 'Tattoo', 'Driver', '幾億光年', '怪物', 'アイドル', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'romance', '好きだ', 'rendez-vous', 'pink', '水平線', '打上花火', '白日', 'カメレオン', 'アカリ', 'ひらり', 'ハロー カゲロウ', 'lemonade', 'ジュブナイル', '愛唄', '道', 'pride', '蕾', 'hikari', 'インフェルノ', 'ダンスホール', '僕のこと', '冬と春', 'アイラブユー', 'happy-birthday', 'クリスマスソング', '勝手にオリンピック', 'エメラルド', '怪盗', '高嶺の花子さん', 'ベテルギウス', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ', 'night-dancer', 'ヒロイン', 'odoriko-dazbee-cover', 'ひまわりの約束', '栄光の架橋', '残機', '阿修羅ちゃん', 'うっせえわ', 'Tomorrow-never-knows',],
   'siglikore': ['youre-too-slow', 'hyptonic-data'],
@@ -50,7 +50,7 @@ const songToArtistMap = {
   'Somebodys-Watching-Me': 'Rockwell',
   'Bad-Habit': 'Steve Lacy',
   'Luxury': 'Azealia Banks',
-  'Ballin (With Roddy Ricch)': 'Mustard, Roddy Ricch',
+  'Ballin-(With-Roddy-Ricch)': 'Mustard, Roddy Ricch',
   'Everybody-Wants-To-Rule-The-World': 'Tears For Fears',
   'The-Perfect-Girl': 'Mareux',
   'Sleepwalker': 'akiaura, LONOWN, STM',
