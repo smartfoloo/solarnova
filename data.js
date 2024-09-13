@@ -1,7 +1,7 @@
 const playlists = {
   'liked-songs': [],
-  'hip-hop-mix': ['BAND4BAND', 'Not-Like-Us', 'MILLION-DOLLAR-BABY', 'Big-Dawgs', 'Mamushi-(feat.-Yuki-Chiba)',  'In-My-Head', 'Mockingbird', 'WALK-UP', 'Blueberry-Faygo', 'Love-You-Better', 'Back-To-You', 'Sea-of-Thieves', 'i-see-london-i-see-france', 'BILLIE-EILISH.', 'Hope', 'SAD', 'bad', 'Ballin-(With-Roddy-Ricch)'],
-  'pop-mix': ['Beautiful-Things', 'Espresso', 'I-Had-Some-Help-(Feat.-Morgan-Wallen)', 'drunk-text', 'you-were-there-for-me', 'pick-up-the-phone', 'i-like-the-way-you-kiss-me', 'STAY-(with-Justin-Bieber)', 'Pedro', 'Dancin-(feat.-Luvli)-Sped-Up-Version', 'Somebody-That-I-Used-To-Know', 'Ballin-(With-Roddy-Ricch)', 'Bad-Habit', 'Sleepwalker', 'Luxury', 'Everybody-Wants-To-Rule-The-World', 'The-Perfect-Girl'],
+  'hip-hop-mix': ['BAND4BAND', 'Not-Like-Us', 'TELESCOPE', 'Double-Life-(From-"Despicable-Me-4")', 'MILLION-DOLLAR-BABY', 'Big-Dawgs', 'Mamushi-(feat.-Yuki-Chiba)',  'In-My-Head', 'Mockingbird', 'WALK-UP', 'Blueberry-Faygo', 'Love-You-Better', 'Back-To-You', 'Sea-of-Thieves', 'i-see-london-i-see-france', 'BILLIE-EILISH.', 'Hope', 'SAD', 'bad', 'Ballin-(With-Roddy-Ricch)'],
+  'pop-mix': ['Beautiful-Things', 'Too-Sweet', 'Espresso', 'I-Had-Some-Help-(Feat.-Morgan-Wallen)', 'drunk-text', 'you-were-there-for-me', 'pick-up-the-phone', 'i-like-the-way-you-kiss-me', 'STAY-(with-Justin-Bieber)', 'Pedro', 'Dancin-(feat.-Luvli)-Sped-Up-Version', 'Somebody-That-I-Used-To-Know', 'Ballin-(With-Roddy-Ricch)', 'Bad-Habit', 'Sleepwalker', 'Luxury', 'Everybody-Wants-To-Rule-The-World', 'The-Perfect-Girl'],
   'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', '美電球', '裸の勇者', 'odoriko', '世界の秘密', 'tokyo-flash', '名前は片想い', 'どうして', '備忘録-Self-Cover-Ver', 'Kaikai-Kitan', 'Dramaturgy', 'Subtitle', 'Pretender', 'I-Love', 'Universe', '宿命', 'パラボラ', 'Hello', 'Override', '青のすみか', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'きらり', 'hana', '満ちてゆく', '谺する', 'まちがいさがし', 'ラストシーン', '虹', 'ロングホープ・フィリア', '星を仰ぐ', '見たこともない景色', 'さよならエレジー', 'Cry-Baby', 'Mixed-Nuts', '115万キロのフィルム', 'Tattoo', 'Driver', '幾億光年', '怪物', 'アイドル', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'romance', '好きだ', 'rendez-vous', 'pink', '水平線', '打上花火', '白日', 'カメレオン', 'アカリ', 'ひらり', 'ハロー カゲロウ', 'lemonade', 'ジュブナイル', '愛唄', '道', 'pride', '蕾', 'hikari', 'インフェルノ', 'ダンスホール', '僕のこと', '冬と春', 'アイラブユー', 'happy-birthday', 'クリスマスソング', '勝手にオリンピック', 'エメラルド', '怪盗', '高嶺の花子さん', 'ベテルギウス', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ', 'night-dancer', 'ヒロイン', 'odoriko-dazbee-cover', 'ひまわりの約束', '栄光の架橋', '残機', '阿修羅ちゃん', 'うっせえわ', 'Tomorrow-never-knows',],
   'siglikore': ['youre-too-slow', 'hyptonic-data'],
   'sped-up': ['kompa-pasión', 'bounce', 'moment', 'ecstacy'],
@@ -22,6 +22,8 @@ const songToArtistMap = {
   'BAND4BAND': 'Central Cee, Lil Baby',
   'Not-Like-Us': 'Kendrick Lamar',
   'In-My-Head': 'Lil Tjay',
+  'TELESCOPE': 'TWXN, LL Clawz, 507KAZ',
+  'Double-Life-(From-"Despicable-Me-4")': 'Pharell Williams',
   'Mamushi-(feat.-Yuki-Chiba)': 'Megan Thee Stallion, Yuki Chiba',
   'Big-Dawgs': 'Hanumankind, Kalmi',
   'MILLION-DOLLAR-BABY': 'Tommy Richman',
@@ -44,6 +46,7 @@ const songToArtistMap = {
   'bounce': 'фрози',
 
   'STAY-(with-Justin-Bieber)': 'The Kid LAROI, Justin Bieber',
+  'Too-Sweet': 'Hozier',
   'Espresso': 'Sabrina Carpenter',
   'I-Had-Some-Help-(Feat.-Morgan-Wallen)': 'Post Malone, Morgan Wallen',
   'Pedro': 'Jaxomy, Agatino Romero, Rafaella Carrà',
