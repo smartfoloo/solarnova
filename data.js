@@ -1,11 +1,11 @@
 const playlists = {
   'liked-songs': [],
-  'hip-hop-mix': ['BAND4BAND', 'Not-Like-Us', 'TELESCOPE', 'Double-Life-(From-"Despicable-Me-4")', 'MILLION-DOLLAR-BABY', 'DEVIL-IS-A-LIE', 'Big-Dawgs', 'Mamushi-(feat.-Yuki-Chiba)',  'In-My-Head', 'Mockingbird', 'WALK-UP', 'Blueberry-Faygo', 'Love-You-Better', 'Back-To-You', 'Sea-of-Thieves', 'i-see-london-i-see-france', 'BILLIE-EILISH.', 'Hope', 'SAD', 'bad', 'Ballin-(With-Roddy-Ricch)'],
-  'pop-mix': ['Beautiful-Things', 'Too-Sweet', 'Espresso', 'Please-Please-Please', 'I-Had-Some-Help-(Feat.-Morgan-Wallen)', 'Burning-Down', 'drunk-text', 'you-were-there-for-me', 'pick-up-the-phone', 'i-like-the-way-you-kiss-me', 'STAY-(with-Justin-Bieber)', 'Pedro', 'Dancin-(feat.-Luvli)-Sped-Up-Version', 'Somebody-That-I-Used-To-Know', 'Ballin-(With-Roddy-Ricch)', 'Bad-Habit', 'Sleepwalker', 'Luxury', 'Everybody-Wants-To-Rule-The-World', 'The-Perfect-Girl'],
+  'hip-hop-mix': ['BAND4BAND', 'Not-Like-Us', 'TELESCOPE', 'Timeless-(with-Playboi-Carti)', 'Double-Life-(From-"Despicable-Me-4")', 'MILLION-DOLLAR-BABY', 'DEVIL-IS-A-LIE', 'Big-Dawgs', 'Mamushi-(feat.-Yuki-Chiba)',  'In-My-Head', 'Mockingbird', 'WALK-UP', 'Blueberry-Faygo', 'Love-You-Better', 'Back-To-You', 'Sea-of-Thieves', 'i-see-london-i-see-france', 'BILLIE-EILISH.', 'Hope', 'SAD', 'bad', 'Ballin-(With-Roddy-Ricch)'],
+  'pop-mix': ['Beautiful-Things', 'Too-Sweet', 'Dancing-In-The-Flames', 'Espresso', 'Please-Please-Please', 'I-Had-Some-Help-(Feat.-Morgan-Wallen)', 'Burning-Down', 'drunk-text', 'you-were-there-for-me', 'pick-up-the-phone', 'i-like-the-way-you-kiss-me', 'STAY-(with-Justin-Bieber)', 'Pedro', 'Dancin-(feat.-Luvli)-Sped-Up-Version', 'Somebody-That-I-Used-To-Know', 'Ballin-(With-Roddy-Ricch)', 'Bad-Habit', 'Sleepwalker', 'Luxury', 'Everybody-Wants-To-Rule-The-World', 'The-Perfect-Girl'],
   'j-pop': ['怪獣の花唄', 'しわあわせ', 'そんなbitterな話', '花占い', 'chainsaw-blood', '恋風邪にのせて', '裸の勇者', 'odoriko', '世界の秘密', 'tokyo-flash', '名前は片想い', 'どうして', '備忘録-Self-Cover-Ver', 'Kaikai-Kitan', 'Dramaturgy', 'Anoko-secret', 'Zenzenzense', 'Sparkle', 'Subtitle', 'Pretender', 'I-Love', 'Universe', '宿命', 'パラボラ', 'Hello', 'Override', '青のすみか', 'sleepwalk', 'overdose', 'フライデー・ナイト', '猿芝居', 'エウレカ', 'cult.', 'きらり', 'hana', '満ちてゆく', '谺する', 'まちがいさがし', 'ラストシーン', '虹', 'ロングホープ・フィリア', '星を仰ぐ', '見たこともない景色', 'さよならエレジー', 'Cry-Baby', 'Mixed-Nuts', '115万キロのフィルム', 'Tattoo', 'Driver', '幾億光年', '怪物', 'アイドル', 'ハルジオン', 'ハルカ', '夜に駆ける', 'あの夢をなぞって', 'アンコール', '勇者', 'ラブレター', '優しい彗星', 'たぶん', 'もしも命が描けたら', 'もう少しだけ', '三原色', '祝福', 'ミスター', 'romance', '好きだ', 'rendez-vous', 'pink', '水平線', '打上花火', '白日', 'カメレオン', 'アカリ', 'ひらり', 'ハロー カゲロウ', 'lemonade', 'ジュブナイル', '愛唄', '道', 'pride', '蕾', 'hikari', 'インフェルノ', 'ダンスホール', '僕のこと', '冬と春', 'アイラブユー', 'happy-birthday', 'クリスマスソング', '勝手にオリンピック', 'エメラルド', '怪盗', '高嶺の花子さん', 'ベテルギウス', 'ただ君に晴れ', 'だから僕は音楽を辞めた', 'ブルーベリー・ナイツ', 'night-dancer', 'ヒロイン', 'odoriko-dazbee-cover', 'ひまわりの約束', '栄光の架橋', '残機', '阿修羅ちゃん', 'うっせえわ', 'Tomorrow-never-knows',],
   'siglikore': ['youre-too-slow', 'hyptonic-data'],
   'sped-up': ['kompa-pasión', 'bounce', 'moment', 'ecstacy'],
-  'phonk': ['slay', 'funk-estranho-(super-slowed)', 'funked-up-(slowed)', 'metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
+  'phonk': ['GLORY', 'slay', 'funk-estranho-(super-slowed)', 'funked-up-(slowed)', 'metamorphosis', 'rapture', 'close-eyes', 'lovely-bastards', 'memory-reboot', 'devil-eyes', 'sahara', 'rave', 'aircraft', 'rainstorm', 'shadow', 'psycho-cruise', 'midnight', 'baixo', 'classical-phonk', 'ghost!', 'gigachad-theme', 'eggstreme-duck-phonk', 'brazilian-phonk-mano', 'brazilian-danca-phonk', 'unholy', 'murder-in-my-mind', 'a-million-ways-to-murder', 'scopin', 'live-another-day', 'murder-plot', 'tokyo-drift', 'avoid-me', 'neon-blade', 'montagem-celestial-de-atenas'],
   'hits-de-internet': ['moment', 'the-perfect-girl-the-motion-retrowave-remix', 'space-song', 'past-lives', 'after-dark', 'my-ordinary-life', 'kerosene', 'gigachad-theme', 'night-dancer', 'lovely-bastards', 'all-my-fellas', 'metamorphosis', 'close-eyes', 'close-eyes-sped-up', 'rave', 'an-enigmatic-encounter', 'chug-jug-with-you', 'live-another-day', 'murder-plot', 'tokyo-drift'],
   'meme-songs': ['burgers-in-the-back', 'last-rizzmas-i-gave-you-my-gyatt', 'indian-sleigh-ride-remix', 'indian-last-christmas-remix', 'king-on-a-budget-bk', 'whopper', 'nom-nom-nom-nom-nom-nom-nom', 'peppa-pig', 'loud-indian-music', 'careless-whisper', 'soviet-anthem', 'shimmy-shimmy-ay'],
   'slowed-and-reverbed': ['funk-estranho-(super-slowed)', 'funked-up-(slowed)', 'close-eyes-slowed-reverb', 'metamorphosis-slowed-reverb', 'living-life-in-the-night-slowed', 'lovely-bastards-slowed', 'memory-reboot-slowed'],
@@ -42,6 +42,7 @@ const songToArtistMap = {
   'Hope': 'XXXTENTACION',
   'SAD': 'XXXTENTACION',
   'bad': 'XXXTENTACION',
+  'Timeless-(with-Playboi-Carti)': 'The Weeknd, Playboi Carti',
 
   'kompa-pasión': 'фрози',
   'bounce': 'фрози',
@@ -50,6 +51,7 @@ const songToArtistMap = {
   'Too-Sweet': 'Hozier',
   'Espresso': 'Sabrina Carpenter',
   'I-Had-Some-Help-(Feat.-Morgan-Wallen)': 'Post Malone, Morgan Wallen',
+  'Dancing-In-The-Flames': 'The Weeknd',
   'Pedro': 'Jaxomy, Agatino Romero, Rafaella Carrà',
   'Please-Please-Please': 'Sabrina Carpenter',
   'Burning-Down': 'Alex Warren',
@@ -226,6 +228,7 @@ const songToArtistMap = {
   'Sparkle': 'RADWIMPS',
   'Zenzenzense': 'RADWIMPS',
 
+  'GLORY': 'Ogryzek',
   'slay': 'eternxltz',
   'funk-estranho-(super-slowed)': 'alxike',
   'funked-up-(slowed)': 'xxanteria, isq',
